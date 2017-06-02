@@ -1,0 +1,27 @@
+name: ubl
+type: theme
+description: 'Université Bretagne Loire Drupal 8 theme.'
+package: Custom
+version: '1.0.0'
+core: '8.x'
+base theme: false
+libraries:
+  - ubl/global-styling
+
+# Regions
+regions:
+  header: 'Header'
+  menu_primary: 'Menu principal'
+  menu_top: 'Menu top'
+  contenttop: 'Top Content'
+  content_filters: 'Content filters'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  footer: 'Footer'
+  footer_top: 'Footer Top Nav'
+  hp_social_wall: 'HP - Social Wall'
+  hp_events: 'HP - Agenda'
+  hp_events_submit: 'HP - Agenda Submission'
+  hp_services: 'HP - Services'
+  hp_chiffres: 'HP - Chiffres'
+  hp_opportunites: 'HP - Opportunités'

@@ -1,0 +1,13 @@
+name: Jssor Slider Example
+type: module
+description: 'Jssor Slider Example'
+package: Slider
+# core: 8.x
+dependencies:
+  - jssor
+
+# Information added by Drupal.org packaging script on 2015-12-02
+version: '8.x-1.0-rc3'
+core: '8.x'
+project: 'jssor'
+datestamp: 1449095942

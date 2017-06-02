@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Theme override for page titles.
+ *
+ * Available variables:
+ * - title_attributes: HTML attributes for the page title element.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title: The page title, for use in the actual content.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ */
+#}
+
+{% if ubl_thumb and not ubl_children %}
+  {% set pageThumb=ubl_thumb.src %}
+{% else %}
+  {% set pageThumb=base_path ~ '/sites/default/files/bandeau/2016-01/bandeauVieUBL_3.jpg' %}
+{% endif %}
+
+<div id="page-top">
+  <div class="slider-wrapper">
+    <div class="slide-wrapper" style="background-image: url('{{ pageThumb }}');">
+      <div class="slide-inner">
+        <div class="slide-content">
+          <div class="content">
+            <div class="title">
+              {{ title_prefix }}
+              {% if title %}
+                <h1{{ title_attributes.addClass('page-title') }}>{% if ubl_parent.title and not ubl_children %}{{ ubl_parent.title }}{% else %}{{ title }}{% endif %}</h1>
+              {% endif %}
+              {{ title_suffix }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

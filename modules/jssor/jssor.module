@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Allows support of a new view handler.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function jssor_theme() {
+  return array(
+    'views_view_jssor' => array(
+      'variables' => array(
+        'view' => NULL,
+        'rows' => NULL,
+      ),
+      'file' => 'jssor.theme.inc',
+    ),
+  );
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function jssor_views_pre_render($view) {
+  if ($view->storage->id() === 'jssor') {
+  }
+
+  return $view;
+}

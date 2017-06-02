@@ -1,0 +1,6 @@
+name: 'UBL Social Wall'
+dependencies: {  }
+description: 'UBL Social Wall'
+core: 8.x
+package: Custom
+type: module

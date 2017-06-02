@@ -1,0 +1,14 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      //fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic: { type: external, minified: true }
+      css/layout.css: {}
+  js:
+    js/bootstrap.js: {}
+    js/equalize.js: {}
+    #js/jquery.contentcarousel.js: {}
+    js/bootstrap-datepicker.js: {}
+    js/common.js: {}
+  dependencies:
+    - core/jquery

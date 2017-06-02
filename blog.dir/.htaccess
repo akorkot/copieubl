@@ -1,0 +1,20 @@
+# BEGIN SEO URL Settings
+
+RewriteEngine on
+ErrorDocument 400 /404.php
+ErrorDocument 401 /404.php
+ErrorDocument 403 /404.php
+ErrorDocument 404 /404.php
+ErrorDocument 500 /404.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+).asp$ index.php?q=$1 [L]
+RewriteRule ^([^/]+).aspx$ index.php?q=$1 [L]
+RewriteRule ^([^/]+).pdf$ index.php?q=$1 [L]
+RewriteRule ^([^/]+).htm$ index.php?q=$1 [L]
+RewriteRule ^([^/]+).html$ index.php?q=$1 [L]
+RewriteRule ^([^/]+).doc$ index.php?q=$1 [L]
+RewriteRule ^([^/]+).docx$ index.php?q=$1 [L]
+RewriteRule ^([^/]+).ppt$ index.php?q=$1 [L]
+RewriteRule ^([^/]+).pptx$ index.php?q=$1 [L]
+
+# END SEO URL Settings

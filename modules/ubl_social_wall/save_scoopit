@@ -1,0 +1,12 @@
+<div id="tab-presse" class="grid-tab">
+
+    <img{{ attributes.addClass(['center-block']).setAttribute('alt', "Scoop it!").setAttribute('src', base_path ~ directory   ~ '/img/logo/scoopit.png') }}>
+
+    { <iframe src='https://www.scoop.it/embed-topic/5084342.html?maxwidth=300'  width='300' height='300' frameBorder='0' scrolling='no'></iframe> #}
+    <iframe width="400" height="360" frameborder="0" align="middle" scrolling="no" src="https://www.scoop.it/t/sup-et-recherche-en-bretagne-et-pays-de-la-loire/js?format=rect&numberOfPosts=5&title=Derni%C3%A8res+actualit%C3%A9s&speed=5&mode=normal&width=400"></iframe>
+
+    <a href="http://www.scoop.it/u/universite-bretagne-loire" title="{{ "Voir notre Scoop It!" }}" class="blue arrow">
+        {{ "Voir notre Scoop It!" }}
+    </a>
+</div>
+

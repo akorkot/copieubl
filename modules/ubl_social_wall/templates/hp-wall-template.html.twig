@@ -1,0 +1,242 @@
+<div class="filters">
+    <ul>
+        <li class="active" data-tab="now">{{ "En ce moment"|t }}</li>
+        <li data-tab="twitter">{{ "Twitter"|t }}</li>
+        <li data-tab="youtube">{{ "YouTube"|t }}</li>
+        <li data-tab="actuchro">{{ "Actualités et chroniques"|t }}</li>
+        <li data-tab="presse">{{ "Revue de presse"|t }}</li>
+    </ul>
+</div>
+
+<div id="tab-now" class="grid-tab active">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <div class="row">
+                {% for post in wall.now.twitter %}
+                    <article class="panel">
+                        <div class="panel-inner panel-blue">
+                            <a href="{{ wall.twitter_statusurl }}{{ post.id_str }}" target="_blank">{{ post.text }}</a>
+                            <div class="date">{{ post.created_at|date("d M") }}</div>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="row">
+                <article class="panel panel-xxl">
+                    <div class="panel-inner panel-black">
+                        <div class="pre-title">{{ "A la une"|t }}</div>
+                        <div class="thumb">
+                            <a href="{{ wall.now.actu_alaune.url }}" title="{{ wall.now.actu_alaune.title }}"><img{{ attributes.addClass(['']).setAttribute('alt', wall.now.actu_alaune.thumb.alt).setAttribute('src', wall.now.actu_alaune.thumb.src) }}></a>
+                        </div>
+                        <div class="cat">{{ wall.now.actu_alaune.cat }}</div>
+                        <h2><a href="{{ wall.now.actu_alaune.url }}" title="{{ wall.now.actu_alaune.title }}">{{ wall.now.actu_alaune.title }}</a></h2>
+                        <p class="body">{{ wall.now.actu_alaune.excerpt }} <a href="{{ wall.now.actu_alaune.url }}" class="views-more-link">voir</a></p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        {% for i in 0..2 %}
+            {% set post = wall.now.actus[i] %}
+            {% if post is not empty %}
+                <article class="panel">
+                    <div class="panel-inner">
+                        <div class="thumb top">
+                            <a href="{{ post.url }}" title="{{ post.title }}"><img{{ attributes.addClass(['']).setAttribute('alt', post.thumb.alt).setAttribute('src', post.thumb.src) }}></a>
+                        </div>
+                        <h2 class="title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title_t }}</a> <a href="{{ post.url }}" class="views-more-link">voir</a></h2>
+                        <div class="excerpt-full">
+                            <span class="cat">{{ post.cat }}</span>
+                            <a href="{{ post.url }}">{{ post.excerpt }}</a> <a href="{{ post.url }}" class="views-more-link">voir</a>
+                        </div>
+                    </div>
+                </article>
+            {% endif %}
+        {% endfor %}
+        <article class="panel">
+            <div class="panel-inner panel-black panel-yt">
+                {% for ytVideo in wall.now.youtube %}
+                    <div class="pre-title">{{ "Vidéo"|t }}</div>
+                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/{{ ytVideo.id }}"
+                            frameborder="0" allowfullscreen></iframe>
+                    <div class="date">{{ ytVideo.date|date("d M") }}</div>
+                {% endfor %}
+            </div>
+        </article>
+        <article class="panel panel-xl">
+            <div class="panel-inner panel-black">
+                {{ wall.wikiradio }}
+            </div>
+        </article>
+        {% for i in 3..4 %}
+            {% set post = wall.now.actus[i] %}
+            {% if post is not empty %}
+                <article class="panel">
+                    <div class="panel-inner">
+                        <div class="thumb top">
+                            <a href="{{ post.url }}" title="{{ post.title }}"><img{{ attributes.addClass(['']).setAttribute('alt', post.thumb.alt).setAttribute('src', post.thumb.src) }}></a>
+                        </div>
+                        <h2 class="title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title_t }}</a> <a href="{{ post.url }}" class="views-more-link">voir</a></h2>
+                        <div class="excerpt-full">
+                            <span class="cat">{{ post.cat }}</span>
+                            <a href="{{ post.url }}">{{ post.excerpt }}</a> <a href="{{ post.url }}" class="views-more-link">voir</a>
+                        </div>
+                    </div>
+                </article>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<div id="tab-twitter" class="grid-tab">
+    <div class="row">
+        {% for post in wall.twitter %}
+            <article class="panel">
+                <div class="panel-inner panel-blue">
+                    <a href="{{ wall.twitter_statusurl }}{{ post.id_str }}" target="_blank">{{ post.text }}</a>
+                    <div class="date">{{ post.created_at|date("d M") }}</div>
+                </div>
+            </article>
+        {% endfor %}
+        <article class="panel panel-xl">
+            <div class="panel-inner panel-black">
+                {{ wall.wikiradio }}
+            </div>
+        </article>
+    </div>
+</div>
+<div id="tab-youtube" class="grid-tab">
+    <div class="row">
+        {% for i in 0..0 %}
+            {% set post = wall.youtube[i] %}
+            {% if post is not empty %}
+                <article class="panel panel-xxl">
+                    <div class="panel-inner panel-black panel-yt">
+                        <div class="pre-title">{{ "Vidéo"|t }}</div>
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/{{ post.id }}"
+                                frameborder="0" allowfullscreen></iframe>
+                        <div class="date">{{ post.date|date("d M") }}</div>
+                    </div>
+                </article>
+            {% endif %}
+        {% endfor %}
+        {% for i in 1..4 %}
+            {% set post = wall.youtube[i] %}
+            {% if post is not empty %}
+                <article class="panel">
+                    <div class="panel-inner panel-black panel-yt">
+                        <div class="pre-title">{{ "Vidéo"|t }}</div>
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/{{ post.id }}"
+                                frameborder="0" allowfullscreen></iframe>
+                        <div class="date">{{ post.date|date("d M") }}</div>
+                    </div>
+                </article>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="row">
+        {% for i in 5..10 %}
+            {% set post = wall.youtube[i] %}
+            {% if post is not empty %}
+                <article class="panel">
+                    <div class="panel-inner panel-black panel-yt">
+                        <div class="pre-title">{{ "Vidéo"|t }}</div>
+                        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/{{ post.id }}"
+                                frameborder="0"
+                                allowfullscreen></iframe>
+                        <div class="date">{{ post.date|date("d M") }}</div>
+                    </div>
+                </article>
+            {% endif %}
+        {% endfor %}
+        <article class="panel panel-xl">
+            <div class="panel-inner panel-black">
+                {{ wall.wikiradio }}
+            </div>
+        </article>
+    </div>
+</div>
+<div id="tab-actuchro" class="grid-tab">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <div class="row">
+                {% for i in 0..3 %}
+                    {% set post = wall.actus[i] %}
+                    {% if post is not empty %}
+                        <article class="panel">
+                            <div class="panel-inner">
+                                <div class="thumb top">
+                                    <a href="{{ post.url }}" title="{{ post.title }}"><img{{ attributes.addClass(['']).setAttribute('alt', post.thumb.alt).setAttribute('src', post.thumb.src) }}></a>
+                                </div>
+                                <h2 class="title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title_t }}</a> <a href="{{ post.url }}" class="views-more-link">voir</a></h2>
+                                <div class="excerpt-full">
+                                    <span class="cat">{{ post.cat }}</span>
+                                    <a href="{{ post.url }}">{{ post.excerpt }}</a> <a href="{{ post.url }}" class="views-more-link">voir</a>
+                                </div>
+                            </div>
+                        </article>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="row">
+                <article class="panel panel-xxl">
+                    <div class="panel-inner panel-black">
+                        <div class="pre-title">{{ "A la une"|t }}</div>
+                        <div class="thumb">
+                            <a href="{{ wall.now.actu_alaune.url }}" title="{{ wall.now.actu_alaune.title }}"><img{{ attributes.addClass(['']).setAttribute('alt', wall.now.actu_alaune.thumb.alt).setAttribute('src', wall.now.actu_alaune.thumb.src) }}></a>
+                        </div>
+                        <div class="cat">{{ wall.now.actu_alaune.cat }}</div>
+                        <h2><a href="{{ wall.now.actu_alaune.url }}" title="{{ wall.now.actu_alaune.title }}">{{ wall.now.actu_alaune.title }}</a></h2>
+                        <p class="body">{{ wall.now.actu_alaune.excerpt }} <a href="{{ wall.now.actu_alaune.url }}" class="views-more-link">voir</a></p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        {% for i in 4..7 %}
+            {% set post = wall.actus[i] %}
+            {% if post is not empty %}
+                <article class="panel">
+                    <div class="panel-inner">
+                        <div class="thumb top">
+                            <a href="{{ post.url }}" title="{{ post.title }}"><img{{ attributes.addClass(['']).setAttribute('alt', post.thumb.alt).setAttribute('src', post.thumb.src) }}></a>
+                        </div>
+                        <h2 class="title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title_t }}</a> <a href="{{ post.url }}" class="views-more-link">voir</a></h2>
+                        <div class="excerpt-full">
+                            <span class="cat">{{ post.cat }}</span>
+                            <a href="{{ post.url }}">{{ post.excerpt }}</a> <a href="{{ post.url }}" class="views-more-link">voir</a>
+                        </div>
+                    </div>
+                </article>
+            {% endif %}
+        {% endfor %}
+        <article class="panel panel-xl">
+            <div class="panel-inner panel-black">
+                {{ wall.wikiradio }}
+            </div>
+        </article>
+        {% for i in 8..9 %}
+            {% set post = wall.actus[i] %}
+            {% if post is not empty %}
+                <article class="panel">
+                    <div class="panel-inner">
+                        <div class="thumb top">
+                            <a href="{{ post.url }}" title="{{ post.title }}"><img{{ attributes.addClass(['']).setAttribute('alt', post.thumb.alt).setAttribute('src', post.thumb.src) }}></a>
+                        </div>
+                        <h2 class="title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title_t }} <a href="{{ post.url }}" class="views-more-link">voir</a></a></h2>
+                        <div class="excerpt-full">
+                            <span class="cat">{{ post.cat }}</span>
+                            <a href="{{ post.url }}">{{ post.excerpt }}</a> <a href="{{ post.url }}" class="views-more-link">voir</a>
+                        </div>
+                    </div>
+                </article>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+

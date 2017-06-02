@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * ubl_social_wall.module
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function ubl_social_wall_menu() {
+  $items = array();
+  return $items;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function ubl_social_wall_form_alter() {
+
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function ubl_social_wall_theme() {
+    return array(
+        'hp_wall_template' => array(
+            'variables' => array(
+                'wall' => array(),
+            ),
+        ),
+        'widget_template' => array(
+            'variables' => array(
+                'wall' => array(),
+            ),
+        ),
+    );
+}

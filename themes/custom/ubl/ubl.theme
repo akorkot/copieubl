@@ -1,0 +1,955 @@
+<?php
+use Drupal\ubl_social_wall\Libs\TwitterAPIExchange;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+/**
+ * @file
+ * Contains theme override functions and preprocess functions
+ */
+
+global $ubl_submenu;
+function _ubl_var($var_name, $new_val = NULL)
+{
+    $vars = &drupal_static(__FUNCTION__, array());
+
+    // If a new value has been passed
+    if ($new_val) {
+        $vars[$var_name] = $new_val;
+    }
+
+    return isset($vars[$var_name]) ? $vars[$var_name] : NULL;
+}
+
+
+/**
+ * Implementation of hook_form_FORM_ID_alter()
+ */
+function ubl_form_contact_site_form_alter(&$form, &$form_state)
+{
+    drupal_set_title('Nous contacter');
+}
+
+function ubl_preprocess_form(&$variables)
+{
+    $formId = $variables['element']['#form_id'];
+    switch ($formId) {
+        case 'contact_message_inscription_au_concours_ma_these_form':
+            $variables['ubl_thumb'] = _ubl_var('ubl_thumb', array(
+                'src' => '/sites/default/files/bandeau/2016-01/bandeauActualites_8.jpg',
+            ));
+            break;
+    }
+    //die();
+    //template_preprocess_form(&$variables);
+}
+
+function ubl_preprocess_html(&$variables)
+{
+
+    if (isset($_SERVER['HTTP_HOST'])) {
+        $domain = $_SERVER['HTTP_HOST'];
+        $variables['base_domain'] = $domain;
+    }
+
+    $variables['base_path'] = base_path();
+    $variables['front_page'] = \Drupal::url('<front>');
+}
+
+function ubl_preprocess_taxonomy_term(&$variables)
+{
+//    die('term');
+
+//    template_preprocess_taxonomy_term();
+
+    $term = $variables['term'];
+
+    $type_name = $term->get('name')->getValue()[0]['value'];
+    $type_id = $term->get('tid')->getValue()[0]['value'];
+    $type_term = $term->get('vid')[0]->get('target_id')->getValue();
+
+    _ubl_var('ubl_submenu_title', $type_name);
+
+    if ($type_term == 'type_etablissement') {
+        // Récupération des ecoles
+        $tarrEtabs = _ubl_get_subEtablissementsMenu($type_id);
+        $tFirstEtab = reset($tarrEtabs);
+        _ubl_var('ubl_submenu', $tarrEtabs);
+
+//        $tFirstEtab['url']->setAbsolute();
+//        return new RedirectResponse($tFirstEtab['url']);
+//        var_dump($tFirstEtab['url']);
+//        var_dump($tFirstEtab['url']->toString());
+
+        header('Location: ' . $tFirstEtab['url']->toString());
+        die();
+
+    } elseif ($type_term == 'categorie_services') {
+        // Récupération des services
+        $tarrEtabs = _ubl_get_subServicesMenu($type_id);
+        $tFirstEtab = reset($tarrEtabs);
+        _ubl_var('ubl_submenu', $tarrEtabs);
+        header('Location: ' . $tFirstEtab['url']->toString());
+        die();
+    }
+}
+
+function ubl_preprocess_views_view(&$variables)
+{
+    $view = $variables['view'];
+    if (!empty($view)) {
+
+        switch ($view->id()) {
+            case 'page_agenda';
+                $variables['ubl_thumb'] = _ubl_var('ubl_thumb', array(
+                    'src' => '/themes/custom/ubl/img/bandeau/bandeauAgenda.jpg',
+                ));
+                break;
+            case 'services';
+                $variables['ubl_thumb'] = _ubl_var('ubl_thumb', array(
+                    'src' => '/themes/custom/ubl/img/bandeau/bandeauOffreServices.jpg',
+                ));
+                break;
+            case 'annuaire';
+                $variables['ubl_thumb'] = _ubl_var('ubl_thumb', array(
+                    'src' => '/themes/custom/ubl/img/bandeau/bandeauAnnuaire.jpg',
+                ));
+                break;
+            case 'etablissements';
+                $variables['ubl_thumb'] = _ubl_var('ubl_thumb', array(
+                    'src' => '/themes/custom/ubl/img/bandeau/bandeauMembres.jpg',
+                ));
+                break;
+
+            case 'reportages';
+                $variables['ubl_thumb'] = _ubl_var('ubl_thumb', array(
+                    'src' => '/sites/default/files/2015-12/bandeauActualites.jpg',
+                ));
+                break;
+            case 'portraits';
+                $variables['ubl_thumb'] = _ubl_var('ubl_thumb', array(
+                    'src' => '/sites/default/files/2015-12/bandeauActualites.jpg',
+                ));
+                break;
+            case 'dossiers';
+                $variables['ubl_thumb'] = _ubl_var('ubl_thumb', array(
+                    'src' => '/sites/default/files/2015-12/bandeauActualites.jpg',
+                ));
+                break;
+        }
+//        var_dump($variables);
+//        die('eof');
+    }
+}
+
+function ubl_preprocess_page(&$variables)
+{
+
+    /*
+     *
+     */
+    $variables['ubl_submenu'] = _ubl_var('ubl_submenu_title');
+    $variables['ubl_submenu'] = _ubl_var('ubl_submenu');
+
+    $variables['has_sidebar'] = true;
+    if (is_object($variables['node'])) {
+        $node = $variables['node'];
+
+        $variables['page']['title'] = _ubl_var('ubl_title', $node->getTitle());
+
+        /**
+         * Affichage ou non de la sidebar
+         */
+        $bundle = $node->bundle();
+
+        if ($bundle == 'services') {
+            $variables['has_sidebar'] = false;
+            $variables['ubl_thumb'] = _ubl_var('ubl_thumb', array(
+                'src' => '/themes/custom/ubl/img/bandeau/bandeauOffreServices.jpg',
+            ));
+        }
+        if ($bundle == 'etablissements') {
+            $variables['has_sidebar'] = false;
+            $variables['ubl_thumb'] = _ubl_var('ubl_thumb', array(
+                'src' => '/themes/custom/ubl/img/bandeau/bandeauMembres.jpg',
+            ));
+        }
+
+        /********************************************************/
+        /**
+         * SIDEBAR CONTENT
+         */
+        $variables['ubl_sidebar'] = [];
+
+        if (in_array($bundle, ['page', 'article', 'reportages', 'dossiers', 'ubl_events', 'opportunites', 'portraits', ''])) {
+            // SERVICES
+            $variables['ubl_sidebar']['services']['active'] = false;
+            if ($node->hasField('field_sb_services_active') && $node->get('field_sb_services_active')->value) {
+                $variables['ubl_sidebar']['services']['active'] = true;
+                foreach ($node->get('field_sb_services_pages') as $servPage) {
+                    $tmpnode = \Drupal::entityTypeManager()->getStorage('node')->load($servPage->target_id);
+                    $result = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $servPage->target_id);
+                    $variables['ubl_sidebar']['services']['pages'][] = [
+                        'url' => file_create_url($result),
+                        'url' => $tmpnode->urlInfo('canonical'),
+                        'title' => $tmpnode->getTitle(),
+                    ];
+                }
+            }
+
+            // DOWNLOADS
+            $variables['ubl_sidebar']['downloads']['active'] = false;
+            if ($node->hasField('field_sb_downloads_active') && $node->get('field_sb_downloads_active')->value) {
+                $variables['ubl_sidebar']['downloads']['active'] = true;
+                foreach ($node->get('field_sb_downloads_files') as $file) {
+
+                    $fileUrl = file_create_url($file->entity->getFileUri());
+
+                    $tabUrl = parse_url($fileUrl);
+                    $fileTitle = urldecode(str_replace(array('_'), ' ', basename($tabUrl["path"])));
+
+                    // Je met le nom de mon fichier dans une variable
+                    $file_name = $fileTitle;
+                    // J'explose dans un tableau à chaque fois que je rencontre un point
+                    $file_array = explode('.', $file_name);
+                    // Je récupère l'indice dans le tableau de l'extension "jpg", soit le dernier élément
+                    $extension = count($file_array) - 1;
+                    // Je découpe en enlevant l'extension cad (la taille de "jpg" + la taille du point d'où le -1)
+                    $fileTitle = substr($file_name, 0, strlen($file_name) - strlen($file_array[$extension]) - 1);
+
+                    if ($file->description) {
+                        $fileTitle = $file->description;
+                    }
+
+                    $variables['ubl_sidebar']['downloads']['files'][] = [
+                        'url' => $fileUrl,
+                        'title' => $fileTitle,
+                    ];
+                }
+            }
+
+            // CONTACT
+            $variables['ubl_sidebar']['contact']['active'] = false;
+            if ($node->hasField('field_sb_contact_active') && $node->get('field_sb_contact_active')->value) {
+                $variables['ubl_sidebar']['contact']['active'] = true;
+                $variables['ubl_sidebar']['contact']['name'] = $node->get('field_sb_contact_name')->value;
+                $variables['ubl_sidebar']['contact']['tel'] = $node->get('field_sb_contact_tel')->value;
+                $variables['ubl_sidebar']['contact']['email'] = $node->get('field_sb_contact_email')->value;
+
+                if ($node->hasField('field_sb_contact2_name')) {
+                    $variables['ubl_sidebar']['contact2']['name'] = $node->get('field_sb_contact2_name')->value;
+                    $variables['ubl_sidebar']['contact2']['tel'] = $node->get('field_sb_contact2_tel')->value;
+                    $variables['ubl_sidebar']['contact2']['email'] = $node->get('field_sb_contact2_email')->value;
+                }
+
+                if ($node->hasField('field_sb_contact3_name')) {
+                    $variables['ubl_sidebar']['contact3']['name'] = $node->get('field_sb_contact3_name')->value;
+                    $variables['ubl_sidebar']['contact3']['tel'] = $node->get('field_sb_contact3_tel')->value;
+                    $variables['ubl_sidebar']['contact3']['email'] = $node->get('field_sb_contact3_email')->value;
+                }
+
+                if ($node->hasField('field_sb_contact4_name')) {
+                    $variables['ubl_sidebar']['contact4']['name'] = $node->get('field_sb_contact4_name')->value;
+                    $variables['ubl_sidebar']['contact4']['tel'] = $node->get('field_sb_contact4_tel')->value;
+                    $variables['ubl_sidebar']['contact4']['email'] = $node->get('field_sb_contact4_email')->value;
+                }
+
+                if ($node->hasField('field_sb_contact5_name')) {
+                    $variables['ubl_sidebar']['contact5']['name'] = $node->get('field_sb_contact5_name')->value;
+                    $variables['ubl_sidebar']['contact5']['tel'] = $node->get('field_sb_contact5_tel')->value;
+                    $variables['ubl_sidebar']['contact5']['email'] = $node->get('field_sb_contact5_email')->value;
+                }
+            }
+
+            // VIDEO
+            $variables['ubl_sidebar']['video']['active'] = false;
+            if ($node->hasField('field_sb_video_active') && $node->get('field_sb_video_active')->value) {
+                $variables['ubl_sidebar']['video']['active'] = true;
+                $variables['ubl_sidebar']['video']['url'] = $node->get('field_sb_video_url')->value;
+                parse_str(parse_url($variables['ubl_sidebar']['video']['url'], PHP_URL_QUERY), $YtUrlVars);
+                if ($YtUrlVars['v'] != '') {
+                    $variables['ubl_sidebar']['video']['id'] = $YtUrlVars['v'];
+                } elseif ($YtUrlVars['list'] != '') {
+                    $variables['ubl_sidebar']['video']['listid'] = $YtUrlVars['list'];
+                }
+            }
+
+            // ACTUS "En ce momment"
+            $variables['ubl_sidebar']['actus']['active'] = false;
+            if ($node->hasField('field_sb_actus_active') && $node->get('field_sb_actus_active')->value) {
+                $variables['ubl_sidebar']['actus']['active'] = true;
+
+                // Filtre sur catégorie ?
+                $tags = false;
+                if ($node->hasField('field_sb_actus_tags') && $node->get('field_sb_actus_tags')->get(0)->target_id) {
+                    $tags = $node->get('field_sb_actus_tags')->get(0)->target_id;
+                }
+                $cat_dossiers = false;
+                if ($node->hasField('field_sb_actus_cat_dossier') && $node->get('field_sb_actus_cat_dossier')->get(0)->target_id) {
+                    $cat_dossiers = $node->get('field_sb_actus_cat_dossier')->get(0)->target_id;
+                }
+                // Récupération des actus "En ce momment"
+                $storage = \Drupal::entityTypeManager()->getStorage('node');
+
+
+                /* * /
+                $tmpSql = $storage->getQuery()->orConditionGroup();
+
+                // Les articles
+                if ($tags) {
+                    $tmpSql = $tmpSql->andConditionGroup()
+                        ->condition('type', 'article')
+                        ->condition('field_tags', array($tags), 'IN');
+                } else {
+                    $tmpSql = $tmpSql->condition('type', 'article');
+                }
+
+                // Les dossiers
+                if ($cat_dossiers) {
+                    $tmpSql = $tmpSql->andConditionGroup()
+                        ->condition('type', 'dossiers')
+                        ->condition('field_categorie', array($cat_dossiers), 'IN');
+                } else {
+                    $tmpSql = $tmpSql->condition('type', 'dossiers');
+                }
+
+                var_dump($tmpSql);
+                var_dump($tmpSql->sort('created', 'desc')->range(0, 3)->execute());
+                die();
+                /* */
+
+
+                $tmpS = $storage->getQuery()
+                    ->condition('type', array(
+                        'article',
+                        'dossiers',
+                        'portraits',
+                        'reportages',
+                    ), 'IN')
+//                    ->condition('type', 'article')
+                    ->sort('created', 'desc')
+                    ->condition('status', 1);
+                if ($tags) {
+                    $tmpS->condition('field_tags', array($tags), 'IN');
+                }
+                $nids = $tmpS->range(0, 3)->execute();
+                if (!empty($nids)) {
+                    $actus = $storage->loadMultiple($nids);
+                    if (is_array($actus)) {
+                        foreach ($actus as $actuUne) {
+
+                            $catLbl = '';
+                            if ($actuUne->hasField('field_tags') && is_object($actuUne->field_tags) && is_object($actuUne->field_tags->entity)) {
+                                $catLbl = $actuUne->field_tags->entity->label();
+                            }
+                            if ($actuUne->hasField('field_categorie')) {
+                                $catLbl = $actuUne->field_categorie->entity->label();
+                            }
+
+                            $variables['ubl_sidebar']['actus']['posts'][] = [
+                                'title' => $actuUne->getTitle(),
+                                'body' => $actuUne->body->value,
+                                'excerpt' => $actuUne->body->summary,
+                                'cat' => $catLbl,
+                                'url' => $actuUne->urlInfo('canonical'),
+//                                'thumb' => [
+//                                    'src' => $actuUne->field_image->entity->url(),
+//                                    'alt' => $actuUne->field_image->alt,
+//                                ],
+                            ];
+                        }
+                    }
+                }
+
+            }
+
+            // TWITTER
+            $variables['ubl_sidebar']['twitter']['active'] = false;
+            if ($node->hasField('field_sb_twitter_active') && $node->get('field_sb_twitter_active')->value) {
+                $variables['ubl_sidebar']['twitter']['active'] = true;
+
+                // Twitter Account
+                $twAccount = 'UBretagneLoire';
+                if (isset($node->get('field__sb_twitter_account')->value) && $node->get('field__sb_twitter_account')->value != '') {
+                    $twAccount = $node->get('field__sb_twitter_account')->value;
+                }
+
+                /** Set access tokens here - see: https://dev.twitter.com/apps/ **/
+                $settings = [
+                    'oauth_access_token' => "17621008-o2UhWvPxKJCskAZRUC9km8APwTbcvdMs4WZEyd2WK",
+                    'oauth_access_token_secret' => "OD9EnZdz88vffDybH7MU3gQfGfxIxy7SVAOUeyiMAdlxI",
+                    'consumer_key' => "Zioe3EfggISAKFQSLpkVlJyxP",
+                    'consumer_secret' => "fdv0SRmRzM286XK4GgGBmTz7FhLRG2fXMUff4hjqNYu2eQtJ2E"
+                ];
+                $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
+                $getfield = '?count=3&screen_name=' . $twAccount;
+                $requestMethod = 'GET';
+                $twitter = new TwitterAPIExchange($settings);
+                $json = $twitter->setGetfield($getfield)
+                    ->buildOauth($url, $requestMethod)
+                    ->performRequest(true, array(
+                        CURLOPT_SSL_VERIFYHOST => 0,
+                        CURLOPT_SSL_VERIFYPEER => 0,
+                    ));
+                $variables['ubl_sidebar']['twitter']['posts'] = json_decode($json);
+//                foreach($variables['ubl_sidebar']['twitter']['posts'] as &$twitPost){
+//                    $twitPost->text = _auto_link_text($twitPost->text);
+//                }
+            }
+
+            // CROSS READING
+            $variables['ubl_crossreading']['active'] = false;
+            if ($node->hasField('field_bot_crossread_active') && $node->get('field_bot_crossread_active')->value) {
+                $variables['ubl_crossreading']['active'] = true;
+
+                $storage = \Drupal::entityTypeManager()->getStorage('node');
+                foreach ($node->get('field_bot_crossread_pages') as $page) {
+                    $curPage = $storage->load($page->target_id);
+                    $thumb = false;
+                    if (isset($curPage->field_image_a_la_une->entity) && !empty($curPage->field_image_a_la_une->entity)) {
+                        $curImage = $curPage->get('field_image_a_la_une')->get(0);
+                        $fid = $curImage->target_id;
+                        $file = Drupal\file\Entity\File::load($fid);
+                        $image_uri = Drupal\image\Entity\ImageStyle::load('235x113')->buildUrl($file->getFileUri());
+                        $thumb = [
+                            'src' => $image_uri,
+                            'alt' => $curImage->alt,
+                        ];
+                    }
+                    $tCat = '';
+                    if (!empty($curPage->field_tags->entity)) {
+                        $tCat = $curPage->field_tags->entity->label();
+                    }
+                    if (!empty($curPage->field_categorie->entity)) {
+                        $tCat = $curPage->field_categorie->entity->label();
+                    }
+                    $variables['ubl_crossreading']['pages'][] = [
+                        'title' => $curPage->title->value,
+                        'url' => $curPage->urlInfo('canonical'),
+                        'thumb' => $thumb,
+                        'cat' => $tCat,
+                        'excerpt' => $curPage->body->summary,
+                    ];
+                }
+
+            }
+
+        }
+
+        /* END SIDEBAR CONTENT */
+        /********************************************************/
+        if ($bundle == 'page') {
+            /************************/
+            /**
+             * Récupération des pages filles
+             */
+            $storage = \Drupal::entityTypeManager()->getStorage('node');
+            $nids = $storage->getQuery()
+                ->condition('type', 'page')
+                ->condition('field_page_parente', $node->get('vid')->value)
+                ->condition('status', 1)
+//                ->range(0, 3)
+                ->execute();
+            if (!empty($nids)) {
+                $childPages = $storage->loadMultiple($nids);
+//                var_dump($childPages);
+//                die('eol');
+                if (is_array($childPages)) {
+                    foreach ($childPages as $childPage) {
+                        $thumb = false;
+                        if (isset($childPage->field_image_a_la_une->entity) && !empty($childPage->field_image_a_la_une->entity)) {
+                            $curImage = $childPage->get('field_image_a_la_une')->get(0);
+                            $fid = $curImage->target_id;
+                            $file = Drupal\file\Entity\File::load($fid);
+                            $image_uri = Drupal\image\Entity\ImageStyle::load('370x200')->buildUrl($file->getFileUri());
+                            $thumb = [
+                                'src' => $image_uri,
+                                'alt' => $curImage->alt,
+                            ];
+                        }
+                        if (!$thumb) {
+                            if (isset($childPage->field_bandeau->entity) && !empty($childPage->field_bandeau->entity)) {
+                                $curImage = $childPage->get('field_bandeau')->get(0);
+                                $fid = $curImage->target_id;
+                                $file = Drupal\file\Entity\File::load($fid);
+                                $image_uri = Drupal\image\Entity\ImageStyle::load('370x200')->buildUrl($file->getFileUri());
+                                $thumb = [
+                                    'src' => $image_uri,
+                                    'alt' => $curImage->alt,
+                                ];
+                            }
+                        }
+                        $excerpt = $childPage->body->summary;
+                        if ($excerpt == '') {
+                            $excerpt = \Drupal\Component\Utility\Unicode::truncate($childPage->body->value, 200, true, true);
+                        }
+                        $variables['ubl_children'][] = [
+                            'nid' => $childPage->get('nid')->value,
+                            'title' => $childPage->getTitle(),
+                            'body' => $childPage->body->value,
+                            'excerpt' => $excerpt,
+                            'url' => $childPage->urlInfo('canonical'),
+                            'thumb' => $thumb,
+                        ];
+                    }
+                    _ubl_var('ubl_children', $variables['ubl_children']);
+                }
+            }
+            /************************/
+            /**
+             * Récupération de la page parente
+             */
+            if ($node->hasField('field_page_parente') && $node->get('field_page_parente')->get(0)->target_id) {
+                $parentPage = $storage->load($node->get('field_page_parente')->get(0)->target_id);
+
+                $variables['ubl_parent'] = _ubl_var('ubl_parent', [
+                    'title' => $parentPage->getTitle(),
+                ]);
+
+//                var_dump($variables);
+//                die();
+            }
+            /************************/
+            /**
+             * Récupération de l'image à la une
+             */
+            $thumb = false;
+            if (isset($node->field_image_a_la_une->entity) && !empty($node->field_image_a_la_une->entity)) {
+                $curImage = $node->get('field_image_a_la_une')->get(0);
+                $fid = $curImage->target_id;
+                $file = Drupal\file\Entity\File::load($fid);
+                $image_uri = $file->url();
+                $thumb = [
+                    'src' => $image_uri,
+                    'alt' => $curImage->alt,
+                ];
+            }
+
+            if (isset($node->field_bandeau->entity) && !empty($node->field_bandeau->entity)) {
+                $curImage = $node->get('field_bandeau')->get(0);
+                $fid = $curImage->target_id;
+                $file = Drupal\file\Entity\File::load($fid);
+                $image_uri = $file->url();
+                $thumb = [
+                    'src' => $image_uri,
+                    'alt' => $curImage->alt,
+                ];
+            }
+            $variables['ubl_thumb'] = _ubl_var('ubl_thumb', $thumb);
+            /************************/
+        }
+        if ($bundle == 'article') {
+            $thumb = false;
+            if (isset($node->field_image->entity) && !empty($node->field_image->entity)) {
+                $curImage = $node->get('field_image')->get(0);
+                $fid = $curImage->target_id;
+                $file = Drupal\file\Entity\File::load($fid);
+                $image_uri = $file->url();
+                $thumb = [
+                    'src' => $image_uri,
+                    'alt' => $curImage->alt,
+                ];
+            }
+            /************************/
+            if (isset($node->field_bandeau->entity) && !empty($node->field_bandeau->entity)) {
+                $curImage = $node->get('field_bandeau')->get(0);
+                $fid = $curImage->target_id;
+                $file = Drupal\file\Entity\File::load($fid);
+                $image_uri = $file->url();
+                $thumb = [
+                    'src' => $image_uri,
+                    'alt' => $curImage->alt,
+                ];
+            }
+            /************************/
+            $variables['ubl_thumb'] = _ubl_var('ubl_thumb', $thumb);
+            /************************/
+//            $variables['ubl_parent'] = _ubl_var('ubl_parent', [
+//                'title' => $node->get('field_tags')->entity->label(),
+//            ]);
+            $variables['ubl_parent'] = _ubl_var('ubl_parent', [
+                'title' => 'Actualités et chroniques',
+            ]);
+        }
+        if ($bundle == 'dossiers') {
+            $thumb = false;
+            if (isset($node->field_image->entity) && !empty($node->field_image->entity)) {
+                $curImage = $node->get('field_image')->get(0);
+                $fid = $curImage->target_id;
+                $file = Drupal\file\Entity\File::load($fid);
+                $image_uri = $file->url();
+                $thumb = [
+                    'src' => $image_uri,
+                    'alt' => $curImage->alt,
+                ];
+            }
+            /************************/
+            if (isset($node->field_bandeau->entity) && !empty($node->field_bandeau->entity)) {
+                $curImage = $node->get('field_bandeau')->get(0);
+                $fid = $curImage->target_id;
+                $file = Drupal\file\Entity\File::load($fid);
+                $image_uri = $file->url();
+                $thumb = [
+                    'src' => $image_uri,
+                    'alt' => $curImage->alt,
+                ];
+            }
+            /************************/
+            $variables['ubl_thumb'] = _ubl_var('ubl_thumb', $thumb);
+            /************************/
+            $variables['ubl_parent'] = _ubl_var('ubl_parent', [
+                'title' => 'Actualités et chroniques',
+            ]);
+        }
+        if ($bundle == 'etablissements') {
+            /************************/
+            $variables['ubl_parent'] = _ubl_var('ubl_parent', [
+//                'title' => $node->get('field_categorie')->entity->label(),
+                'title' => 'Membres',
+            ]);
+        }
+        if ($bundle == 'ubl_events') {
+            $thumb = false;
+            if (isset($node->field_miniature->entity) && !empty($node->field_miniature->entity)) {
+                $curImage = $node->get('field_miniature')->get(0);
+                $fid = $curImage->target_id;
+                $file = Drupal\file\Entity\File::load($fid);
+                $image_uri = $file->url();
+                $thumb = [
+                    'src' => $image_uri,
+                    'alt' => $curImage->alt,
+                ];
+            }
+            /************************/
+            if (isset($node->field_bandeau->entity) && !empty($node->field_bandeau->entity)) {
+                $curImage = $node->get('field_bandeau')->get(0);
+                $fid = $curImage->target_id;
+                $file = Drupal\file\Entity\File::load($fid);
+                $image_uri = $file->url();
+                $thumb = [
+                    'src' => $image_uri,
+                    'alt' => $curImage->alt,
+                ];
+            }
+            /************************/
+            $variables['ubl_thumb'] = _ubl_var('ubl_thumb', $thumb);
+            /************************/
+            $variables['ubl_parent'] = _ubl_var('ubl_parent', [
+                'title' => $node->get('field_categorie')->entity->label(),
+            ]);
+        }
+        if ($bundle == 'portraits') {
+            $thumb = false;
+            if (isset($node->field_image->entity) && !empty($node->field_image->entity)) {
+                $curImage = $node->get('field_image')->get(0);
+                $fid = $curImage->target_id;
+                $file = Drupal\file\Entity\File::load($fid);
+                $image_uri = $file->url();
+                $thumb = [
+                    'src' => $image_uri,
+                    'alt' => $curImage->alt,
+                ];
+            }
+            /************************/
+            if (isset($node->field_bandeau->entity) && !empty($node->field_bandeau->entity)) {
+                $curImage = $node->get('field_bandeau')->get(0);
+                $fid = $curImage->target_id;
+                $file = Drupal\file\Entity\File::load($fid);
+                $image_uri = $file->url();
+                $thumb = [
+                    'src' => $image_uri,
+                    'alt' => $curImage->alt,
+                ];
+            }
+            /************************/
+            $variables['ubl_thumb'] = _ubl_var('ubl_thumb', $thumb);
+            /************************/
+            $variables['ubl_parent'] = _ubl_var('ubl_parent', [
+                'title' => 'Actualités et chroniques',
+            ]);
+        }
+        if ($bundle == 'reportages') {
+            $thumb = false;
+            if (isset($node->field_image->entity) && !empty($node->field_image->entity)) {
+                $curImage = $node->get('field_image')->get(0);
+                $fid = $curImage->target_id;
+                $file = Drupal\file\Entity\File::load($fid);
+                $image_uri = $file->url();
+                $thumb = [
+                    'src' => $image_uri,
+                    'alt' => $curImage->alt,
+                ];
+            }
+            /************************/
+            if (isset($node->field_bandeau->entity) && !empty($node->field_bandeau->entity)) {
+                $curImage = $node->get('field_bandeau')->get(0);
+                $fid = $curImage->target_id;
+                $file = Drupal\file\Entity\File::load($fid);
+                $image_uri = $file->url();
+                $thumb = [
+                    'src' => $image_uri,
+                    'alt' => $curImage->alt,
+                ];
+            }
+            /************************/
+            $variables['ubl_thumb'] = _ubl_var('ubl_thumb', $thumb);
+            /************************/
+            $variables['ubl_parent'] = _ubl_var('ubl_parent', [
+                'title' => 'Actualités et chroniques',
+            ]);
+        }
+        if ($bundle == 'services') {
+            /************************/
+            $variables['ubl_parent'] = _ubl_var('ubl_parent', [
+//                'title' => $node->get('field_categorie')->entity->label(),
+                'title' => 'Offre de services',
+            ]);
+        }
+        /********************************************************/
+        $is_front_page = \Drupal::service('path.matcher')->isFrontPage();
+        if ($is_front_page) {
+            /**
+             * Slider sur homepage
+             */
+            // Récupération des slides
+            $storage = \Drupal::entityTypeManager()->getStorage('node');
+            $nids = $storage->getQuery()
+                ->condition('type', 'slider')
+                ->condition('status', 1)
+                ->sort('created', 'DESC')
+                ->range(0, 5)
+                ->execute();
+            if (!empty($nids)) {
+                $slides = $storage->loadMultiple($nids);
+                if (is_array($slides)) {
+                    foreach ($slides as $slide) {
+
+                        $thumb = false;
+                        if (isset($slide->field_miniature->entity) && !empty($slide->field_miniature->entity)) {
+                            $curImage = $slide->get('field_miniature')->get(0);
+                            $fid = $curImage->target_id;
+                            $file = Drupal\file\Entity\File::load($fid);
+                            $image_uri = Drupal\image\Entity\ImageStyle::load('185x90')->buildUrl($file->getFileUri());
+                            $thumb = [
+                                'src' => $image_uri,
+                                'alt' => $curImage->alt,
+                            ];
+                        } elseif (isset($slide->field_image->entity) && !empty($slide->field_image->entity)) {
+                            $curImage = $slide->get('field_image')->get(0);
+                            $fid = $curImage->target_id;
+                            $file = Drupal\file\Entity\File::load($fid);
+                            $image_uri = Drupal\image\Entity\ImageStyle::load('185x90')->buildUrl($file->getFileUri());
+                            $thumb = [
+                                'src' => $image_uri,
+                                'alt' => $curImage->alt,
+                            ];
+                        }
+
+                        // ID de la page cible
+                        $tarId = $slide->get('field_url')->get(0)->target_id;
+                        $tarUrl = false;
+
+                        if ($tarId && $tarId > 0) {
+                            $storage = \Drupal::entityTypeManager()->getStorage('node');
+                            $tarPage = $storage->load($tarId);
+                            $tarUrl = $tarPage->urlInfo('canonical');
+                        }
+
+                        $variables['ubl_slides'][] = [
+                            'title' => $slide->getTitle(),
+                            'body' => $slide->body->value,
+                            'excerpt' => $slide->body->summary,
+                            'url' => $tarUrl,
+                            'image' => [
+                                'src' => $slide->field_image->entity->url(),
+                                'alt' => $slide->field_image->alt,
+                            ],
+                            'thumb' => $thumb,
+                        ];
+
+                    }
+                }
+            }
+
+        }
+        /********************************************************/
+
+    }
+
+    $theme = \Drupal::theme()->getActiveTheme()->getName();
+    $variables['theme_path'] = drupal_get_path('theme', $theme);
+}
+
+function ubl_preprocess_region(&$variables)
+{
+    if ($variables['region'] == 'contenttop') {
+
+    }
+}
+
+function ubl_preprocess_field(&$variables, $hook)
+{
+    $element = $variables['element'];
+    if ($element['#bundle'] == 'page' && $element['#field_name'] == 'title') {
+        $variables['ubl_parent'] = [
+            'title' => 'test',
+        ];
+        $variables['parenttitle'] = 'test';
+    }
+
+//    echo $element['#field_name'];
+    if ($element['#bundle'] == 'ubl_events' && $element['#field_name'] == 'field_categorie') {
+        foreach ($variables['items'] as &$item) {
+            $item['itemId'] = $item['content']['#url']->getRouteParameters()['taxonomy_term'];
+        }
+    }
+
+    if ($element['#field_name'] == 'field_tags' || $element['#field_name'] == 'field_categorie') {
+        foreach ($variables['items'] as &$item) {
+            $item['itemId'] = $item['content']['#url']->getRouteParameters()['taxonomy_term'];
+        }
+    }
+}
+
+function ubl_preprocess_node(&$variables)
+{
+    $variables['ubl_submenu_title'] = _ubl_var('ubl_submenu_title');
+    $variables['ubl_submenu'] = _ubl_var('ubl_submenu');
+
+    $node = $variables['node'];
+    $bundle = $node->bundle();
+
+    if ($bundle == 'etablissements') {
+        // Récupere la liste des ecole de la meme categorie
+        $cat_ecole_id = $node->get('field_categorie')[0]->getValue()['target_id'];
+        $tAMenu = _ubl_get_subEtablissementsMenu($cat_ecole_id);
+        $variables['ubl_submenu'] = _ubl_var('ubl_submenu', $tAMenu);
+        $tIAMenu = reset($tAMenu);
+        $variables['ubl_submenu_title'] = _ubl_var('ubl_submenu_title', $tIAMenu['cat']);
+
+
+        $storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+        $curTerm = $storage->load($cat_ecole_id);
+        $catIcon = $curTerm->get('field_picto');
+        $fid = $catIcon->target_id;
+        $file = Drupal\file\Entity\File::load($fid);
+        if (is_object($file)) {
+            $image_uri = $file->url();
+            $variables['ubl_submenu_title_icon'] = _ubl_var('ubl_submenu_title_icon', $image_uri);
+        } else {
+        }
+    } elseif ($bundle == 'services') {
+        // Récupere la liste des servies de la meme categorie
+        $cat_serv_id = $node->get('field_categorie')[0]->getValue()['target_id'];
+
+        $tAMenu = _ubl_get_subServicesMenu($cat_serv_id);
+        $variables['ubl_submenu'] = _ubl_var('ubl_submenu', $tAMenu);
+        $tIAMenu = reset($tAMenu);
+        $variables['ubl_submenu_title'] = _ubl_var('ubl_submenu_title', $tIAMenu['cat']);
+
+        $storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+        $curTerm = $storage->load($cat_serv_id);
+        $catIcon = $curTerm->get('field_picto');
+        $fid = $catIcon->target_id;
+        $file = Drupal\file\Entity\File::load($fid);
+        $image_uri = $file->url();
+        $variables['ubl_submenu_title_icon'] = _ubl_var('ubl_submenu_title_icon', $image_uri);
+    }
+
+}
+
+function ubl_preprocess_page_title(&$variables)
+{
+    $variables['ubl_parent'] = _ubl_var('ubl_parent');
+    $variables['ubl_thumb'] = _ubl_var('ubl_thumb');
+    $variables['ubl_children'] = _ubl_var('ubl_children');
+}
+
+function ubl_preprocess_block(&$variables)
+{
+}
+
+/*********************/
+
+function _ubl_get_subEtablissementsMenu($termId)
+{
+    $r = false;
+    // Récupération des ecoles
+    $storage = \Drupal::entityTypeManager()->getStorage('node');
+    $nids = $storage->getQuery()
+        ->condition('type', 'etablissements')
+        ->condition('status', 1)
+        ->condition('field_categorie', $termId)
+//            ->range(0, 3)
+        ->execute();
+    if (!empty($nids)) {
+        $etablissements = $storage->loadMultiple($nids);
+
+        if (is_array($etablissements)) {
+            foreach ($etablissements as $etablissement) {
+                $r[] = [
+                    'title' => $etablissement->getTitle(),
+                    'body' => $etablissement->body->value,
+                    'excerpt' => $etablissement->body->summary,
+                    'cat' => $etablissement->field_categorie->entity->label(),
+                    'url' => $etablissement->urlInfo('canonical'),
+//                        'thumb' => [
+//                            'src' => $etablissement->field_image->entity->url(),
+//                            'alt' => $etablissement->field_image->alt,
+//                        ],
+                ];
+            }
+            return $r;
+        }
+    }
+    return false;
+}
+
+function _ubl_get_subServicesMenu($termId)
+{
+    $r = false;
+    // Récupération des services
+    $storage = \Drupal::entityTypeManager()->getStorage('node');
+    $nids = $storage->getQuery()
+        ->condition('type', 'services')
+        ->condition('status', 1)
+        ->condition('field_categorie', $termId)
+//            ->range(0, 3)
+        ->execute();
+    if (!empty($nids)) {
+        $etablissements = $storage->loadMultiple($nids);
+
+        if (is_array($etablissements)) {
+            foreach ($etablissements as $etablissement) {
+                $r[] = [
+                    'title' => $etablissement->getTitle(),
+                    'body' => $etablissement->body->value,
+                    'excerpt' => $etablissement->body->summary,
+                    'cat' => $etablissement->field_categorie->entity->label(),
+                    'url' => $etablissement->urlInfo('canonical'),
+//                        'thumb' => [
+//                            'src' => $etablissement->field_image->entity->url(),
+//                            'alt' => $etablissement->field_image->alt,
+//                        ],
+                ];
+            }
+            return $r;
+        }
+    }
+    return false;
+}
+
+function _auto_link_text($text)
+{
+
+    //Motifs permettant de retrouver les éléments à remplacer
+    $in = array(
+        '`((?:https?|ftp)://\S+?)(?=[[:punct:]]?(?:\s|\Z)|\Z)`',
+    );
+    //Les chaînes qui vont remplacer les éléments repérés
+    $out = array(
+        '<a href="$1" title="$1" target="_blank">$1</a>',
+    );
+    // on éxécute l'expression régulière et on retourne le texte formaté
+    $text = preg_replace($in, $out, $text);
+    return $text;
+}
