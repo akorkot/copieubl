@@ -1,0 +1,24 @@
+uuid: 1619168f-6f48-41d7-a7c5-bb9045bc58f3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - ubl
+id: ubl_main_menu
+theme: ubl
+region: menu_primary
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navigation principale'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 3
+visibility: {  }

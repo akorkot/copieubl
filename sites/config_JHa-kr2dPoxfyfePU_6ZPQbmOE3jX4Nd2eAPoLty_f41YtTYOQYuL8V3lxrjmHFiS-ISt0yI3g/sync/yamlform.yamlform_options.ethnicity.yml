@@ -1,0 +1,7 @@
+uuid: ce03083e-bdf9-4eae-b92f-47747bd53222
+langcode: fr
+status: true
+dependencies: {  }
+id: ethnicity
+label: Ethnicity
+options: "Caucasian: Caucasian\n'Latino/Hispanic': 'Latino/Hispanic'\n'Middle Eastern': 'Middle Eastern'\nAfrican: African\nCaribbean: Caribbean\n'South Asian': 'South Asian'\n'East Asian': 'East Asian'\nMixed: Mixed\n"

@@ -1,0 +1,54 @@
+uuid: be41f046-e63f-483d-9a36-5481f6855fa9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.type_etablissement.field_picto
+    - image.style.thumbnail
+    - taxonomy.vocabulary.type_etablissement
+  module:
+    - image
+    - path
+    - text
+id: taxonomy_term.type_etablissement.default
+targetEntityType: taxonomy_term
+bundle: type_etablissement
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_picto:
+    weight: 31
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

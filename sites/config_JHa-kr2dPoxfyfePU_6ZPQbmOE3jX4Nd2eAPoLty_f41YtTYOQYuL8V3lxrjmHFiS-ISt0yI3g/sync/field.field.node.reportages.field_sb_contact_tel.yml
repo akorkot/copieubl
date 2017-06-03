@@ -1,0 +1,19 @@
+uuid: c26df380-8ca5-4572-8056-86edd33bdac2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact_tel
+    - node.type.reportages
+id: node.reportages.field_sb_contact_tel
+field_name: field_sb_contact_tel
+entity_type: node
+bundle: reportages
+label: Tél.
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

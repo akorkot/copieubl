@@ -1,0 +1,96 @@
+uuid: 4eb489df-f6a7-4f1b-8456-442e5dfd1438
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ubl_events.body
+    - field.field.node.ubl_events.field__sb_twitter_account
+    - field.field.node.ubl_events.field_adresse_complete
+    - field.field.node.ubl_events.field_bandeau
+    - field.field.node.ubl_events.field_categorie
+    - field.field.node.ubl_events.field_date
+    - field.field.node.ubl_events.field_date_fin
+    - field.field.node.ubl_events.field_ecole
+    - field.field.node.ubl_events.field_miniature
+    - field.field.node.ubl_events.field_sb_actus_active
+    - field.field.node.ubl_events.field_sb_actus_tags
+    - field.field.node.ubl_events.field_sb_contact2_email
+    - field.field.node.ubl_events.field_sb_contact2_name
+    - field.field.node.ubl_events.field_sb_contact2_tel
+    - field.field.node.ubl_events.field_sb_contact3_email
+    - field.field.node.ubl_events.field_sb_contact3_name
+    - field.field.node.ubl_events.field_sb_contact3_tel
+    - field.field.node.ubl_events.field_sb_contact4_email
+    - field.field.node.ubl_events.field_sb_contact4_name
+    - field.field.node.ubl_events.field_sb_contact4_tel
+    - field.field.node.ubl_events.field_sb_contact5_email
+    - field.field.node.ubl_events.field_sb_contact5_name
+    - field.field.node.ubl_events.field_sb_contact5_tel
+    - field.field.node.ubl_events.field_sb_contact_active
+    - field.field.node.ubl_events.field_sb_contact_email
+    - field.field.node.ubl_events.field_sb_contact_name
+    - field.field.node.ubl_events.field_sb_contact_tel
+    - field.field.node.ubl_events.field_sb_downloads_active
+    - field.field.node.ubl_events.field_sb_downloads_files
+    - field.field.node.ubl_events.field_sb_services_active
+    - field.field.node.ubl_events.field_sb_services_pages
+    - field.field.node.ubl_events.field_sb_twitter_active
+    - field.field.node.ubl_events.field_sb_video_active
+    - field.field.node.ubl_events.field_sb_video_url
+    - node.type.ubl_events
+  module:
+    - text
+    - user
+id: node.ubl_events.teaser
+targetEntityType: node
+bundle: ubl_events
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field__sb_twitter_account: true
+  field_adresse_complete: true
+  field_bandeau: true
+  field_categorie: true
+  field_date: true
+  field_date_fin: true
+  field_ecole: true
+  field_miniature: true
+  field_sb_actus_active: true
+  field_sb_actus_tags: true
+  field_sb_contact2_email: true
+  field_sb_contact2_name: true
+  field_sb_contact2_tel: true
+  field_sb_contact3_email: true
+  field_sb_contact3_name: true
+  field_sb_contact3_tel: true
+  field_sb_contact4_email: true
+  field_sb_contact4_name: true
+  field_sb_contact4_tel: true
+  field_sb_contact5_email: true
+  field_sb_contact5_name: true
+  field_sb_contact5_tel: true
+  field_sb_contact_active: true
+  field_sb_contact_email: true
+  field_sb_contact_name: true
+  field_sb_contact_tel: true
+  field_sb_downloads_active: true
+  field_sb_downloads_files: true
+  field_sb_services_active: true
+  field_sb_services_pages: true
+  field_sb_twitter_active: true
+  field_sb_video_active: true
+  field_sb_video_url: true
+  langcode: true

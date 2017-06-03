@@ -1,0 +1,20 @@
+uuid: 71b5de74-657a-4657-a018-dff6c556a97e
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ubl
+id: ubl_content
+theme: ubl
+region: content
+weight: -10
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenu de la page principale'
+  provider: system
+  label_display: '0'
+visibility: {  }

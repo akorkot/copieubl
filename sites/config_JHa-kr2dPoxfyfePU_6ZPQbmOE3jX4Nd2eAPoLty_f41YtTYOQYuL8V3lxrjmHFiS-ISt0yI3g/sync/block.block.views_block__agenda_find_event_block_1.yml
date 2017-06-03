@@ -1,0 +1,30 @@
+uuid: 10bb5a07-8cbb-41d0-81d2-7a1518385df5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.agenda_find_event
+  module:
+    - system
+    - views
+  theme:
+    - ubl
+id: views_block__agenda_find_event_block_1
+theme: ubl
+region: content
+weight: -13
+provider: null
+plugin: 'views_block:agenda_find_event-block_1'
+settings:
+  id: 'views_block:agenda_find_event-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /agenda2
+    negate: false
+    context_mapping: {  }

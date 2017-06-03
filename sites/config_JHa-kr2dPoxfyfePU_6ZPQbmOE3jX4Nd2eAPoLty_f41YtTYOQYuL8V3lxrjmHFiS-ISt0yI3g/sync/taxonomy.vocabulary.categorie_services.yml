@@ -1,0 +1,9 @@
+uuid: 9ff739b1-c6cc-4e45-9d00-a867536b49e7
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Catégorie de services'
+vid: categorie_services
+description: ''
+hierarchy: 0
+weight: 0

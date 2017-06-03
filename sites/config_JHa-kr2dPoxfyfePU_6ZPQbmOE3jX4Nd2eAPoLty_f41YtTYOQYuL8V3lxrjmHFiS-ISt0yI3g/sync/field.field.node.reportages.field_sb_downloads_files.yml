@@ -1,0 +1,27 @@
+uuid: 6c53ebca-1378-4788-9000-a60a1a4a3441
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_downloads_files
+    - node.type.reportages
+  module:
+    - file
+id: node.reportages.field_sb_downloads_files
+field_name: field_sb_downloads_files
+entity_type: node
+bundle: reportages
+label: Fichier
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'sidebar/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt doc pdf docx xls xlsx odt'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

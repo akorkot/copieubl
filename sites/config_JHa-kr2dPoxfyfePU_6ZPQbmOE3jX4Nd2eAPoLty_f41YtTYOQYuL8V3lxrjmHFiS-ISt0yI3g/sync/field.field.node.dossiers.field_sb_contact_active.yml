@@ -1,0 +1,23 @@
+uuid: 0bd3c452-2df9-4291-a031-4955f37e26a5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact_active
+    - node.type.dossiers
+id: node.dossiers.field_sb_contact_active
+field_name: field_sb_contact_active
+entity_type: node
+bundle: dossiers
+label: 'Activer ?'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

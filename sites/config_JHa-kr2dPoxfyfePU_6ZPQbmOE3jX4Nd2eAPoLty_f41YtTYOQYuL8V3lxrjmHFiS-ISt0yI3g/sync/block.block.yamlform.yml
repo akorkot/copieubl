@@ -1,0 +1,22 @@
+uuid: 2b43951d-63c2-42e9-a11c-28ef6857c2c7
+langcode: fr
+status: true
+dependencies:
+  module:
+    - yamlform
+  theme:
+    - ubl
+id: yamlform
+theme: ubl
+region: hp_events_submit
+weight: -20
+provider: null
+plugin: yamlform_block
+settings:
+  id: yamlform_block
+  label: 'YAML form'
+  provider: yamlform
+  label_display: '0'
+  yamlform_id: event_submission
+  default_data: ''
+visibility: {  }

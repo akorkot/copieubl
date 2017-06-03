@@ -1,0 +1,9 @@
+uuid: 9a4fec77-21d3-4812-83e5-8e33920ad4fd
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Catégorie reportage'
+vid: categorie_reportage
+description: ''
+hierarchy: 0
+weight: 0

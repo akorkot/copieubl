@@ -1,0 +1,7 @@
+uuid: bf21aa8e-c507-4426-9300-ce3969b2779e
+langcode: fr
+status: true
+dependencies: {  }
+id: likert_importance
+label: 'Likert: Importance'
+options: "1: Not at all Important\n2: Somewhat Important\n3: Neutral\n4: Important\n5: Very Important\n"

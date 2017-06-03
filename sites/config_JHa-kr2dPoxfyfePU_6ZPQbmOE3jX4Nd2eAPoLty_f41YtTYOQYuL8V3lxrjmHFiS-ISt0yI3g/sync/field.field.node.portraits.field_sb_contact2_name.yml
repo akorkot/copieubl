@@ -1,0 +1,19 @@
+uuid: 6d8035f1-aa2f-42cb-bc03-0378009021cd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact2_name
+    - node.type.portraits
+id: node.portraits.field_sb_contact2_name
+field_name: field_sb_contact2_name
+entity_type: node
+bundle: portraits
+label: 'Nom du contact 2'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

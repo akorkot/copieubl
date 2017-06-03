@@ -1,0 +1,9 @@
+uuid: b50e2020-941c-45ee-9200-d803fa261aab
+langcode: fr
+status: true
+dependencies: {  }
+name: Ecole
+vid: ecole
+description: ''
+hierarchy: 0
+weight: 0

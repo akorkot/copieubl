@@ -1,0 +1,4 @@
+interface:
+  default: php_mail
+  yamlform: yamlform_php_mail
+langcode: fr

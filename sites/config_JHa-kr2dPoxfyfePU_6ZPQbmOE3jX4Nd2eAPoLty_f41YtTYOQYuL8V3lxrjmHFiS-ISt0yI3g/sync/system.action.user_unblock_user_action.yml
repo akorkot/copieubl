@@ -1,0 +1,11 @@
+uuid: 0e94f1e5-9fe0-48d3-a18a-547be3412265
+langcode: fr
+status: true
+dependencies:
+  module:
+    - user
+id: user_unblock_user_action
+label: 'Débloquer le(s) utilisateur(s) sélectionné(s)'
+type: user
+plugin: user_unblock_user_action
+configuration: {  }

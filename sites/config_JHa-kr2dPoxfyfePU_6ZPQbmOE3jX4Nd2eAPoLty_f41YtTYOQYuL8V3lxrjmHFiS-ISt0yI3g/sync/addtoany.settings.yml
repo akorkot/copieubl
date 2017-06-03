@@ -1,0 +1,9 @@
+additional_css: ''
+additional_html: "<a class=\"a2a_button_facebook\"></a>\r\n<a class=\"a2a_button_twitter\"></a>\r\n<a class=\"a2a_button_google_plus\"></a>\r\n"
+additional_js: ''
+buttons_size: 24
+custom_universal_button: ''
+universal_button: default
+universal_button_placement: before
+no_3p: false
+langcode: fr

@@ -1,0 +1,19 @@
+uuid: 87e183cb-282d-4f08-9108-8d9040117808
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact_name
+    - node.type.article
+id: node.article.field_sb_contact_name
+field_name: field_sb_contact_name
+entity_type: node
+bundle: article
+label: 'Nom du contact'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

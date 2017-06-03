@@ -1,0 +1,11 @@
+uuid: 2aa2e536-8320-4db8-8f59-308dc491828a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categorie_dossiers
+id: taxonomy_term.categorie_dossiers
+target_entity_type_id: taxonomy_term
+target_bundle: categorie_dossiers
+default_langcode: site_default
+language_alterable: false

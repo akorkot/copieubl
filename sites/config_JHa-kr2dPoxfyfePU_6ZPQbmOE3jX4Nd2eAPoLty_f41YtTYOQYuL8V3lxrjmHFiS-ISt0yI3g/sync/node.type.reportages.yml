@@ -1,0 +1,18 @@
+uuid: 32533ff7-a1a7-4652-9223-34e11778ca31
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Reportages
+type: reportages
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,27 @@
+uuid: baa71cee-08ca-4ac9-af16-cf0efeaabee4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_downloads_files
+    - node.type.page
+  module:
+    - file
+id: node.page.field_sb_downloads_files
+field_name: field_sb_downloads_files
+entity_type: node
+bundle: page
+label: Fichier
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'sidebar/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt doc pdf docx xls xlsx odt'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

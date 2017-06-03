@@ -1,0 +1,11 @@
+uuid: d73a8065-ece2-4e37-a00a-9950d27ed517
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.portraits
+id: node.portraits
+target_entity_type_id: node
+target_bundle: portraits
+default_langcode: site_default
+language_alterable: false

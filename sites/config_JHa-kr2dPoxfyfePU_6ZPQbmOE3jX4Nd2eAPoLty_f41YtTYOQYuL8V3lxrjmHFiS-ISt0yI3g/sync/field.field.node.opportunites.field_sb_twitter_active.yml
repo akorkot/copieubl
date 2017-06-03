@@ -1,0 +1,23 @@
+uuid: 5cfaab22-841d-43f6-a241-651e61201d4b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_twitter_active
+    - node.type.opportunites
+id: node.opportunites.field_sb_twitter_active
+field_name: field_sb_twitter_active
+entity_type: node
+bundle: opportunites
+label: 'Activer ?'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

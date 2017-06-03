@@ -1,0 +1,23 @@
+uuid: 0d0acd4d-8a60-4e06-9500-d3673e5cb2d0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_services_active
+    - node.type.opportunites
+id: node.opportunites.field_sb_services_active
+field_name: field_sb_services_active
+entity_type: node
+bundle: opportunites
+label: 'Activer ?'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

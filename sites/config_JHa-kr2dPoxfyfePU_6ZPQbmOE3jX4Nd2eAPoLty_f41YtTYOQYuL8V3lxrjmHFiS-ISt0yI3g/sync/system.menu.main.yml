@@ -1,0 +1,8 @@
+uuid: 622735b5-f2dc-45b7-a34b-36f12dedff1a
+langcode: fr
+status: true
+dependencies: {  }
+id: main
+label: 'Navigation principale'
+description: 'Liens de section du site'
+locked: true

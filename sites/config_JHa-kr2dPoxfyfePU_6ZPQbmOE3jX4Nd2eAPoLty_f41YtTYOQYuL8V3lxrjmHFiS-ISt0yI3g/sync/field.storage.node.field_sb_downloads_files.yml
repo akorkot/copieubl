@@ -1,0 +1,23 @@
+uuid: 7411fe1c-5d72-426c-ab4f-2e90d07a7398
+langcode: fr
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_sb_downloads_files
+field_name: field_sb_downloads_files
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

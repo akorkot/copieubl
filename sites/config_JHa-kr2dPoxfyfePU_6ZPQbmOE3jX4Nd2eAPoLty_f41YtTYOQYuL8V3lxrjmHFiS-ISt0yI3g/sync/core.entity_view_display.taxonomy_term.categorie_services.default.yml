@@ -1,0 +1,33 @@
+uuid: f60953f9-a4f4-4c91-9c2a-42236c1ef0c2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.categorie_services.field_picto
+    - taxonomy.vocabulary.categorie_services
+  module:
+    - image
+    - text
+id: taxonomy_term.categorie_services.default
+targetEntityType: taxonomy_term
+bundle: categorie_services
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_picto:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true

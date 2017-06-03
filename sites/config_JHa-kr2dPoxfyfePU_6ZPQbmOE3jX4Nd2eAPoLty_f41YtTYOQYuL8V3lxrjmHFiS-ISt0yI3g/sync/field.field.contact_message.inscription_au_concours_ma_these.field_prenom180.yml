@@ -1,0 +1,19 @@
+uuid: cd11f71c-0b74-4026-8606-6aa1b91a9e0b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - contact.form.inscription_au_concours_ma_these
+    - field.storage.contact_message.field_prenom180
+id: contact_message.inscription_au_concours_ma_these.field_prenom180
+field_name: field_prenom180
+entity_type: contact_message
+bundle: inscription_au_concours_ma_these
+label: Prénom
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

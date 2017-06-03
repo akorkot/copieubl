@@ -1,0 +1,20 @@
+uuid: ff7d2fc1-70f6-4b80-befb-2c3c974e4dcb
+langcode: fr
+status: false
+dependencies:
+  theme:
+    - ubl
+id: ubl_local_tasks
+theme: ubl
+region: header
+weight: -16
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Onglets
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

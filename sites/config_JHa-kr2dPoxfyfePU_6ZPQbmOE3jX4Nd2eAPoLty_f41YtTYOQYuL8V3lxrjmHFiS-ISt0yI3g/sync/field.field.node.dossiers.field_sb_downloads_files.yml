@@ -1,0 +1,27 @@
+uuid: 8cb622c5-1374-4a38-9108-8e8e1ee9a80a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_downloads_files
+    - node.type.dossiers
+  module:
+    - file
+id: node.dossiers.field_sb_downloads_files
+field_name: field_sb_downloads_files
+entity_type: node
+bundle: dossiers
+label: Fichier
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'sidebar/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt doc pdf docx xls xlsx odt'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

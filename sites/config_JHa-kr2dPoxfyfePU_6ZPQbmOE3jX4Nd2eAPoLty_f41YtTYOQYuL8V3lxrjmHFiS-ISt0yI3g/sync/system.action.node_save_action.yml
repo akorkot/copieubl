@@ -1,0 +1,11 @@
+uuid: df4a7fcb-e2b7-4e6e-88d2-8b963f13c568
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node_save_action
+label: 'Enregistrer un contenu'
+type: node
+plugin: node_save_action
+configuration: {  }

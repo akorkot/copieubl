@@ -1,0 +1,8 @@
+uuid: 20dd626e-f48b-42c0-8bfd-7f98e2f120d0
+langcode: fr
+status: true
+dependencies: {  }
+id: menu-top
+label: 'Menu top'
+description: 'Menu barre haute de la page'
+locked: false

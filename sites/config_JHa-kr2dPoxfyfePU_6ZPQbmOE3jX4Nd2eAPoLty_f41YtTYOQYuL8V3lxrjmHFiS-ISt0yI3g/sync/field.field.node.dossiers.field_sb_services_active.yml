@@ -1,0 +1,23 @@
+uuid: 2612ff91-e6c2-47ba-bd1e-303fa951d40a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_services_active
+    - node.type.dossiers
+id: node.dossiers.field_sb_services_active
+field_name: field_sb_services_active
+entity_type: node
+bundle: dossiers
+label: 'Activer ?'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

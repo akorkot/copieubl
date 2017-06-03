@@ -1,0 +1,20 @@
+uuid: 3a69ee19-2837-4a81-af54-2f01d4890e39
+langcode: fr
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - ubl
+id: ubl_powered
+theme: ubl
+region: header
+weight: -14
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Propulsé par Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

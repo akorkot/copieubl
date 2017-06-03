@@ -1,0 +1,24 @@
+uuid: 13b06b69-c09d-4eca-b206-6e2acd31f4e9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.categories_services_hp
+  module:
+    - views
+  theme:
+    - ubl
+id: views_block__categories_services_hp_block_1
+theme: ubl
+region: hp_services
+weight: -17
+provider: null
+plugin: 'views_block:categories_services_hp-block_1'
+settings:
+  id: 'views_block:categories_services_hp-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

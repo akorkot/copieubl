@@ -1,0 +1,8 @@
+uuid: 60074271-6c14-48b2-96d6-a0ebad77b965
+langcode: fr
+status: true
+dependencies: {  }
+id: date_moyenne
+label: 'Date moyenne'
+locked: false
+pattern: 'j F Y'

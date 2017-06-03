@@ -1,0 +1,19 @@
+uuid: 4a47a607-d2d8-4fcc-a93a-673931f9e78b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_adresse
+    - node.type.annuaire
+id: node.annuaire.field_adresse
+field_name: field_adresse
+entity_type: node
+bundle: annuaire
+label: Adresse
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

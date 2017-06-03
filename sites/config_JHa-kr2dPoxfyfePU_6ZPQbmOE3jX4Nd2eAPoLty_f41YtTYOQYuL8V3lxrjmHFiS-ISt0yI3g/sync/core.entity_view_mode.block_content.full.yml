@@ -1,0 +1,10 @@
+uuid: 3fd80ac5-6abd-4e79-b44a-cca6d5196444
+langcode: fr
+status: false
+dependencies:
+  module:
+    - block_content
+id: block_content.full
+label: Complet
+targetEntityType: block_content
+cache: true

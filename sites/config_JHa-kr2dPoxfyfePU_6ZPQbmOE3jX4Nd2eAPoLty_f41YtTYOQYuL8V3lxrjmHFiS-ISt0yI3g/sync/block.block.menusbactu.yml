@@ -1,0 +1,35 @@
+uuid: 7ec24eb4-8046-4297-ae87-69c4552cc5c9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.menu-sb-actu
+  module:
+    - node
+    - system
+  theme:
+    - ubl
+id: menusbactu
+theme: ubl
+region: sidebar
+weight: -18
+provider: null
+plugin: 'system_menu_block:menu-sb-actu'
+settings:
+  id: 'system_menu_block:menu-sb-actu'
+  label: 'Menu SB actu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+      dossiers: dossiers
+      portraits: portraits
+      reportages: reportages
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

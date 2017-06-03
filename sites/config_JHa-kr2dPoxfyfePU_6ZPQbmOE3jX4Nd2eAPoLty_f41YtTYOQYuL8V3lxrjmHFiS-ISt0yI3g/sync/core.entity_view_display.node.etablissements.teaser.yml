@@ -1,0 +1,32 @@
+uuid: 0169d6e1-4d63-4f80-9705-5adf2f84b7b0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.etablissements.body
+    - field.field.node.etablissements.field_categorie
+    - node.type.etablissements
+  module:
+    - text
+    - user
+id: node.etablissements.teaser
+targetEntityType: node
+bundle: etablissements
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_categorie: true
+  langcode: true

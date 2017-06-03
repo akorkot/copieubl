@@ -1,0 +1,21 @@
+uuid: 83831cde-601e-4017-8c60-960b42d99265
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact_active
+    - node.type.ubl_events
+id: node.ubl_events.field_sb_contact_active
+field_name: field_sb_contact_active
+entity_type: node
+bundle: ubl_events
+label: 'Activer ?'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

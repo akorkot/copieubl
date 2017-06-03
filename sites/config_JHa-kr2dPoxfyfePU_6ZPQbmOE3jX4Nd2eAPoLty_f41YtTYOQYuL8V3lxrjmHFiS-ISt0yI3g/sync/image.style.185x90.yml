@@ -1,0 +1,14 @@
+uuid: c582c521-6b29-4f32-8b20-320a6b09c0b6
+langcode: fr
+status: true
+dependencies: {  }
+name: 185x90
+label: '185x90 "thumb slide hp"'
+effects:
+  e0cef765-e497-4885-9d03-3f4f8abce52b:
+    uuid: e0cef765-e497-4885-9d03-3f4f8abce52b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 180
+      height: 93

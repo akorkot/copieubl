@@ -1,0 +1,7 @@
+uuid: 8c1b22d1-c4be-49b0-9400-ceb888e4a355
+langcode: fr
+status: true
+dependencies: {  }
+id: creditcard_codes
+label: 'Credit card codes'
+options: "VI: 'Visa'\nMC: 'Mastercard'\nAE: 'American Express'\nDC: 'Discover'\n"

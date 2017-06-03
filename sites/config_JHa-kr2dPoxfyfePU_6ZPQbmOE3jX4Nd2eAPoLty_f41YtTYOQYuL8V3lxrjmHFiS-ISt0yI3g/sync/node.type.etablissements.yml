@@ -1,0 +1,18 @@
+uuid: 5a7e3a4b-a658-4e4b-b456-86a17b27df33
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Etablissements
+type: etablissements
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

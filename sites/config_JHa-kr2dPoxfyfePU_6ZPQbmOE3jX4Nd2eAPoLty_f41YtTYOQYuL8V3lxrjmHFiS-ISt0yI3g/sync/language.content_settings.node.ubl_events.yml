@@ -1,0 +1,11 @@
+uuid: fb57ed34-da4e-4bee-9ee6-d49cf3c1ed11
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.ubl_events
+id: node.ubl_events
+target_entity_type_id: node
+target_bundle: ubl_events
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,21 @@
+uuid: f7291f07-4d2f-4072-a806-6e639bfe2199
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field__sb_twitter_account
+    - node.type.reportages
+id: node.reportages.field__sb_twitter_account
+field_name: field__sb_twitter_account
+entity_type: node
+bundle: reportages
+label: 'Compte twitter'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: UBretagneLoire
+default_value_callback: ''
+settings: {  }
+field_type: string

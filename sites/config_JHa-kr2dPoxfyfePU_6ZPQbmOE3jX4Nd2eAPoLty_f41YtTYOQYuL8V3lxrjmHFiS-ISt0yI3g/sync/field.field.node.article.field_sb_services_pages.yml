@@ -1,0 +1,26 @@
+uuid: 749c553e-c0f3-4bd4-8808-8abe37b7f1ba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_services_pages
+    - node.type.article
+    - node.type.services
+id: node.article.field_sb_services_pages
+field_name: field_sb_services_pages
+entity_type: node
+bundle: article
+label: Pages
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      services: services
+    sort:
+      field: _none
+field_type: entity_reference

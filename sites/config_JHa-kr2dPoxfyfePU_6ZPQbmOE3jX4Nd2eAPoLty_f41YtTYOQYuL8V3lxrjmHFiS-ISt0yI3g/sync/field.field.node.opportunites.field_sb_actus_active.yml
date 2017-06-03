@@ -1,0 +1,23 @@
+uuid: 3c34d2c1-c0e0-474b-8000-a9addbc3e88b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_actus_active
+    - node.type.opportunites
+id: node.opportunites.field_sb_actus_active
+field_name: field_sb_actus_active
+entity_type: node
+bundle: opportunites
+label: 'Activer ?'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

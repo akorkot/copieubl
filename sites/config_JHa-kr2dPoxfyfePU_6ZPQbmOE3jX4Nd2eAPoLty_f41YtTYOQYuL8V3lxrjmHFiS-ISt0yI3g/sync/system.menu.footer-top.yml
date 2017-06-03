@@ -1,0 +1,8 @@
+uuid: 2d5530ad-2eac-4a77-95bf-4f421d14585d
+langcode: fr
+status: true
+dependencies: {  }
+id: footer-top
+label: 'Footer top'
+description: 'Menu à côté du logo UBL dans le footer'
+locked: false

@@ -1,0 +1,94 @@
+uuid: 0a250ca2-f89d-4ed2-8003-07d98517e935
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rss
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field__sb_twitter_account
+    - field.field.node.article.field_bandeau
+    - field.field.node.article.field_bot_crossread_active
+    - field.field.node.article.field_bot_crossread_pages
+    - field.field.node.article.field_display_bloc_now
+    - field.field.node.article.field_display_bloc_une
+    - field.field.node.article.field_image
+    - field.field.node.article.field_sb_actus_active
+    - field.field.node.article.field_sb_actus_tags
+    - field.field.node.article.field_sb_contact2_email
+    - field.field.node.article.field_sb_contact2_name
+    - field.field.node.article.field_sb_contact2_tel
+    - field.field.node.article.field_sb_contact3_email
+    - field.field.node.article.field_sb_contact3_name
+    - field.field.node.article.field_sb_contact3_tel
+    - field.field.node.article.field_sb_contact4_email
+    - field.field.node.article.field_sb_contact4_name
+    - field.field.node.article.field_sb_contact4_tel
+    - field.field.node.article.field_sb_contact5_email
+    - field.field.node.article.field_sb_contact5_name
+    - field.field.node.article.field_sb_contact5_tel
+    - field.field.node.article.field_sb_contact_active
+    - field.field.node.article.field_sb_contact_email
+    - field.field.node.article.field_sb_contact_name
+    - field.field.node.article.field_sb_contact_tel
+    - field.field.node.article.field_sb_downloads_active
+    - field.field.node.article.field_sb_downloads_files
+    - field.field.node.article.field_sb_services_active
+    - field.field.node.article.field_sb_services_pages
+    - field.field.node.article.field_sb_twitter_active
+    - field.field.node.article.field_sb_video_active
+    - field.field.node.article.field_sb_video_url
+    - field.field.node.article.field_tags
+    - node.type.article
+  module:
+    - user
+id: node.article.rss
+targetEntityType: node
+bundle: article
+mode: rss
+content:
+  addtoany:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  body: true
+  comment: true
+  field__sb_twitter_account: true
+  field_bandeau: true
+  field_bot_crossread_active: true
+  field_bot_crossread_pages: true
+  field_display_bloc_now: true
+  field_display_bloc_une: true
+  field_image: true
+  field_sb_actus_active: true
+  field_sb_actus_tags: true
+  field_sb_contact2_email: true
+  field_sb_contact2_name: true
+  field_sb_contact2_tel: true
+  field_sb_contact3_email: true
+  field_sb_contact3_name: true
+  field_sb_contact3_tel: true
+  field_sb_contact4_email: true
+  field_sb_contact4_name: true
+  field_sb_contact4_tel: true
+  field_sb_contact5_email: true
+  field_sb_contact5_name: true
+  field_sb_contact5_tel: true
+  field_sb_contact_active: true
+  field_sb_contact_email: true
+  field_sb_contact_name: true
+  field_sb_contact_tel: true
+  field_sb_downloads_active: true
+  field_sb_downloads_files: true
+  field_sb_services_active: true
+  field_sb_services_pages: true
+  field_sb_twitter_active: true
+  field_sb_video_active: true
+  field_sb_video_url: true
+  field_tags: true
+  langcode: true

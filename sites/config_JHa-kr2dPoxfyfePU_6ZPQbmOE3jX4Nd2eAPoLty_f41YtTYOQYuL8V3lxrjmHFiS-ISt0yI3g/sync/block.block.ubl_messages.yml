@@ -1,0 +1,20 @@
+uuid: f56fbaa7-d307-416c-bbf1-4cfad5e755e7
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ubl
+id: ubl_messages
+theme: ubl
+region: contenttop
+weight: -14
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Messages de statut'
+  provider: system
+  label_display: '0'
+visibility: {  }

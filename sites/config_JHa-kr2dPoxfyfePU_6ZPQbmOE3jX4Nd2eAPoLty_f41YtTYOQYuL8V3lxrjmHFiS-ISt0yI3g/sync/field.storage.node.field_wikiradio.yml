@@ -1,0 +1,20 @@
+uuid: c09df82e-c9de-4fa6-aa1c-dca38c8780f5
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_wikiradio
+field_name: field_wikiradio
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

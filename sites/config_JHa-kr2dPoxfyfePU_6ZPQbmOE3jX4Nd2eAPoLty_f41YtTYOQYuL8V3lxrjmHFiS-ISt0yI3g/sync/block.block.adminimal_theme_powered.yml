@@ -1,0 +1,20 @@
+uuid: 51ed3bb6-6556-4cdb-b005-1b2b019f1363
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - adminimal_theme
+id: adminimal_theme_powered
+theme: adminimal_theme
+region: header
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Propulsé par Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

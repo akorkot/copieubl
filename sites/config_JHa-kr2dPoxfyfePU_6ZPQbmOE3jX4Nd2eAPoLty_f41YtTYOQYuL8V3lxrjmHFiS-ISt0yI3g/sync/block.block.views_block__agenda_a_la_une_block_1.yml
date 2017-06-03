@@ -1,0 +1,30 @@
+uuid: c97395ec-df2d-4c33-b61b-06202f2011f7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.agenda_a_la_une
+  module:
+    - system
+    - views
+  theme:
+    - ubl
+id: views_block__agenda_a_la_une_block_1
+theme: ubl
+region: contenttop
+weight: -12
+provider: null
+plugin: 'views_block:agenda_a_la_une-block_1'
+settings:
+  id: 'views_block:agenda_a_la_une-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /agenda
+    negate: false
+    context_mapping: {  }

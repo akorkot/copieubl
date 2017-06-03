@@ -1,0 +1,19 @@
+uuid: 69280779-fa9e-4691-8a20-9b15f43fac98
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tel
+    - node.type.annuaire
+id: node.annuaire.field_tel
+field_name: field_tel
+entity_type: node
+bundle: annuaire
+label: Tél.
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

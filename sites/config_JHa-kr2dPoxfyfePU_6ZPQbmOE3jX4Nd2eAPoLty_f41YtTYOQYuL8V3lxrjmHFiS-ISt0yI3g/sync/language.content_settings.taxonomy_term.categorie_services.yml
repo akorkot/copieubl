@@ -1,0 +1,11 @@
+uuid: 479efaea-0fa0-49f3-a603-3e2927d41156
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categorie_services
+id: taxonomy_term.categorie_services
+target_entity_type_id: taxonomy_term
+target_bundle: categorie_services
+default_langcode: site_default
+language_alterable: false

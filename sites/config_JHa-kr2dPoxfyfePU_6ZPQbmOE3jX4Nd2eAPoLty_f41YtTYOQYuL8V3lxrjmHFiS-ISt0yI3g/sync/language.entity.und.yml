@@ -1,0 +1,9 @@
+uuid: 80db03bd-1c04-4e33-bd1d-963a1576f1e4
+langcode: fr
+status: true
+dependencies: {  }
+id: und
+label: 'Non spécifié'
+direction: ltr
+weight: 2
+locked: true

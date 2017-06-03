@@ -1,0 +1,38 @@
+uuid: 93f63d2e-be93-484c-9206-6a6e68288c94
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_picto
+    - taxonomy.vocabulary.categorie_services
+  module:
+    - image
+id: taxonomy_term.categorie_services.field_picto
+field_name: field_picto
+entity_type: taxonomy_term
+bundle: categorie_services
+label: Picto
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'services/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

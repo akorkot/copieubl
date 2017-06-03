@@ -1,0 +1,23 @@
+uuid: 45758f23-69fc-4b0b-a8a9-db7acde8a6a5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact_active
+    - node.type.page
+id: node.page.field_sb_contact_active
+field_name: field_sb_contact_active
+entity_type: node
+bundle: page
+label: 'Activer ?'
+description: 'Cochez pour activer ce bloc pour cette page.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

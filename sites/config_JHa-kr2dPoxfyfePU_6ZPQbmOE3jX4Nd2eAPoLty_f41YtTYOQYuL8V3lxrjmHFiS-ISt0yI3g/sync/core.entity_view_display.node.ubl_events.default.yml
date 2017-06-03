@@ -1,0 +1,141 @@
+uuid: 3b4a2e58-89bb-4f79-9eab-b6bf66d9d14a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.ubl_events.body
+    - field.field.node.ubl_events.field__sb_twitter_account
+    - field.field.node.ubl_events.field_adresse_complete
+    - field.field.node.ubl_events.field_bandeau
+    - field.field.node.ubl_events.field_categorie
+    - field.field.node.ubl_events.field_date
+    - field.field.node.ubl_events.field_date_fin
+    - field.field.node.ubl_events.field_ecole
+    - field.field.node.ubl_events.field_miniature
+    - field.field.node.ubl_events.field_sb_actus_active
+    - field.field.node.ubl_events.field_sb_actus_tags
+    - field.field.node.ubl_events.field_sb_contact2_email
+    - field.field.node.ubl_events.field_sb_contact2_name
+    - field.field.node.ubl_events.field_sb_contact2_tel
+    - field.field.node.ubl_events.field_sb_contact3_email
+    - field.field.node.ubl_events.field_sb_contact3_name
+    - field.field.node.ubl_events.field_sb_contact3_tel
+    - field.field.node.ubl_events.field_sb_contact4_email
+    - field.field.node.ubl_events.field_sb_contact4_name
+    - field.field.node.ubl_events.field_sb_contact4_tel
+    - field.field.node.ubl_events.field_sb_contact5_email
+    - field.field.node.ubl_events.field_sb_contact5_name
+    - field.field.node.ubl_events.field_sb_contact5_tel
+    - field.field.node.ubl_events.field_sb_contact_active
+    - field.field.node.ubl_events.field_sb_contact_email
+    - field.field.node.ubl_events.field_sb_contact_name
+    - field.field.node.ubl_events.field_sb_contact_tel
+    - field.field.node.ubl_events.field_sb_downloads_active
+    - field.field.node.ubl_events.field_sb_downloads_files
+    - field.field.node.ubl_events.field_sb_services_active
+    - field.field.node.ubl_events.field_sb_services_pages
+    - field.field.node.ubl_events.field_sb_twitter_active
+    - field.field.node.ubl_events.field_sb_video_active
+    - field.field.node.ubl_events.field_sb_video_url
+    - image.style.320x440
+    - node.type.ubl_events
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.ubl_events.default
+targetEntityType: node
+bundle: ubl_events
+mode: default
+content:
+  addtoany:
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  body:
+    label: hidden
+    type: text_default
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_adresse_complete:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_categorie:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date:
+    weight: 3
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: date_moyenne
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_fin:
+    weight: 4
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: date_moyenne
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_miniature:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: 320x440
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field__sb_twitter_account: true
+  field_bandeau: true
+  field_ecole: true
+  field_sb_actus_active: true
+  field_sb_actus_tags: true
+  field_sb_contact2_email: true
+  field_sb_contact2_name: true
+  field_sb_contact2_tel: true
+  field_sb_contact3_email: true
+  field_sb_contact3_name: true
+  field_sb_contact3_tel: true
+  field_sb_contact4_email: true
+  field_sb_contact4_name: true
+  field_sb_contact4_tel: true
+  field_sb_contact5_email: true
+  field_sb_contact5_name: true
+  field_sb_contact5_tel: true
+  field_sb_contact_active: true
+  field_sb_contact_email: true
+  field_sb_contact_name: true
+  field_sb_contact_tel: true
+  field_sb_downloads_active: true
+  field_sb_downloads_files: true
+  field_sb_services_active: true
+  field_sb_services_pages: true
+  field_sb_twitter_active: true
+  field_sb_video_active: true
+  field_sb_video_url: true
+  langcode: true

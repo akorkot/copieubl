@@ -1,0 +1,23 @@
+uuid: 7381a9cc-fd57-43e1-a6c3-0e98a254f297
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_twitter_active
+    - node.type.page
+id: node.page.field_sb_twitter_active
+field_name: field_sb_twitter_active
+entity_type: node
+bundle: page
+label: 'Activer ?'
+description: 'Active ou non le bloc "Twitter" dans la sidebar'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

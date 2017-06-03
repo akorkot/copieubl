@@ -1,0 +1,8 @@
+uuid: 314275d4-c3f5-4528-9e1f-933765d695b1
+langcode: fr
+status: true
+dependencies: {  }
+id: siblings-menu
+label: 'Siblings menu'
+description: 'Menu pour les pages intérieures'
+locked: false

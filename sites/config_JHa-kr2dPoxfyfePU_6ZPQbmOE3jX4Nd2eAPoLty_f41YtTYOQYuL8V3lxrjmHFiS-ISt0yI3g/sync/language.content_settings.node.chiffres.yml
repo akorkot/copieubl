@@ -1,0 +1,11 @@
+uuid: 80a062aa-6334-40c4-8563-4395dd5c25a3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.chiffres
+id: node.chiffres
+target_entity_type_id: node
+target_bundle: chiffres
+default_langcode: site_default
+language_alterable: false

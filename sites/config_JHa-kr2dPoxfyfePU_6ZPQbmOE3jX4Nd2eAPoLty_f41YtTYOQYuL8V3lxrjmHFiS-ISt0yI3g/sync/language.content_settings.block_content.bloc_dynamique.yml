@@ -1,0 +1,11 @@
+uuid: 3d06585b-09e1-4148-a7bb-78b955ce299e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.bloc_dynamique
+id: block_content.bloc_dynamique
+target_entity_type_id: block_content
+target_bundle: bloc_dynamique
+default_langcode: site_default
+language_alterable: false

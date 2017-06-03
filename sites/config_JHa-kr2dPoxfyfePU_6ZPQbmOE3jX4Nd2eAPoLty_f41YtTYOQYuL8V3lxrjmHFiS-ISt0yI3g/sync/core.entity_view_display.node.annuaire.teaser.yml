@@ -1,0 +1,46 @@
+uuid: 355b8e70-7216-4861-be97-be4b29d31e4d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.annuaire.body
+    - field.field.node.annuaire.field_adresse
+    - field.field.node.annuaire.field_code_postal
+    - field.field.node.annuaire.field_desc_poste
+    - field.field.node.annuaire.field_email
+    - field.field.node.annuaire.field_poste
+    - field.field.node.annuaire.field_service
+    - field.field.node.annuaire.field_tel
+    - field.field.node.annuaire.field_ville
+    - node.type.annuaire
+  module:
+    - text
+    - user
+id: node.annuaire.teaser
+targetEntityType: node
+bundle: annuaire
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_adresse: true
+  field_code_postal: true
+  field_desc_poste: true
+  field_email: true
+  field_poste: true
+  field_service: true
+  field_tel: true
+  field_ville: true
+  langcode: true

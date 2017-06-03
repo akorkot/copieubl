@@ -1,0 +1,7 @@
+uuid: b42e7b3f-f88a-44f2-b802-2dbae7b54c08
+langcode: fr
+status: true
+dependencies: {  }
+id: size
+label: Size
+options: "Extra Small: Extra Small\nSmall: Small\nMedium: Medium\nLarge: Large\nExtra Large: Extra Large\n"

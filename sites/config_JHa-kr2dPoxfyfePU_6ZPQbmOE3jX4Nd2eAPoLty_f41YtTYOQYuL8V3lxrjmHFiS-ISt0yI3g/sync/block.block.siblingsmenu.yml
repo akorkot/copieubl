@@ -1,0 +1,29 @@
+uuid: 6f3b7147-3426-4dc2-a5ca-3107cc4940ed
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.siblings-menu
+  module:
+    - system
+  theme:
+    - ubl
+id: siblingsmenu
+theme: ubl
+region: contenttop
+weight: -15
+provider: null
+plugin: 'system_menu_block:siblings-menu'
+settings:
+  id: 'system_menu_block:siblings-menu'
+  label: Navigation
+  provider: system
+  label_display: '0'
+  level: 3
+  depth: 1
+visibility:
+  request_path:
+    id: request_path
+    pages: "/missions-et-activites\r\n/missions-et-activites/recherche\r\n/missions-et-activites/formation\r\n/missions-et-activites/doctorat\r\n/missions-et-activites/numerique\r\n/missions-et-activites/international\r\n/missions-et-activites/entreprises"
+    negate: true
+    context_mapping: {  }

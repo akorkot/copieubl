@@ -1,0 +1,19 @@
+uuid: d284bae1-95c3-43a2-965a-9059d29070ab
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact3_email
+    - node.type.article
+id: node.article.field_sb_contact3_email
+field_name: field_sb_contact3_email
+entity_type: node
+bundle: article
+label: E-mail
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

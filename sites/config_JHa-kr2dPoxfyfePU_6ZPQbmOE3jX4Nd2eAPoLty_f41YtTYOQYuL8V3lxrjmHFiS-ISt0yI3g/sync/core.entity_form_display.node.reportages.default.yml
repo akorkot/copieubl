@@ -1,0 +1,527 @@
+uuid: d92dd149-1f3b-431a-9f71-173c6e1da5a2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.reportages.body
+    - field.field.node.reportages.field__sb_twitter_account
+    - field.field.node.reportages.field_bandeau
+    - field.field.node.reportages.field_categorie
+    - field.field.node.reportages.field_display_bloc_now
+    - field.field.node.reportages.field_display_bloc_une
+    - field.field.node.reportages.field_image
+    - field.field.node.reportages.field_sb_actus_active
+    - field.field.node.reportages.field_sb_actus_tags
+    - field.field.node.reportages.field_sb_contact2_email
+    - field.field.node.reportages.field_sb_contact2_name
+    - field.field.node.reportages.field_sb_contact2_tel
+    - field.field.node.reportages.field_sb_contact3_email
+    - field.field.node.reportages.field_sb_contact3_name
+    - field.field.node.reportages.field_sb_contact3_tel
+    - field.field.node.reportages.field_sb_contact4_email
+    - field.field.node.reportages.field_sb_contact4_name
+    - field.field.node.reportages.field_sb_contact4_tel
+    - field.field.node.reportages.field_sb_contact5_email
+    - field.field.node.reportages.field_sb_contact5_name
+    - field.field.node.reportages.field_sb_contact5_tel
+    - field.field.node.reportages.field_sb_contact_active
+    - field.field.node.reportages.field_sb_contact_email
+    - field.field.node.reportages.field_sb_contact_name
+    - field.field.node.reportages.field_sb_contact_tel
+    - field.field.node.reportages.field_sb_downloads_active
+    - field.field.node.reportages.field_sb_downloads_files
+    - field.field.node.reportages.field_sb_services_active
+    - field.field.node.reportages.field_sb_services_pages
+    - field.field.node.reportages.field_sb_twitter_active
+    - field.field.node.reportages.field_sb_video_active
+    - field.field.node.reportages.field_sb_video_url
+    - image.style.thumbnail
+    - node.type.reportages
+  module:
+    - field_group
+    - file
+    - image
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_sb:
+      children:
+        - group_sb_contact
+        - group_sb_services
+        - group_sb_video
+        - group_sb_downloads
+        - group_sb_actu
+        - group_sb_twitter
+      parent_name: ''
+      weight: 13
+      label: Sidebar
+      format_type: tabs
+      format_settings:
+        direction: vertical
+        classes: ''
+        id: ''
+    group_sb_contact:
+      children:
+        - field_sb_contact_active
+        - group_sb_contact1
+        - group_sb_contact2
+        - group_sb_contact3
+        - group_sb_contact4
+        - group_sb_contact5
+      parent_name: group_sb
+      weight: 106
+      label: 'Bloc contact'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_sb_services:
+      children:
+        - field_sb_services_active
+        - field_sb_services_pages
+      parent_name: group_sb
+      weight: 107
+      label: 'Bloc services'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_sb_video:
+      children:
+        - field_sb_video_active
+        - field_sb_video_url
+      parent_name: group_sb
+      weight: 108
+      label: 'Bloc video'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_sb_actu:
+      children:
+        - field_sb_actus_active
+        - field_sb_actus_tags
+      parent_name: group_sb
+      weight: 110
+      label: 'Bloc actualités'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_sb_twitter:
+      children:
+        - field_sb_twitter_active
+        - field__sb_twitter_account
+      parent_name: group_sb
+      weight: 111
+      label: 'Bloc twitter'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_sb_downloads:
+      children:
+        - field_sb_downloads_active
+        - field_sb_downloads_files
+      parent_name: group_sb
+      weight: 109
+      label: 'Bloc téléchargements'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_sb_contact1:
+      children:
+        - field_sb_contact_name
+        - field_sb_contact_tel
+        - field_sb_contact_email
+      parent_name: group_sb_contact
+      weight: 111
+      label: 'Contact 1'
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_sb_contact2:
+      children:
+        - field_sb_contact2_name
+        - field_sb_contact2_tel
+        - field_sb_contact2_email
+      parent_name: group_sb_contact
+      weight: 112
+      label: 'Contact 2'
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_sb_contact4:
+      children:
+        - field_sb_contact4_name
+        - field_sb_contact4_tel
+        - field_sb_contact4_email
+      parent_name: group_sb_contact
+      weight: 114
+      label: 'Contact 4'
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_sb_contact5:
+      children:
+        - field_sb_contact5_name
+        - field_sb_contact5_tel
+        - field_sb_contact5_email
+      parent_name: group_sb_contact
+      weight: 115
+      label: 'Contact 5'
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_sb_contact3:
+      children:
+        - field_sb_contact3_name
+        - field_sb_contact3_tel
+        - field_sb_contact3_email
+      parent_name: group_sb_contact
+      weight: 113
+      label: 'Contact 3'
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+id: node.reportages.default
+targetEntityType: node
+bundle: reportages
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 9
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field__sb_twitter_account:
+    weight: 118
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_bandeau:
+    weight: 10
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_categorie:
+    weight: 12
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_display_bloc_now:
+    weight: 2
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_display_bloc_une:
+    weight: 1
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_image:
+    weight: 11
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_sb_actus_active:
+    weight: 116
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_sb_actus_tags:
+    weight: 117
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_sb_contact2_email:
+    weight: 121
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sb_contact2_name:
+    weight: 119
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sb_contact2_tel:
+    type: string_textfield
+    weight: 120
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_sb_contact3_email:
+    type: string_textfield
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_sb_contact3_name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_sb_contact3_tel:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_sb_contact4_email:
+    type: string_textfield
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_sb_contact4_name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_sb_contact4_tel:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_sb_contact5_email:
+    type: string_textfield
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_sb_contact5_name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_sb_contact5_tel:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_sb_contact_active:
+    weight: 107
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_sb_contact_email:
+    type: string_textfield
+    weight: 110
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_sb_contact_name:
+    weight: 108
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sb_contact_tel:
+    type: string_textfield
+    weight: 109
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_sb_downloads_active:
+    weight: 114
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_sb_downloads_files:
+    weight: 115
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_sb_services_active:
+    weight: 11
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_sb_services_pages:
+    weight: 12
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_sb_twitter_active:
+    weight: 117
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_sb_video_active:
+    weight: 111
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_sb_video_url:
+    weight: 112
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    third_party_settings: {  }
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

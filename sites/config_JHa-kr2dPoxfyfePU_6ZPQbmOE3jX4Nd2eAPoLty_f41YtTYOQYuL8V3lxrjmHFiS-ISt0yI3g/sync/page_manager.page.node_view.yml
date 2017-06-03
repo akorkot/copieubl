@@ -1,0 +1,11 @@
+uuid: c422a141-a338-4f67-92f0-80188a37bc95
+langcode: fr
+status: true
+dependencies: {  }
+id: node_view
+label: 'Node view'
+use_admin_theme: false
+path: '/node/{node}'
+access_logic: and
+access_conditions: {  }
+static_context: {  }

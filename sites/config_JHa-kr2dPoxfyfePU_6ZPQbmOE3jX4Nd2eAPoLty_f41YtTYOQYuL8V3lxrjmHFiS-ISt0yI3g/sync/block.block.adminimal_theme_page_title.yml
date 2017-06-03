@@ -1,0 +1,18 @@
+uuid: afcb372e-5ee9-4336-9bfb-e4eb7125b10f
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - adminimal_theme
+id: adminimal_theme_page_title
+theme: adminimal_theme
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titre de page'
+  provider: core
+  label_display: '0'
+visibility: {  }

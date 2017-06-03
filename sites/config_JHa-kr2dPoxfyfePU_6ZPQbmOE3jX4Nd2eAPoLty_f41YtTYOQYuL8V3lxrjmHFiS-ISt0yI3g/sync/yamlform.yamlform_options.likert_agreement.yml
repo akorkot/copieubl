@@ -1,0 +1,7 @@
+uuid: 527477d3-ffce-4838-a800-d575fdacb90b
+langcode: fr
+status: true
+dependencies: {  }
+id: likert_agreement
+label: 'Likert: Agreement'
+options: "1: Much Worse\n2: Somewhat Worse\n3: About the Same\n4: Somewhat Better\n5: Much Better\n"

@@ -1,0 +1,7 @@
+uuid: 57efbd01-2af9-4bbe-982c-441e3f7b2b27
+langcode: fr
+status: true
+dependencies: {  }
+id: likert_satisfaction
+label: 'Likert: Satisfaction'
+options: "1: Very Unsatisfied\n2: Unsatisfied\n3: Neutral\n4: Satisfied\n5: Very Satisfied\n"

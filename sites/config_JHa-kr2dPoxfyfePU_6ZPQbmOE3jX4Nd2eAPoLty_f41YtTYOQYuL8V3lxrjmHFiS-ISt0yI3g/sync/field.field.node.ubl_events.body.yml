@@ -1,0 +1,22 @@
+uuid: cb9072d8-1519-4c6f-a81a-43cb8db75f3e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.ubl_events
+  module:
+    - text
+id: node.ubl_events.body
+field_name: body
+entity_type: node
+bundle: ubl_events
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

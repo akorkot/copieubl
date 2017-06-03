@@ -1,0 +1,7 @@
+uuid: 436d4c82-d572-454e-8b09-9a4fac18b05c
+langcode: fr
+status: true
+dependencies: {  }
+id: yes_no
+label: Oui/Non
+options: "Yes: Yes\nNo: No\n"

@@ -1,0 +1,14 @@
+uuid: 5cfbaf5b-3a1a-4f3e-8800-c24f17b624f1
+langcode: fr
+status: true
+dependencies: {  }
+name: 320x440
+label: '320x440 (Detail event)'
+effects:
+  dc9895ab-88a3-4479-9100-dc681c9ac5f7:
+    uuid: dc9895ab-88a3-4479-9100-dc681c9ac5f7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 320
+      height: 440

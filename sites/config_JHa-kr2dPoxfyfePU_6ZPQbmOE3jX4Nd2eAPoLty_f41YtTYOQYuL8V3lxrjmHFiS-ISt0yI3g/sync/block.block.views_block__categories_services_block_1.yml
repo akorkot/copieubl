@@ -1,0 +1,32 @@
+uuid: 94019fb3-b9ac-430b-b900-adc2f0aca3e3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.categories_services
+  module:
+    - node
+    - views
+  theme:
+    - ubl
+id: views_block__categories_services_block_1
+theme: ubl
+region: contenttop
+weight: -11
+provider: null
+plugin: 'views_block:categories_services-block_1'
+settings:
+  id: 'views_block:categories_services-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      services: services
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

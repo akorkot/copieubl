@@ -1,0 +1,33 @@
+uuid: ae817ac1-c016-4fb3-9d00-c2498737adf7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.type_etablissement.field_picto
+    - taxonomy.vocabulary.type_etablissement
+  module:
+    - image
+    - text
+id: taxonomy_term.type_etablissement.default
+targetEntityType: taxonomy_term
+bundle: type_etablissement
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_picto:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true

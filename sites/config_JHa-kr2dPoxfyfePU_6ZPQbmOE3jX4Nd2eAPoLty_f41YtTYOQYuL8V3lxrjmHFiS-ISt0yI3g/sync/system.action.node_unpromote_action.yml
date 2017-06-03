@@ -1,0 +1,11 @@
+uuid: 46a9a63c-64f6-43f3-b862-2b5e21a8fd75
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node_unpromote_action
+label: 'Retirer un contenu de la page d''accueil'
+type: node
+plugin: node_unpromote_action
+configuration: {  }

@@ -1,0 +1,18 @@
+uuid: 741698fa-cc48-4547-9c98-f798bb2e3444
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.annuaire
+id: node.annuaire.title
+field_name: title
+entity_type: node
+bundle: annuaire
+label: Nom
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 08abbe93-22ba-44f5-974b-755d86aef84a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_actus_active
+    - node.type.article
+id: node.article.field_sb_actus_active
+field_name: field_sb_actus_active
+entity_type: node
+bundle: article
+label: 'Activer ?'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

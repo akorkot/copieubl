@@ -1,0 +1,8 @@
+uuid: e9028641-d050-4fa1-b4d1-bf17f95b5f1d
+langcode: fr
+status: true
+dependencies: {  }
+id: menu-sb-actu
+label: 'Menu SB actu'
+description: 'Menu de sidebar pour page actu'
+locked: false

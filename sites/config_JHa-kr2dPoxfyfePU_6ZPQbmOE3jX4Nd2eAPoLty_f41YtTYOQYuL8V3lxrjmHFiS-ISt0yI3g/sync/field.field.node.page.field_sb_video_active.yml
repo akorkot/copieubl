@@ -1,0 +1,23 @@
+uuid: b679e6ef-8763-4266-9dba-0c7b00b66c94
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_video_active
+    - node.type.page
+id: node.page.field_sb_video_active
+field_name: field_sb_video_active
+entity_type: node
+bundle: page
+label: 'Activer ?'
+description: 'Active ou non le bloc "Vidéo" de la sidebar'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

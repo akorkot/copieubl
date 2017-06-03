@@ -1,0 +1,21 @@
+uuid: 8a62a47d-69ba-45a4-9e09-9cacdc8109f1
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_sb_contact2_email
+field_name: field_sb_contact2_email
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

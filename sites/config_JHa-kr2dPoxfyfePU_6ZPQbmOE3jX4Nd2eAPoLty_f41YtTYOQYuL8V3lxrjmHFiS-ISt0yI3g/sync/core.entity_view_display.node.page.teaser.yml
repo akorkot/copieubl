@@ -1,0 +1,94 @@
+uuid: 6f557342-e7f1-41f3-9cac-86c4a21712b9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page.body
+    - field.field.node.page.field__sb_twitter_account
+    - field.field.node.page.field_bandeau
+    - field.field.node.page.field_bot_crossread_active
+    - field.field.node.page.field_bot_crossread_pages
+    - field.field.node.page.field_image_a_la_une
+    - field.field.node.page.field_page_parente
+    - field.field.node.page.field_sb_actus_active
+    - field.field.node.page.field_sb_actus_tags
+    - field.field.node.page.field_sb_contact2_email
+    - field.field.node.page.field_sb_contact2_name
+    - field.field.node.page.field_sb_contact2_tel
+    - field.field.node.page.field_sb_contact3_email
+    - field.field.node.page.field_sb_contact3_name
+    - field.field.node.page.field_sb_contact3_tel
+    - field.field.node.page.field_sb_contact4_email
+    - field.field.node.page.field_sb_contact4_name
+    - field.field.node.page.field_sb_contact4_tel
+    - field.field.node.page.field_sb_contact5_email
+    - field.field.node.page.field_sb_contact5_name
+    - field.field.node.page.field_sb_contact5_tel
+    - field.field.node.page.field_sb_contact_active
+    - field.field.node.page.field_sb_contact_email
+    - field.field.node.page.field_sb_contact_name
+    - field.field.node.page.field_sb_contact_tel
+    - field.field.node.page.field_sb_downloads_active
+    - field.field.node.page.field_sb_downloads_files
+    - field.field.node.page.field_sb_services_active
+    - field.field.node.page.field_sb_services_pages
+    - field.field.node.page.field_sb_twitter_active
+    - field.field.node.page.field_sb_video_active
+    - field.field.node.page.field_sb_video_url
+    - field.field.node.page.field_wikiradio
+    - node.type.page
+  module:
+    - text
+    - user
+id: node.page.teaser
+targetEntityType: node
+bundle: page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 100
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 101
+    region: content
+hidden:
+  addtoany: true
+  field__sb_twitter_account: true
+  field_bandeau: true
+  field_bot_crossread_active: true
+  field_bot_crossread_pages: true
+  field_image_a_la_une: true
+  field_page_parente: true
+  field_sb_actus_active: true
+  field_sb_actus_tags: true
+  field_sb_contact2_email: true
+  field_sb_contact2_name: true
+  field_sb_contact2_tel: true
+  field_sb_contact3_email: true
+  field_sb_contact3_name: true
+  field_sb_contact3_tel: true
+  field_sb_contact4_email: true
+  field_sb_contact4_name: true
+  field_sb_contact4_tel: true
+  field_sb_contact5_email: true
+  field_sb_contact5_name: true
+  field_sb_contact5_tel: true
+  field_sb_contact_active: true
+  field_sb_contact_email: true
+  field_sb_contact_name: true
+  field_sb_contact_tel: true
+  field_sb_downloads_active: true
+  field_sb_downloads_files: true
+  field_sb_services_active: true
+  field_sb_services_pages: true
+  field_sb_twitter_active: true
+  field_sb_video_active: true
+  field_sb_video_url: true
+  field_wikiradio: true
+  langcode: true

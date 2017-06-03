@@ -1,0 +1,32 @@
+uuid: 1b66633c-e5a7-459e-b057-bf9e7e7462f2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.chiffres.body
+    - field.field.node.chiffres.field_icon
+    - node.type.chiffres
+  module:
+    - text
+    - user
+id: node.chiffres.teaser
+targetEntityType: node
+bundle: chiffres
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_icon: true
+  langcode: true

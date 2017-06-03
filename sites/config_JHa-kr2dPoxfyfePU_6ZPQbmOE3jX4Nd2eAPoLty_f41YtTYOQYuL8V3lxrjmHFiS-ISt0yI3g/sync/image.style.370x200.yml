@@ -1,0 +1,14 @@
+uuid: 824c74c7-19da-45ce-8a00-bdebaa1b6ff7
+langcode: fr
+status: true
+dependencies: {  }
+name: 370x200
+label: '370x200 (child pages)'
+effects:
+  58b981c6-1cb7-40a9-af07-7ec54a07c9ef:
+    uuid: 58b981c6-1cb7-40a9-af07-7ec54a07c9ef
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 370
+      height: 200

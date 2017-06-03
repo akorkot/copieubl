@@ -1,0 +1,27 @@
+uuid: 52dd7c3f-4095-4707-990f-159a5a312bc2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_downloads_files
+    - node.type.ubl_events
+  module:
+    - file
+id: node.ubl_events.field_sb_downloads_files
+field_name: field_sb_downloads_files
+entity_type: node
+bundle: ubl_events
+label: Fichier
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'sidebar/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt doc pdf docx xls xlsx odt'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

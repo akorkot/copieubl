@@ -1,0 +1,23 @@
+uuid: 0e2a4747-018e-4c65-ad47-b6334fd877b6
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - adminimal_theme
+id: adminimal_theme_branding
+theme: adminimal_theme
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

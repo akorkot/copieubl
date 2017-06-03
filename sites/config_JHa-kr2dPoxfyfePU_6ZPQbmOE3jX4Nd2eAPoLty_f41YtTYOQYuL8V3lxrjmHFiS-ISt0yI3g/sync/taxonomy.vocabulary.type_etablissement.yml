@@ -1,0 +1,9 @@
+uuid: 87b607f8-af8a-4ff3-9900-c70cab360868
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Type d''établissement'
+vid: type_etablissement
+description: ''
+hierarchy: 0
+weight: 0

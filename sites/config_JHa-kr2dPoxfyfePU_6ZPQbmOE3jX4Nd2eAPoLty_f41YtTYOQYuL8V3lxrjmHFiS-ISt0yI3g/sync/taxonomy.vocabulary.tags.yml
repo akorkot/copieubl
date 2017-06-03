@@ -1,0 +1,9 @@
+uuid: 17207117-3d77-4070-a332-e75a107520bf
+langcode: fr
+status: true
+dependencies: {  }
+name: Étiquettes
+vid: tags
+description: 'Utilisez les étiquettes pour regrouper les articles sur des sujets similaires dans des catégories.'
+hierarchy: 0
+weight: 0

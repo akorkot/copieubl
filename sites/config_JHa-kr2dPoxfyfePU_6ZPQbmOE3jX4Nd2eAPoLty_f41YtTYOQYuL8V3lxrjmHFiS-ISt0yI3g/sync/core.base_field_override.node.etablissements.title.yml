@@ -1,0 +1,18 @@
+uuid: cec233b0-9512-492f-ab62-98702499fb75
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.etablissements
+id: node.etablissements.title
+field_name: title
+entity_type: node
+bundle: etablissements
+label: Nom
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

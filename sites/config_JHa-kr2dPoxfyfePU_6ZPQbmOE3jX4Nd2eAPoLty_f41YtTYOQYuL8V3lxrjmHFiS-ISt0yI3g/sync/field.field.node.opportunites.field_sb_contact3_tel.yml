@@ -1,0 +1,19 @@
+uuid: e5dce381-0da5-4f28-b600-e8e8c8367d09
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact3_tel
+    - node.type.opportunites
+id: node.opportunites.field_sb_contact3_tel
+field_name: field_sb_contact3_tel
+entity_type: node
+bundle: opportunites
+label: Tél.
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

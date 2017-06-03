@@ -1,0 +1,11 @@
+uuid: 9508447f-232c-4bf7-bc3b-598b85c96b3c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.type_etablissement
+id: taxonomy_term.type_etablissement
+target_entity_type_id: taxonomy_term
+target_bundle: type_etablissement
+default_langcode: site_default
+language_alterable: false

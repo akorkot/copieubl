@@ -1,0 +1,19 @@
+uuid: 84379e34-5170-4bd2-8e07-7e6562370bce
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact_email
+    - node.type.ubl_events
+id: node.ubl_events.field_sb_contact_email
+field_name: field_sb_contact_email
+entity_type: node
+bundle: ubl_events
+label: E-mail
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

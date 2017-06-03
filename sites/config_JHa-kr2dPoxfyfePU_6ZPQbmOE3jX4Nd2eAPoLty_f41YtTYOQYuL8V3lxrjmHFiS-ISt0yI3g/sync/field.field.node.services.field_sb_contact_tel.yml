@@ -1,0 +1,19 @@
+uuid: 13705488-d87a-496b-b508-8ed2679dc4a4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact_tel
+    - node.type.services
+id: node.services.field_sb_contact_tel
+field_name: field_sb_contact_tel
+entity_type: node
+bundle: services
+label: Tél.
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,38 @@
+uuid: 418cec21-c6bf-4fda-96d4-f2ba60b3c1a3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.bloc_dynamique
+    - field.field.block_content.bloc_dynamique.body
+  module:
+    - text
+id: block_content.bloc_dynamique.default
+targetEntityType: block_content
+bundle: bloc_dynamique
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

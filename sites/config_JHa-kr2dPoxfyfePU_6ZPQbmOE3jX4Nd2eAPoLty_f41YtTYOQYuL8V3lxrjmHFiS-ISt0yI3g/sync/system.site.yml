@@ -1,0 +1,12 @@
+uuid: 5c608be8-ee64-49d6-b842-f1435b04ab3b
+name: 'l''Université Bretagne Loire'
+mail: no-reply@u-bretagneloire.fr
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/46
+admin_compact_mode: false
+weight_select_max: 100
+langcode: fr
+default_langcode: fr

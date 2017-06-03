@@ -1,0 +1,19 @@
+uuid: d5305a8b-345f-401e-8f5f-95671310661e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact4_name
+    - node.type.ubl_events
+id: node.ubl_events.field_sb_contact4_name
+field_name: field_sb_contact4_name
+entity_type: node
+bundle: ubl_events
+label: 'Nom du contact 4'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

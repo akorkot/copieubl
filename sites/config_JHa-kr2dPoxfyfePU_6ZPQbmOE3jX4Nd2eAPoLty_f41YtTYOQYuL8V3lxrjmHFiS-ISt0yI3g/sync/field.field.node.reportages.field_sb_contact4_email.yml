@@ -1,0 +1,19 @@
+uuid: 747b9fc8-7924-4615-a54c-7644f90f7cb0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact4_email
+    - node.type.reportages
+id: node.reportages.field_sb_contact4_email
+field_name: field_sb_contact4_email
+entity_type: node
+bundle: reportages
+label: E-mail
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

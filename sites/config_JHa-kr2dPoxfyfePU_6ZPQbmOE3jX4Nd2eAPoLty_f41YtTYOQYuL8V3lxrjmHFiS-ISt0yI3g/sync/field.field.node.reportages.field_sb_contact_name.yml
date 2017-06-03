@@ -1,0 +1,19 @@
+uuid: 9ac048d3-e870-4206-8205-5d60baa16eed
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact_name
+    - node.type.reportages
+id: node.reportages.field_sb_contact_name
+field_name: field_sb_contact_name
+entity_type: node
+bundle: reportages
+label: 'Nom du contact'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

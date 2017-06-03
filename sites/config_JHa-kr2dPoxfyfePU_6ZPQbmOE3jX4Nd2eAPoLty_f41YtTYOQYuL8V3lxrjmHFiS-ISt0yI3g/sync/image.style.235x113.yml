@@ -1,0 +1,14 @@
+uuid: e2c2ced5-3059-44eb-9009-9cf6425363bc
+langcode: fr
+status: true
+dependencies: {  }
+name: 235x113
+label: '235x113 "cross reading"'
+effects:
+  39f012a0-387e-4cf9-b000-f42191127a7f:
+    uuid: 39f012a0-387e-4cf9-b000-f42191127a7f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 235
+      height: 113

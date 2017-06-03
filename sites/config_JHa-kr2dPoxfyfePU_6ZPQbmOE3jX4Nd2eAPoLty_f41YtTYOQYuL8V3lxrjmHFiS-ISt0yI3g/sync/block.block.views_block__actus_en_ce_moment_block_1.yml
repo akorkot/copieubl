@@ -1,0 +1,30 @@
+uuid: e9e39b6a-3f8b-429b-b4ea-cf55022040a7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.actus_en_ce_moment
+  module:
+    - system
+    - views
+  theme:
+    - ubl
+id: views_block__actus_en_ce_moment_block_1
+theme: ubl
+region: content
+weight: -18
+provider: null
+plugin: 'views_block:actus_en_ce_moment-block_1'
+settings:
+  id: 'views_block:actus_en_ce_moment-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /actualites-et-chroniques
+    negate: false
+    context_mapping: {  }

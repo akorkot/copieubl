@@ -1,0 +1,27 @@
+uuid: e4a1afac-df85-4033-a651-81b4e649e03e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ecole
+    - node.type.ubl_events
+    - taxonomy.vocabulary.ecole
+id: node.ubl_events.field_ecole
+field_name: field_ecole
+entity_type: node
+bundle: ubl_events
+label: Ecole
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ecole: ecole
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

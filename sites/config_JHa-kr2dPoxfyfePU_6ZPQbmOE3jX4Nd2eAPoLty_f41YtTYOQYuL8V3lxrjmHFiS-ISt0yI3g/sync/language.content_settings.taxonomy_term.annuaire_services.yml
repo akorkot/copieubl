@@ -1,0 +1,11 @@
+uuid: 52b2e1db-e501-46af-b902-02f0a9ab0418
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.annuaire_services
+id: taxonomy_term.annuaire_services
+target_entity_type_id: taxonomy_term
+target_bundle: annuaire_services
+default_langcode: site_default
+language_alterable: false

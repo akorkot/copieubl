@@ -1,0 +1,54 @@
+uuid: 61606c00-df04-4575-aa07-7eac564dd0b2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.categorie_services.field_picto
+    - image.style.thumbnail
+    - taxonomy.vocabulary.categorie_services
+  module:
+    - image
+    - path
+    - text
+id: taxonomy_term.categorie_services.default
+targetEntityType: taxonomy_term
+bundle: categorie_services
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_picto:
+    weight: 31
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

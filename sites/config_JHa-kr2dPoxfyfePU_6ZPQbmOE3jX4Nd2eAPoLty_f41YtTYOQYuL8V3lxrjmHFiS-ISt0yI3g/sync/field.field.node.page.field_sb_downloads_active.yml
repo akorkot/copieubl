@@ -1,0 +1,23 @@
+uuid: 3628cf3d-3282-4c12-a7ef-4d4182a811d5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_downloads_active
+    - node.type.page
+id: node.page.field_sb_downloads_active
+field_name: field_sb_downloads_active
+entity_type: node
+bundle: page
+label: 'Activer ?'
+description: 'Active ou non le bloc de téléchargements'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

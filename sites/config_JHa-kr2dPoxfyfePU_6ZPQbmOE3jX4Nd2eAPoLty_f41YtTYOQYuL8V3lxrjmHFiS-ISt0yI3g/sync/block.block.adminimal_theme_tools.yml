@@ -1,0 +1,24 @@
+uuid: 765f671e-7dcc-4f29-a220-428c7b5dad9e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - adminimal_theme
+id: adminimal_theme_tools
+theme: adminimal_theme
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Outils
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

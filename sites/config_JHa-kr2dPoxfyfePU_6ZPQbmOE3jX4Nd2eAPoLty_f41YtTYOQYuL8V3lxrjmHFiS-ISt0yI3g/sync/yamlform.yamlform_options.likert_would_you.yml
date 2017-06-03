@@ -1,0 +1,7 @@
+uuid: 4eed826f-96eb-4082-ab05-5a1207aa0b86
+langcode: fr
+status: true
+dependencies: {  }
+id: likert_would_you
+label: 'Likert: Would You'
+options: "1: Definitely Not\n2: Probably Not\n3: Not Sure\n4: Probably\n5: Definitely\n"

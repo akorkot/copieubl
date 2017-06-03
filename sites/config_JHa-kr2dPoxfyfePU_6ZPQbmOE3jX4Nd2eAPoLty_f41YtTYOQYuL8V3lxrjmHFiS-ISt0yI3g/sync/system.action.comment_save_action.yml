@@ -1,0 +1,11 @@
+uuid: da8486ba-1d93-4fe1-bb8a-d4ecd963455a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - comment
+id: comment_save_action
+label: 'Enregistrer le commentaire'
+type: comment
+plugin: comment_save_action
+configuration: {  }

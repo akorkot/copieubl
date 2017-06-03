@@ -1,0 +1,11 @@
+uuid: 0f129f30-8477-407b-a248-718b985a7539
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categorie_portraits
+id: taxonomy_term.categorie_portraits
+target_entity_type_id: taxonomy_term
+target_bundle: categorie_portraits
+default_langcode: site_default
+language_alterable: false

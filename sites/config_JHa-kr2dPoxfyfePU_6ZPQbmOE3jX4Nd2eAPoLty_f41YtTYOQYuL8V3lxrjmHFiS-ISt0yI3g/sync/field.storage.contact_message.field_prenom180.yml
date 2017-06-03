@@ -1,0 +1,21 @@
+uuid: 488826bd-2241-4d2c-a802-2b8807b1a734
+langcode: fr
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_prenom180
+field_name: field_prenom180
+entity_type: contact_message
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

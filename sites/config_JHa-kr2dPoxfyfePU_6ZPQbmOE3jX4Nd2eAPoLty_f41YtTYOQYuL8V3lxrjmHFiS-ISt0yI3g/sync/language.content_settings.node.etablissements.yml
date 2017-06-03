@@ -1,0 +1,11 @@
+uuid: e9930825-bb3d-4cf8-bb42-662c8d40590f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.etablissements
+id: node.etablissements
+target_entity_type_id: node
+target_bundle: etablissements
+default_langcode: site_default
+language_alterable: false

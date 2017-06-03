@@ -1,0 +1,26 @@
+uuid: acb94c0f-cecd-4d3a-ae03-3b9b8aefd3b4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_services_pages
+    - node.type.opportunites
+    - node.type.services
+id: node.opportunites.field_sb_services_pages
+field_name: field_sb_services_pages
+entity_type: node
+bundle: opportunites
+label: Pages
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      services: services
+    sort:
+      field: _none
+field_type: entity_reference

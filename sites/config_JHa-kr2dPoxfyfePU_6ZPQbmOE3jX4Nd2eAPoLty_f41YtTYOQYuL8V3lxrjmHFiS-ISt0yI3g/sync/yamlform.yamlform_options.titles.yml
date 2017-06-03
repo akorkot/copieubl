@@ -1,0 +1,7 @@
+uuid: ff7ebc31-99fd-4792-b638-5692b9c40fae
+langcode: fr
+status: true
+dependencies: {  }
+id: titles
+label: Titres
+options: "Miss: Miss\nMs: Ms\nMr: Mr\nMrs: Mrs\nDr: Dr\n"

@@ -1,0 +1,7 @@
+uuid: 393d16cf-0418-4a11-9700-bae6b4f445f2
+langcode: fr
+status: true
+dependencies: {  }
+id: employment_status
+label: 'Employment status'
+options: "'Full Time': 'Full Time'\n'Part Time': 'Part Time'\n'Military': 'Military'\nUnemployed: Unemployed\nRetired: Retired\n"

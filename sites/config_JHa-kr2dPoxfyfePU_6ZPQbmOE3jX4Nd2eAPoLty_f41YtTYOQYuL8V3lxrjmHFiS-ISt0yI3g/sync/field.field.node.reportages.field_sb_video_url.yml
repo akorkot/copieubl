@@ -1,0 +1,19 @@
+uuid: 8bd364ad-e450-4240-9c00-d6951623e172
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_video_url
+    - node.type.reportages
+id: node.reportages.field_sb_video_url
+field_name: field_sb_video_url
+entity_type: node
+bundle: reportages
+label: Url
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

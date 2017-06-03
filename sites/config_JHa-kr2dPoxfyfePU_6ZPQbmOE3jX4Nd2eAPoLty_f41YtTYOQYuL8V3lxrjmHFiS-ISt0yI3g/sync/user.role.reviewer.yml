@@ -1,0 +1,9 @@
+uuid: 8d23e4a5-ba15-44ee-bf00-0e84c709aa16
+langcode: fr
+status: true
+dependencies: {  }
+id: reviewer
+label: Reviewer
+weight: 3
+is_admin: null
+permissions: {  }

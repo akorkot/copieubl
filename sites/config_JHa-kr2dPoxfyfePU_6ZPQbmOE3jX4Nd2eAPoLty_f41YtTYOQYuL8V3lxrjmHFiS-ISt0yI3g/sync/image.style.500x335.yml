@@ -1,0 +1,14 @@
+uuid: 2cbb39c0-651b-4052-a000-ce101fdf2aef
+langcode: fr
+status: true
+dependencies: {  }
+name: 500x335
+label: '500x335 (Wall a la une)'
+effects:
+  ff374084-80c1-4b41-b245-6919d55dffb6:
+    uuid: ff374084-80c1-4b41-b245-6919d55dffb6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 335

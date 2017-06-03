@@ -1,0 +1,18 @@
+uuid: 71520e5f-9d6b-4a87-b181-b74a5d4720bb
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_sb_downloads_active
+field_name: field_sb_downloads_active
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

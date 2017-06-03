@@ -1,0 +1,24 @@
+uuid: 043c0aa4-3dd1-4be2-aedf-d33453e42be4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.ubl_events_recents
+  module:
+    - views
+  theme:
+    - ubl
+id: views_block__ubl_events_recents_block_1
+theme: ubl
+region: hp_events
+weight: -10
+provider: null
+plugin: 'views_block:ubl_events_recents-block_1'
+settings:
+  id: 'views_block:ubl_events_recents-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

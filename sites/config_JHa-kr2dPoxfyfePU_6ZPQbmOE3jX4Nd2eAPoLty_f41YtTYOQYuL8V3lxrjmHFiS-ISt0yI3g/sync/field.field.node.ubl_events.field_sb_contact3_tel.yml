@@ -1,0 +1,19 @@
+uuid: f1050db1-bc6b-4180-b214-209e908328d7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact3_tel
+    - node.type.ubl_events
+id: node.ubl_events.field_sb_contact3_tel
+field_name: field_sb_contact3_tel
+entity_type: node
+bundle: ubl_events
+label: Tél.
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

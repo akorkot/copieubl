@@ -1,0 +1,23 @@
+uuid: 69b4d43d-03c1-4e42-b900-eff437428f70
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bot_crossread_active
+    - node.type.page
+id: node.page.field_bot_crossread_active
+field_name: field_bot_crossread_active
+entity_type: node
+bundle: page
+label: 'Activer ?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

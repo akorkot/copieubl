@@ -1,0 +1,24 @@
+uuid: d803fdd8-0484-4b7d-8800-dc9908c0e7ab
+langcode: fr
+status: false
+dependencies:
+  config:
+    - views.view.article_en_avant
+  module:
+    - views
+  theme:
+    - ubl
+id: views_block__article_en_avant_block_1
+theme: ubl
+region: header
+weight: -17
+provider: null
+plugin: 'views_block:article_en_avant-block_1'
+settings:
+  id: 'views_block:article_en_avant-block_1'
+  label: 'A consulter'
+  provider: views
+  label_display: visible
+  views_label: 'A consulter'
+  items_per_page: none
+visibility: {  }

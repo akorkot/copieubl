@@ -1,0 +1,19 @@
+uuid: 789ee937-59e6-450e-bc23-354a9030bad2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - contact.form.inscription_au_concours_ma_these
+    - field.storage.contact_message.field_ecole180
+id: contact_message.inscription_au_concours_ma_these.field_ecole180
+field_name: field_ecole180
+entity_type: contact_message
+bundle: inscription_au_concours_ma_these
+label: 'Ecole doctorale de rattachement'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

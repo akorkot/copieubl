@@ -1,0 +1,7 @@
+uuid: b30d3c4a-1b14-449d-a05c-929dbc63ab34
+langcode: fr
+status: true
+dependencies: {  }
+id: relationship
+label: Relationship
+options: "Parent: Parent\n'Significant Other': 'Significant Other'\nSibling: Sibling\nChild: Child\nFriend: Friend\n"

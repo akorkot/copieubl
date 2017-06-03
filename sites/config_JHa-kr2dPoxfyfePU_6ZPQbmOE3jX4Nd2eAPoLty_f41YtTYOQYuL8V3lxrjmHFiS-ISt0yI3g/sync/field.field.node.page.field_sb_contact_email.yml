@@ -1,0 +1,19 @@
+uuid: 650c423e-523a-4262-ae3a-1d2377e2530c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact_email
+    - node.type.page
+id: node.page.field_sb_contact_email
+field_name: field_sb_contact_email
+entity_type: node
+bundle: page
+label: E-mail
+description: 'E-mail du contact'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

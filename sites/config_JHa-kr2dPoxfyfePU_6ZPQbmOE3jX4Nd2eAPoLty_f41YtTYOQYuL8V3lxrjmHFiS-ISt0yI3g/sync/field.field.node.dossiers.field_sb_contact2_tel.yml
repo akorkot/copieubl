@@ -1,0 +1,19 @@
+uuid: f3eebc16-9665-4789-b200-a13958fe47e6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact2_tel
+    - node.type.dossiers
+id: node.dossiers.field_sb_contact2_tel
+field_name: field_sb_contact2_tel
+entity_type: node
+bundle: dossiers
+label: Tél.
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

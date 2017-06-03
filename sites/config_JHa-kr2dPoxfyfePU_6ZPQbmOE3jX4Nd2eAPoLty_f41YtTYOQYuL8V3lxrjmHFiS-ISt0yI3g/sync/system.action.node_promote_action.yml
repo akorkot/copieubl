@@ -1,0 +1,11 @@
+uuid: 32be0076-3a69-49c4-a204-0284b7932dae
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node_promote_action
+label: 'Promouvoir un contenu en page d''accueil'
+type: node
+plugin: node_promote_action
+configuration: {  }

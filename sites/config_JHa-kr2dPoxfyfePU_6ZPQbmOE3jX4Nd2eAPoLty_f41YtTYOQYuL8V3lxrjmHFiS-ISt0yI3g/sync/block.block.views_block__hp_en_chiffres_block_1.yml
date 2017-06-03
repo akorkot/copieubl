@@ -1,0 +1,24 @@
+uuid: a152a91c-bdad-4402-8e6c-f5941ce450b1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.hp_en_chiffres
+  module:
+    - views
+  theme:
+    - ubl
+id: views_block__hp_en_chiffres_block_1
+theme: ubl
+region: hp_chiffres
+weight: -10
+provider: null
+plugin: 'views_block:hp_en_chiffres-block_1'
+settings:
+  id: 'views_block:hp_en_chiffres-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

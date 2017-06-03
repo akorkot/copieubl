@@ -1,0 +1,22 @@
+uuid: a0c16657-1ea8-4ef3-ab6f-001915c2cee8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.portraits
+  module:
+    - text
+id: node.portraits.body
+field_name: body
+entity_type: node
+bundle: portraits
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

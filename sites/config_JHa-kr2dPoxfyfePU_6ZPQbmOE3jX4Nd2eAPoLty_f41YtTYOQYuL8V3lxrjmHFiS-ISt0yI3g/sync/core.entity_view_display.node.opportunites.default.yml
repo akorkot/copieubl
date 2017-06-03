@@ -1,0 +1,86 @@
+uuid: aaeaa96b-daa2-432c-9f08-cc4a4d17c79c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.opportunites.body
+    - field.field.node.opportunites.field__sb_twitter_account
+    - field.field.node.opportunites.field_miniature
+    - field.field.node.opportunites.field_sb_actus_active
+    - field.field.node.opportunites.field_sb_contact2_email
+    - field.field.node.opportunites.field_sb_contact2_name
+    - field.field.node.opportunites.field_sb_contact2_tel
+    - field.field.node.opportunites.field_sb_contact3_email
+    - field.field.node.opportunites.field_sb_contact3_name
+    - field.field.node.opportunites.field_sb_contact3_tel
+    - field.field.node.opportunites.field_sb_contact4_email
+    - field.field.node.opportunites.field_sb_contact4_name
+    - field.field.node.opportunites.field_sb_contact4_tel
+    - field.field.node.opportunites.field_sb_contact5_email
+    - field.field.node.opportunites.field_sb_contact5_name
+    - field.field.node.opportunites.field_sb_contact5_tel
+    - field.field.node.opportunites.field_sb_contact_active
+    - field.field.node.opportunites.field_sb_contact_email
+    - field.field.node.opportunites.field_sb_contact_name
+    - field.field.node.opportunites.field_sb_contact_tel
+    - field.field.node.opportunites.field_sb_downloads_active
+    - field.field.node.opportunites.field_sb_downloads_files
+    - field.field.node.opportunites.field_sb_services_active
+    - field.field.node.opportunites.field_sb_services_pages
+    - field.field.node.opportunites.field_sb_twitter_active
+    - field.field.node.opportunites.field_sb_video_active
+    - field.field.node.opportunites.field_sb_video_url
+    - node.type.opportunites
+  module:
+    - text
+    - user
+id: node.opportunites.default
+targetEntityType: node
+bundle: opportunites
+mode: default
+content:
+  addtoany:
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field__sb_twitter_account: true
+  field_miniature: true
+  field_sb_actus_active: true
+  field_sb_contact2_email: true
+  field_sb_contact2_name: true
+  field_sb_contact2_tel: true
+  field_sb_contact3_email: true
+  field_sb_contact3_name: true
+  field_sb_contact3_tel: true
+  field_sb_contact4_email: true
+  field_sb_contact4_name: true
+  field_sb_contact4_tel: true
+  field_sb_contact5_email: true
+  field_sb_contact5_name: true
+  field_sb_contact5_tel: true
+  field_sb_contact_active: true
+  field_sb_contact_email: true
+  field_sb_contact_name: true
+  field_sb_contact_tel: true
+  field_sb_downloads_active: true
+  field_sb_downloads_files: true
+  field_sb_services_active: true
+  field_sb_services_pages: true
+  field_sb_twitter_active: true
+  field_sb_video_active: true
+  field_sb_video_url: true
+  langcode: true

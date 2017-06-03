@@ -1,0 +1,20 @@
+uuid: 5f2fcc64-d33d-453b-ac68-264fd60e4b8f
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - adminimal_theme
+id: adminimal_theme_local_tasks
+theme: adminimal_theme
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Onglets
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

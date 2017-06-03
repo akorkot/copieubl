@@ -1,0 +1,27 @@
+uuid: fe08fe64-2cb9-4196-8256-86441015f2df
+langcode: fr
+status: true
+dependencies:
+  config:
+    - contact.form.inscription_au_concours_ma_these
+    - field.storage.contact_message.field_lettre_de_motivation180
+  module:
+    - file
+id: contact_message.inscription_au_concours_ma_these.field_lettre_de_motivation180
+field_name: field_lettre_de_motivation180
+entity_type: contact_message
+bundle: inscription_au_concours_ma_these
+label: 'Lettre de motivation'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt docx pdf doc'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -1,0 +1,85 @@
+uuid: 4a53308e-8c34-4a7f-9503-3c7050f145d4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - contact.form.inscription_au_concours_ma_these
+    - field.field.contact_message.inscription_au_concours_ma_these.field_ecole180
+    - field.field.contact_message.inscription_au_concours_ma_these.field_email180
+    - field.field.contact_message.inscription_au_concours_ma_these.field_lettre_de_motivation180
+    - field.field.contact_message.inscription_au_concours_ma_these.field_nom180
+    - field.field.contact_message.inscription_au_concours_ma_these.field_prenom180
+    - field.field.contact_message.inscription_au_concours_ma_these.field_telephone180
+    - field.field.contact_message.inscription_au_concours_ma_these.field_titre_de_la_these180
+  module:
+    - file
+    - telephone
+id: contact_message.inscription_au_concours_ma_these.default
+targetEntityType: contact_message
+bundle: inscription_au_concours_ma_these
+mode: default
+content:
+  field_ecole180:
+    weight: 56
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_email180:
+    weight: 53
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_lettre_de_motivation180:
+    weight: 57
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_nom180:
+    weight: 51
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_prenom180:
+    weight: 52
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_telephone180:
+    weight: 54
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_titre_de_la_these180:
+    weight: 55
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  preview:
+    weight: 40
+    region: content
+hidden:
+  copy: true
+  langcode: true
+  mail: true
+  message: true
+  name: true
+  subject: true

@@ -1,0 +1,19 @@
+uuid: e64d5c67-7c78-4213-9100-ed48e0606df9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact4_name
+    - node.type.opportunites
+id: node.opportunites.field_sb_contact4_name
+field_name: field_sb_contact4_name
+entity_type: node
+bundle: opportunites
+label: 'Nom du contact 4'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

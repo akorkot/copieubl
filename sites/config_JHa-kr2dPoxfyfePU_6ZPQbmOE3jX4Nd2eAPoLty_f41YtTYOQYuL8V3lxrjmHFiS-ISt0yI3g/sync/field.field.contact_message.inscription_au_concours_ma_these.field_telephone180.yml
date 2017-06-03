@@ -1,0 +1,21 @@
+uuid: 812fa540-19eb-4e61-a500-e224f1e2835f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - contact.form.inscription_au_concours_ma_these
+    - field.storage.contact_message.field_telephone180
+  module:
+    - telephone
+id: contact_message.inscription_au_concours_ma_these.field_telephone180
+field_name: field_telephone180
+entity_type: contact_message
+bundle: inscription_au_concours_ma_these
+label: Téléphone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

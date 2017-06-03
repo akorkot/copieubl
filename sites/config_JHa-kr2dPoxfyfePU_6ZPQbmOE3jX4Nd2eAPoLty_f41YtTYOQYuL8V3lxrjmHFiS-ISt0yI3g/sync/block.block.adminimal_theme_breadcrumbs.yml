@@ -1,0 +1,20 @@
+uuid: 43059baa-225e-4a5f-aaec-59477d13ee42
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - adminimal_theme
+id: adminimal_theme_breadcrumbs
+theme: adminimal_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Fils d''Ariane'
+  provider: system
+  label_display: '0'
+visibility: {  }

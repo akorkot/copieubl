@@ -1,0 +1,27 @@
+uuid: 9eec80eb-61e7-4095-b04c-999a575d64ab
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categorie
+    - node.type.dossiers
+    - taxonomy.vocabulary.categorie_dossiers
+id: node.dossiers.field_categorie
+field_name: field_categorie
+entity_type: node
+bundle: dossiers
+label: Catégorie
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categorie_dossiers: categorie_dossiers
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

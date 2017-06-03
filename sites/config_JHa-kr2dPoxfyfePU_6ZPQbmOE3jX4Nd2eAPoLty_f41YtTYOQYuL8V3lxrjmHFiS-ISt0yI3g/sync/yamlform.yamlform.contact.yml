@@ -1,0 +1,131 @@
+uuid: a0bc5aa7-a122-4b24-8006-6ae8f31973f6
+langcode: fr
+status: true
+dependencies: {  }
+uid: null
+template: false
+id: contact
+title: Contact
+description: 'Basic email contact form.'
+elements: "name:\n  '#type': textfield\n  '#title': Nom\n  '#default_value': '[yamlform-authenticated-user:display-name]'\n  '#placeholder': 'Nom *'\n  '#required': true\nfirstname:\n  '#type': textfield\n  '#title': Prénom\n  '#default_value': '[yamlform-authenticated-user:display-name]'\n  '#placeholder': 'Prénom *'\n  '#required': true\nemail:\n  '#type': email\n  '#title': E-mail\n  '#default_value': '[yamlform-authenticated-user:mail]'\n  '#placeholder': 'E-mail *'\nphone:\n  '#type': tel\n  '#title': Téléphone\n  '#placeholder': 'Téléphone *'\n  '#required': true\ndestinataire:\n  '#type': select\n  '#title': 'Votre demande concerne...'\n  '#options':\n    marches-publics@u-bretagneloire.fr: 'Marchés publics'\n    ressources-humaines@u-bretagneloire.fr: recrutements/candidatures\n    fsd@u-bretagneloire.fr: 'protection d''information stratégique'\n    communication@u-bretagneloire.fr: 'site web'\n    communication+autres@u-bretagneloire.fr: autres\n  '#empty_option': 'Votre demande concerne...'\n  '#required': true\nsubject:\n  '#type': textfield\n  '#title': Objet\n  '#placeholder': 'Objet *'\n  '#required': true\n  '#test': 'Testing contact form from [site:name]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#placeholder': 'Message *'\n  '#required': true\n  '#test': 'Please ignore this email.'\n"
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: contact
+  page_confirm_path: ''
+  form_submit_label: Envoyer
+  form_submit_attributes: {  }
+  form_exception_message: ''
+  form_closed_message: ''
+  form_confidential: false
+  form_confidential_message: ''
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_next_button_label: ''
+  wizard_next_button_attributes: {  }
+  wizard_prev_button_label: ''
+  wizard_prev_button_attributes: {  }
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_next_button_label: ''
+  preview_next_button_attributes: {  }
+  preview_prev_button_label: ''
+  preview_prev_button_attributes: {  }
+  preview_message: ''
+  draft: false
+  draft_auto_save: false
+  draft_button_label: ''
+  draft_button_attributes: {  }
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: url_message
+  confirmation_message: '<p>Your message has been sent.</p>'
+  confirmation_url: '<front>'
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+handlers:
+  email_confirmation:
+    id: email
+    label: 'Courriel de confirmation'
+    handler_id: email_confirmation
+    status: true
+    weight: 1
+    settings:
+      to_mail: '[yamlform-submission:values:email:raw]'
+      cc_mail: ''
+      bcc_mail: ''
+      from_mail: default
+      from_name: défaut
+      subject: '[yamlform-submission:values:subject:value]'
+      body: '[yamlform-submission:values:message:value]'
+      excluded_elements: {  }
+      html: true
+      attachments: false
+      debug: false
+  email_notification:
+    id: email
+    label: 'Notification par courriel'
+    handler_id: email_notification
+    status: true
+    weight: 1
+    settings:
+      to_mail: '[yamlform-submission:values:destinataire:raw]'
+      cc_mail: ''
+      bcc_mail: ''
+      from_mail: default
+      from_name: '[yamlform-submission:values:name:value]'
+      subject: '[yamlform-submission:values:subject:value]'
+      body: '[yamlform-submission:values:message:value]'
+      excluded_elements: {  }
+      html: true
+      attachments: false
+      debug: false

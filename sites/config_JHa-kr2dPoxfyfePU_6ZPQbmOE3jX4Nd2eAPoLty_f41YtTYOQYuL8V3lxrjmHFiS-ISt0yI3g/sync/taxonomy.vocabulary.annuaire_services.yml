@@ -1,0 +1,9 @@
+uuid: 6edac9c8-ecf1-4ead-8000-c21bed41b253
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Annuaire services'
+vid: annuaire_services
+description: ''
+hierarchy: 0
+weight: 0

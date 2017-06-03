@@ -1,0 +1,24 @@
+uuid: 1b8ee1c8-4b1a-431a-9210-6f59f54827e8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.hp_opportunites
+  module:
+    - views
+  theme:
+    - ubl
+id: views_block__hp_opportunites_block_1
+theme: ubl
+region: hp_opportunites
+weight: -10
+provider: null
+plugin: 'views_block:hp_opportunites-block_1'
+settings:
+  id: 'views_block:hp_opportunites-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

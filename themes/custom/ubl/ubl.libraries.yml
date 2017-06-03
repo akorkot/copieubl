@@ -4,6 +4,7 @@ global-styling:
     base:
       //fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic: { type: external, minified: true }
       css/layout.css: {}
+      css/custom.css: {}
   js:
     js/bootstrap.js: {}
     js/equalize.js: {}

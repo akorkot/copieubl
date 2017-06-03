@@ -1,0 +1,39 @@
+uuid: 74e53b57-bbc5-4b7e-9300-a434abd722d5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.yamlform.body
+    - field.field.node.yamlform.yamlform
+    - node.type.yamlform
+  module:
+    - text
+    - user
+    - yamlform
+id: node.yamlform.default
+targetEntityType: node
+bundle: yamlform
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  yamlform:
+    weight: 102
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: yamlform_entity_reference_entity_view
+    region: content
+hidden:
+  addtoany: true
+  langcode: true

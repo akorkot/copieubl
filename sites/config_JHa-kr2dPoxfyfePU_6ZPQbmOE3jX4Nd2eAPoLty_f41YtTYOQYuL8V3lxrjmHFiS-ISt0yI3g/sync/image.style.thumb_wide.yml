@@ -1,0 +1,14 @@
+uuid: 236daef6-ab69-4e3a-b6f8-131a67cac4b7
+langcode: fr
+status: true
+dependencies: {  }
+name: thumb_wide
+label: 'Thumb wide'
+effects:
+  5a3f4ca8-a1f2-40ad-8a59-e71f39f6df1e:
+    uuid: 5a3f4ca8-a1f2-40ad-8a59-e71f39f6df1e
+    id: image_scale_and_crop
+    weight: 3
+    data:
+      width: 220
+      height: 110

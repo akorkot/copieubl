@@ -1,0 +1,11 @@
+uuid: 7696282a-9084-4aee-8002-2a99c54dbdcd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ecole
+id: taxonomy_term.ecole
+target_entity_type_id: taxonomy_term
+target_bundle: ecole
+default_langcode: site_default
+language_alterable: false

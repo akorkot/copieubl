@@ -1,0 +1,25 @@
+uuid: 19c756ce-2a55-4153-b0d4-d440a0d94c69
+langcode: fr
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:bf44ab7f-31a8-4518-93c5-d35d432a8a3f'
+  module:
+    - block_content
+  theme:
+    - ubl
+id: wallwikiradio
+theme: ubl
+region: header
+weight: -9
+provider: null
+plugin: 'block_content:bf44ab7f-31a8-4518-93c5-d35d432a8a3f'
+settings:
+  id: 'block_content:bf44ab7f-31a8-4518-93c5-d35d432a8a3f'
+  label: 'Wall - Wikiradio'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

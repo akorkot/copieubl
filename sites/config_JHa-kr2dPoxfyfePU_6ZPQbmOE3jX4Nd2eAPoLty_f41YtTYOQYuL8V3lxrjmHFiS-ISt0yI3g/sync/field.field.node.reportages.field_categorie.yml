@@ -1,0 +1,27 @@
+uuid: 4fe71de3-47a8-474a-bcd6-4e186b668ad4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categorie
+    - node.type.reportages
+    - taxonomy.vocabulary.categorie_reportage
+id: node.reportages.field_categorie
+field_name: field_categorie
+entity_type: node
+bundle: reportages
+label: Catégorie
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categorie_reportage: categorie_reportage
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

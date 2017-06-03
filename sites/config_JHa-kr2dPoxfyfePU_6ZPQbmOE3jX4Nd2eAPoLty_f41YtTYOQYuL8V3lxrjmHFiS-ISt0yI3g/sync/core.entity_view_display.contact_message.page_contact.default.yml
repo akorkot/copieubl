@@ -1,0 +1,57 @@
+uuid: fc76a9ba-ae52-4fca-bd76-2bf884a10c8a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - contact.form.page_contact
+    - field.field.contact_message.page_contact.field_e_mail
+    - field.field.contact_message.page_contact.field_nom
+    - field.field.contact_message.page_contact.field_prenom
+    - field.field.contact_message.page_contact.field_telephone
+  module:
+    - telephone
+id: contact_message.page_contact.default
+targetEntityType: contact_message
+bundle: page_contact
+mode: default
+content:
+  field_e_mail:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_nom:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_prenom:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_telephone:
+    weight: 3
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  message:
+    type: basic_string
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

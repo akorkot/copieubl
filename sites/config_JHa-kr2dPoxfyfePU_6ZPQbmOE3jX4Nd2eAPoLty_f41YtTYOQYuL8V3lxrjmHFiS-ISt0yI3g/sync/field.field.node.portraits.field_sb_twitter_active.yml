@@ -1,0 +1,23 @@
+uuid: 1a62ac81-a250-428d-a20e-148971aa0d9a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_twitter_active
+    - node.type.portraits
+id: node.portraits.field_sb_twitter_active
+field_name: field_sb_twitter_active
+entity_type: node
+bundle: portraits
+label: 'Activer ?'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

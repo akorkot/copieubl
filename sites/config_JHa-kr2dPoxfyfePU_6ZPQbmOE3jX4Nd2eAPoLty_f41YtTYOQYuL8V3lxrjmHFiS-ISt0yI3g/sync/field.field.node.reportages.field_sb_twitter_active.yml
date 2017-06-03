@@ -1,0 +1,23 @@
+uuid: 637878b5-dac2-4e89-ad04-4d68aef69f3b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_twitter_active
+    - node.type.reportages
+id: node.reportages.field_sb_twitter_active
+field_name: field_sb_twitter_active
+entity_type: node
+bundle: reportages
+label: 'Activer ?'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

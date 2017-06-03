@@ -1,0 +1,12 @@
+uuid: 520aad45-68c1-4588-afaf-09d8e12462a6
+langcode: fr
+status: true
+dependencies: {  }
+id: feedback
+label: 'Retours utilisateurs sur le site web'
+recipients:
+  - nicolas@stafe.fr
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

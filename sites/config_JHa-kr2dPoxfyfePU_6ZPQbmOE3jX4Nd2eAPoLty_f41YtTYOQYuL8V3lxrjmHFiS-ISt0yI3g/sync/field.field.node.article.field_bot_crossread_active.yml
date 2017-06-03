@@ -1,0 +1,23 @@
+uuid: 571492f5-a842-4b43-ab56-8624e2a3243c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bot_crossread_active
+    - node.type.article
+id: node.article.field_bot_crossread_active
+field_name: field_bot_crossread_active
+entity_type: node
+bundle: article
+label: 'Activer ?'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

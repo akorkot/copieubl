@@ -1,0 +1,23 @@
+uuid: 0db4a1e6-5c03-4d27-a115-2121a70fc1b8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_video_active
+    - node.type.opportunites
+id: node.opportunites.field_sb_video_active
+field_name: field_sb_video_active
+entity_type: node
+bundle: opportunites
+label: 'Activer ?'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

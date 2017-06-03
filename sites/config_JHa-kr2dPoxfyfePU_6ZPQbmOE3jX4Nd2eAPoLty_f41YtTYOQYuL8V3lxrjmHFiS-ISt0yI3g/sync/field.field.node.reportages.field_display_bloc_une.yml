@@ -1,0 +1,23 @@
+uuid: 8a1fd2e1-69b7-4c31-8400-0dc62f6e5665
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_bloc_une
+    - node.type.reportages
+id: node.reportages.field_display_bloc_une
+field_name: field_display_bloc_une
+entity_type: node
+bundle: reportages
+label: 'Afficher dans le bloc "à la une"'
+description: 'Afficher dans le bloc "à la une" sur la page "Actualités et chroniques"'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Affiché
+  off_label: Caché
+field_type: boolean

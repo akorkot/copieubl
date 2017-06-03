@@ -1,0 +1,7 @@
+uuid: 8b0a8a65-43fd-41d2-b000-001ea9c55162
+langcode: fr
+status: true
+dependencies: {  }
+id: likert_comparison
+label: 'Likert: Comparison'
+options: "1: Strongly Disagree\n2: Disagree\n3: Neutral\n4: Agree\n5: Strongly Agree\n"

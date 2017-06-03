@@ -1,0 +1,11 @@
+uuid: f22bf523-0032-4715-b260-6fb813cf4d86
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.opportunites
+id: node.opportunites
+target_entity_type_id: node
+target_bundle: opportunites
+default_langcode: site_default
+language_alterable: false

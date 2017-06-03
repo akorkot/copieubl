@@ -1,0 +1,14 @@
+uuid: 9d025161-f281-4747-b301-1ebee5dbdd75
+langcode: fr
+status: true
+dependencies:
+  enforced:
+    module:
+      - yamlform
+name: 'YAML form'
+type: yamlform
+description: 'A basic page with a YAML form attached.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

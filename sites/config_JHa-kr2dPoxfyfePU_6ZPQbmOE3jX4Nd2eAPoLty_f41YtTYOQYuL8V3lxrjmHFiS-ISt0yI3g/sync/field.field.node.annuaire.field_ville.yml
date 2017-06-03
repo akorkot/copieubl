@@ -1,0 +1,19 @@
+uuid: e9348a99-4237-41c0-957c-52921a04d9f3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ville
+    - node.type.annuaire
+id: node.annuaire.field_ville
+field_name: field_ville
+entity_type: node
+bundle: annuaire
+label: Ville
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

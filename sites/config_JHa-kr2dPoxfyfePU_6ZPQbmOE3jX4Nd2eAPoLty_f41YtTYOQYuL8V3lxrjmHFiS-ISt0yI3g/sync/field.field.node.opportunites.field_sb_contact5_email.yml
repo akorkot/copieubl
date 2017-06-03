@@ -1,0 +1,19 @@
+uuid: ecdf1521-2335-46e9-8008-08765553e288
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact5_email
+    - node.type.opportunites
+id: node.opportunites.field_sb_contact5_email
+field_name: field_sb_contact5_email
+entity_type: node
+bundle: opportunites
+label: E-mail
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

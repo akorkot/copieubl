@@ -1,0 +1,84 @@
+uuid: 1b11b659-8ecc-45cc-a009-9f1874158d93
+langcode: fr
+status: true
+dependencies:
+  config:
+    - contact.form.inscription_au_concours_ma_these
+    - field.field.contact_message.inscription_au_concours_ma_these.field_ecole180
+    - field.field.contact_message.inscription_au_concours_ma_these.field_email180
+    - field.field.contact_message.inscription_au_concours_ma_these.field_lettre_de_motivation180
+    - field.field.contact_message.inscription_au_concours_ma_these.field_nom180
+    - field.field.contact_message.inscription_au_concours_ma_these.field_prenom180
+    - field.field.contact_message.inscription_au_concours_ma_these.field_telephone180
+    - field.field.contact_message.inscription_au_concours_ma_these.field_titre_de_la_these180
+  module:
+    - file
+    - telephone
+id: contact_message.inscription_au_concours_ma_these.default
+targetEntityType: contact_message
+bundle: inscription_au_concours_ma_these
+mode: default
+content:
+  field_ecole180:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_email180:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_lettre_de_motivation180:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_nom180:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_prenom180:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_telephone180:
+    weight: 3
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_titre_de_la_these180:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  message:
+    type: basic_string
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

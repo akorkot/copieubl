@@ -1,0 +1,23 @@
+uuid: 0fac9c18-a8a0-400d-bf00-0d9b5e253b81
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_twitter_active
+    - node.type.services
+id: node.services.field_sb_twitter_active
+field_name: field_sb_twitter_active
+entity_type: node
+bundle: services
+label: 'Activer ?'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

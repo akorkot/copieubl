@@ -1,0 +1,7 @@
+uuid: 91c3bf41-4d43-458c-a003-3c6b829ba71f
+langcode: fr
+status: true
+dependencies: {  }
+id: marital_status
+label: 'Marital status'
+options: "Single: Single\nMarried: Married\nDivorced: Divorced\nWidowed: Widowed\n"

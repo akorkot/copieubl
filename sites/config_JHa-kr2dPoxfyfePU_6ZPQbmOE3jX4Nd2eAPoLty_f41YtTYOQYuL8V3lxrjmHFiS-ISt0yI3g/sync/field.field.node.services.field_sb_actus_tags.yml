@@ -1,0 +1,27 @@
+uuid: 16cb4fd4-3ea1-474e-b100-f2b4c05eb9a8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_actus_tags
+    - node.type.services
+    - taxonomy.vocabulary.tags
+id: node.services.field_sb_actus_tags
+field_name: field_sb_actus_tags
+entity_type: node
+bundle: services
+label: 'Catégorie d''actu.'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

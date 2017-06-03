@@ -1,0 +1,26 @@
+uuid: 40e7e789-637f-4d5f-b800-e2cff2c41ba3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_services_pages
+    - node.type.services
+    - node.type.ubl_events
+id: node.ubl_events.field_sb_services_pages
+field_name: field_sb_services_pages
+entity_type: node
+bundle: ubl_events
+label: Pages
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      services: services
+    sort:
+      field: _none
+field_type: entity_reference

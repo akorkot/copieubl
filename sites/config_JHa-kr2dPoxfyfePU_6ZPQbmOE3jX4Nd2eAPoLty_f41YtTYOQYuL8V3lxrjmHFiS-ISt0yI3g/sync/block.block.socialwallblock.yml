@@ -1,0 +1,20 @@
+uuid: 7b3ddcf1-a38a-4ee9-b498-4061daa9a666
+langcode: fr
+status: true
+dependencies:
+  module:
+    - ubl_social_wall
+  theme:
+    - ubl
+id: socialwallblock
+theme: ubl
+region: hp_social_wall
+weight: -14
+provider: null
+plugin: wall_block
+settings:
+  id: wall_block
+  label: 'Social wall block'
+  provider: ubl_social_wall
+  label_display: '0'
+visibility: {  }

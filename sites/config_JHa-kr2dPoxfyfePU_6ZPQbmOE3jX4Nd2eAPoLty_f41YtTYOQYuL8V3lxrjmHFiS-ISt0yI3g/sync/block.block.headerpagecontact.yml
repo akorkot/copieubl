@@ -1,0 +1,31 @@
+uuid: 9bf3b316-8210-47cc-9d00-e7c11da87077
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0ac74b7c-8dd0-4046-9404-4ecea7362301'
+  module:
+    - block_content
+    - system
+  theme:
+    - ubl
+id: headerpagecontact
+theme: ubl
+region: contenttop
+weight: -9
+provider: null
+plugin: 'block_content:0ac74b7c-8dd0-4046-9404-4ecea7362301'
+settings:
+  id: 'block_content:0ac74b7c-8dd0-4046-9404-4ecea7362301'
+  label: 'Header page contact'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/contact\r\n/contact/\r\n/form/contact\r\n/form/contact/"
+    negate: false
+    context_mapping: {  }

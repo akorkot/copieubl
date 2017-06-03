@@ -1,0 +1,19 @@
+uuid: e35b28bc-8e8b-46fa-bf00-caad0bd3de34
+langcode: fr
+status: true
+dependencies:
+  config:
+    - contact.form.inscription_au_concours_ma_these
+    - field.storage.contact_message.field_email180
+id: contact_message.inscription_au_concours_ma_these.field_email180
+field_name: field_email180
+entity_type: contact_message
+bundle: inscription_au_concours_ma_these
+label: 'Adresse électronique'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

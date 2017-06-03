@@ -1,0 +1,11 @@
+uuid: fe867d2c-e323-4549-97af-a8c91b283576
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.dossiers
+id: node.dossiers
+target_entity_type_id: node
+target_bundle: dossiers
+default_langcode: site_default
+language_alterable: false

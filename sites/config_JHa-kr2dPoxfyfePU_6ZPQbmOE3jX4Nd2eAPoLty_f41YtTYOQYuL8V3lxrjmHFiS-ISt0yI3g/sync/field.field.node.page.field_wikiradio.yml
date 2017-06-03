@@ -1,0 +1,21 @@
+uuid: 64469052-6c88-42c6-9f06-557cc4b764a0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_wikiradio
+    - node.type.page
+  module:
+    - text
+id: node.page.field_wikiradio
+field_name: field_wikiradio
+entity_type: node
+bundle: page
+label: Wikiradio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

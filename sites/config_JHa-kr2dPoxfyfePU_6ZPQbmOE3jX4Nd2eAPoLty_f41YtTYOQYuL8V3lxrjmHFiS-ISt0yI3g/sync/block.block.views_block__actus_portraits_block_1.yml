@@ -1,0 +1,30 @@
+uuid: 3bc66d57-17db-4c62-a99a-828d4c43384f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.actus_portraits
+  module:
+    - system
+    - views
+  theme:
+    - ubl
+id: views_block__actus_portraits_block_1
+theme: ubl
+region: content
+weight: -15
+provider: null
+plugin: 'views_block:actus_portraits-block_1'
+settings:
+  id: 'views_block:actus_portraits-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /actualites-et-chroniques
+    negate: false
+    context_mapping: {  }

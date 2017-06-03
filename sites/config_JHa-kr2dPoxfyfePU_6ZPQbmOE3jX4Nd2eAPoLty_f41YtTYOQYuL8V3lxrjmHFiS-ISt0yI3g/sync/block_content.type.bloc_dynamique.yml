@@ -1,0 +1,8 @@
+uuid: db3f53d1-3f2b-4e6c-92df-eb503bd18fc4
+langcode: fr
+status: true
+dependencies: {  }
+id: bloc_dynamique
+label: 'BLoc dynamique'
+revision: 0
+description: ''

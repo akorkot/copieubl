@@ -1,0 +1,24 @@
+uuid: 488f96b6-7e21-45eb-ac76-4b5740ea88cf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - ubl
+id: ubl_footer
+theme: ubl
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Menu Pied de page'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

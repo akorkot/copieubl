@@ -1,0 +1,23 @@
+uuid: 72869455-8a07-4617-b901-1e89f7082aa2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_bloc_une
+    - node.type.portraits
+id: node.portraits.field_display_bloc_une
+field_name: field_display_bloc_une
+entity_type: node
+bundle: portraits
+label: 'Afficher dans le bloc "à la une"'
+description: 'Afficher dans le bloc "à la une" sur la page "Actualités et chroniques"'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Affiché
+  off_label: Caché
+field_type: boolean

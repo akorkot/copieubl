@@ -1,0 +1,14 @@
+uuid: f2e725fb-f5d8-45e1-953e-8e711b4a45c9
+langcode: fr
+status: true
+dependencies: {  }
+name: quarter
+label: Quarter
+effects:
+  be835e85-e331-45ff-a43b-f6ad9c4f48cb:
+    uuid: be835e85-e331-45ff-a43b-f6ad9c4f48cb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 250
+      height: 150

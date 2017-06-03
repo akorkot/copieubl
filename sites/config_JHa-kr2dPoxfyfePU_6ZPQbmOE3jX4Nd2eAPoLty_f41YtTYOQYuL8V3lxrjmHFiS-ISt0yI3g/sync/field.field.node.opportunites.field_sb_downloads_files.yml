@@ -1,0 +1,27 @@
+uuid: 8dca03ab-2a83-4234-be1c-28a50af90db2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_downloads_files
+    - node.type.opportunites
+  module:
+    - file
+id: node.opportunites.field_sb_downloads_files
+field_name: field_sb_downloads_files
+entity_type: node
+bundle: opportunites
+label: Fichier
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'sidebar/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt doc pdf docx xls xlsx odt'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

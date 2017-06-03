@@ -1,0 +1,25 @@
+uuid: 9e92c8c6-1952-475d-8ec3-7b802f8b704c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ubl
+id: ubl_breadcrumbs
+theme: ubl
+region: contenttop
+weight: -16
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Fils d''Ariane'
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/contact\r\n/contact/\r\n/form/contact\r\n/form/contact/"
+    negate: true
+    context_mapping: {  }

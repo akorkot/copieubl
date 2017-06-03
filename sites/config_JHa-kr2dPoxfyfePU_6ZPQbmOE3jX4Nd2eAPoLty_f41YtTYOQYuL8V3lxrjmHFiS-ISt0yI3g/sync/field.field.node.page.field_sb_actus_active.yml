@@ -1,0 +1,23 @@
+uuid: 1352703d-abee-413c-926b-ff582a694e48
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_actus_active
+    - node.type.page
+id: node.page.field_sb_actus_active
+field_name: field_sb_actus_active
+entity_type: node
+bundle: page
+label: 'Activer ?'
+description: 'Active ou non le bloc "Actualités" dans la sidebar'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

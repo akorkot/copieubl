@@ -1,0 +1,131 @@
+langcode: fr
+status: true
+dependencies: {  }
+uid: 17
+template: false
+id: inscriptions_mt180
+title: 'Inscriptions MT180'
+description: 'Formulaire d''inscription MT180'
+elements: "nom:\n  '#type': textfield\n  '#title': Nom\n  '#description': '<p><strong>Nom&nbsp;</strong></p>'\n  '#title_display': inline\n  '#description_display': before\n  '#required': true\n  '#required_error': 'Veuillez renseigner ce champ obligatoire'\nprenom:\n  '#type': textfield\n  '#title': Prénom\n  '#description': '<p><strong>Pr&eacute;nom</strong></p>'\n  '#title_display': inline\n  '#description_display': before\n  '#required': true\n  '#required_error': 'Veuillez renseigner ce champ obligatoire'\nadresse_electronique:\n  '#type': email\n  '#title': 'Adresse électronique'\n  '#description': '<p><strong>Adresse &eacute;lectronique</strong></p>'\n  '#title_display': inline\n  '#description_display': before\n  '#required': true\n  '#required_error': 'Veuillez renseigner ce champ obligatoire'\nsujet_de_these:\n  '#type': textfield\n  '#title': 'Sujet de thèse'\n  '#description': '<p><strong>Sujet de th&egrave;se</strong></p>'\n  '#title_display': inline\n  '#description_display': before\n  '#required': true\n  '#required_error': 'veuillez renseigner ce champ obligatoire '\necole_doctorale:\n  '#type': select\n  '#title': 'Ecole doctorale'\n  '#description': '<p><strong>Ecole doctorale</strong></p>'\n  '#title_display': inline\n  '#description_display': before\n  '#options':\n    'Arts, Lettres et Langues (Bretagne)': 'Arts, Lettres et Langues (Bretagne)'\n    'Sciences de la Mer (Bretagne)': 'Sciences de la Mer (Bretagne)'\n    'Mathématiques, Télécommunications, Informatique, Signal, Systèmes, Electronique (Bretagne)': 'Mathématiques, Télécommunications, Informatique, Signal, Systèmes, Electronique (Bretagne)'\n    'Sciences de la matière (Bretagne)': 'Sciences de la matière (Bretagne)'\n    'Sciences de l’Homme, des Organisations et de la Société (Bretagne)': 'Sciences de l’Homme, des Organisations et de la Société (Bretagne)'\n    'Sciences Humaines et Sociales (Bretagne)': 'Sciences Humaines et Sociales (Bretagne)'\n    'Vie-Agro-Santé (Bretagne)': 'Vie-Agro-Santé (Bretagne)'\n    'Biologie - Santé (Pays de Loire)': 'Biologie - Santé (Pays de Loire)'\n    'Cognition, Education, Interactions (CEI) - (Pays de Loire)': 'Cognition, Education, Interactions (CEI) - (Pays de Loire)'\n    'Droit, Economie-Gestion, Sociétés, Territoires (Pays de Loire)': 'Droit, Economie-Gestion, Sociétés, Territoires (Pays de Loire)'\n    'Matière, Molécules, Matériaux (Pays de Loire)': 'Matière, Molécules, Matériaux (Pays de Loire)'\n    'Sociétés, Cultures, Echanges (Pays de Loire)': 'Sociétés, Cultures, Echanges (Pays de Loire)'\n    'Sciences pour l’Ingénieur, Géosciences, Architecture (SPIGA) - (Pays de Loire)': 'Sciences pour l’Ingénieur, Géosciences, Architecture (SPIGA) - (Pays de Loire)'\n    'Sciences et Technologie de l’Information et des Mathématique (STIM) - (Pays de Loire)': 'Sciences et Technologie de l’Information et des Mathématique (STIM) - (Pays de Loire)'\n    'Végétal, Environnement, Nutrition, Agroalimentaire, Mer (VENAM) - (Pays de Loire)': 'Végétal, Environnement, Nutrition, Agroalimentaire, Mer (VENAM) - (Pays de Loire)'\n    'Droit et Sciences Politiques  - (Pays de Loire)': 'Droit et Sciences Politiques  - (Pays de Loire)'\n  '#required': true\n  '#required_error': 'Veuillez renseigner ce champ obligatoire'\netablissement_de_rattachement:\n  '#type': select\n  '#title': 'Établissement de rattachement'\n  '#description': '<p><strong>&Eacute;tablissement de rattachement</strong></p>'\n  '#title_display': inline\n  '#description_display': before\n  '#options':\n    'Université d''Angers': 'Université d''Angers'\n    'Université de Bretagne Occidentale': 'Université de Bretagne Occidentale'\n    'Université de Bretagne Sud': 'Université de Bretagne Sud'\n    'Université du Maine': 'Université du Maine'\n    'Université de Nantes': 'Université de Nantes'\n    'Université de Rennes 1': 'Université de Rennes 1'\n    'Université Rennes 2': 'Université Rennes 2'\n    'Agrocampus Ouest': 'Agrocampus Ouest'\n    'École Centrale de Nantes': 'École Centrale de Nantes'\n    'Ecole des hautes études en santé publique (EHESP)': 'Ecole des hautes études en santé publique (EHESP)'\n    'École des Mines de Nantes': 'École des Mines de Nantes'\n    'École nationale de Chimie de Rennes (ENSCR)': 'École nationale de Chimie de Rennes (ENSCR)'\n    'École nationale de la statistique et de l''analyse de l''information (ENSAI)': 'École nationale de la statistique et de l''analyse de l''information (ENSAI)'\n    'École nationale supérieure d''arts et métiers (ENSAM)': 'École nationale supérieure d''arts et métiers (ENSAM)'\n    'Ecole nationale d''ingénieurs de Brest (ENIB)': 'Ecole nationale d''ingénieurs de Brest (ENIB)'\n    'ENSTA Bretagne': 'ENSTA Bretagne'\n    'ENS Rennes': 'ENS Rennes'\n    'École supérieure d''agricultures (ESA)': 'École supérieure d''agricultures (ESA)'\n    'INSA Rennes': 'INSA Rennes'\n    Oniris: Oniris\n    'Sciences Po Rennes': 'Sciences Po Rennes'\n    'Télécom Bretagne': 'Télécom Bretagne'\n    'Agence nationale de sécurité sanitaire de l''alimentation, de l''environnement et du travail (Anses)': 'Agence nationale de sécurité sanitaire de l''alimentation, de l''environnement et du travail (Anses)'\n    CNRS: CNRS\n    Ifremer: Ifremer\n    INRIA: INRIA\n    'Institut de recherche pour le développement (IRD)': 'Institut de recherche pour le développement (IRD)'\n  '#required': true\n  '#required_error': 'Veuillez renseigner ce champ obligatoire'\nen_quelques_lignes_je_souhaite_participer_au_concours_mt180_parc:\n  '#type': textarea\n  '#title': Motivation\n  '#description': '<p><strong>En quelques lignes, je souhaite participer au concours MT180 parce que ... :</strong></p>'\n  '#title_display': inline\n  '#description_display': before\n  '#required': true\n_ai_pris_connaissance_du_reglement_du_concours_et_je_l_accepte_c:\n  '#type': checkbox\n  '#title': 'Règlement du concours'\n  '#description': '<p>J&#39;ai pris connaissance du r&egrave;glement du concours et je l&#39;accepte</p>'\n  '#title_display': inline\n  '#description_display': before\n  '#required': true\n  '#required_error': 'Veuillez cocher cette case afin de poursuivre votre inscription'\n"
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_label: Envoyer
+  form_submit_attributes: {  }
+  form_exception_message: ''
+  form_closed_message: ''
+  form_confidential: false
+  form_confidential_message: ''
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_next_button_label: ''
+  wizard_next_button_attributes: {  }
+  wizard_prev_button_label: ''
+  wizard_prev_button_attributes: {  }
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_next_button_label: ''
+  preview_next_button_attributes: {  }
+  preview_prev_button_label: ''
+  preview_prev_button_attributes: {  }
+  preview_message: ''
+  draft: false
+  draft_auto_save: false
+  draft_button_label: ''
+  draft_button_attributes: {  }
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_message: '<p>Votre inscription a bien &eacute;t&eacute; enregistr&eacute;e. Nous reviendrons vers vous &agrave; partir du <strong>20 janvier 2017 </strong>pour vous confirmer votre participation.</p>'
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+handlers:
+  courriel:
+    id: email
+    label: Courriel
+    handler_id: courriel
+    status: true
+    weight: 0
+    settings:
+      to_mail: webmaster@u-bretagneloire.fr
+      cc_mail: ''
+      bcc_mail: ''
+      from_mail: default
+      from_name: default
+      subject: default
+      body: default
+      excluded_elements: {  }
+      html: true
+      attachments: false
+      debug: false
+  courriel2:
+    id: email
+    label: Courriel
+    handler_id: courriel2
+    status: true
+    weight: 1
+    settings:
+      to_mail: communication@u-bretagneloire.fr
+      cc_mail: ''
+      bcc_mail: ''
+      from_mail: default
+      from_name: default
+      subject: default
+      body: default
+      excluded_elements: {  }
+      html: true
+      attachments: false
+      debug: false
+uuid: 01b910c4-8f42-42d9-ab40-64ab892a1583

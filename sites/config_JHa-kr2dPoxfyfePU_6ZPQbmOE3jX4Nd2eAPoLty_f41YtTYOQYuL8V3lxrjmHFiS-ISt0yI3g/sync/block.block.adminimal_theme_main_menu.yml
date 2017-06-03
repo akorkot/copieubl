@@ -1,0 +1,24 @@
+uuid: 66b31bb8-bba3-4fe2-baf2-25b8be5f0d8c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - adminimal_theme
+id: adminimal_theme_main_menu
+theme: adminimal_theme
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navigation principale'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

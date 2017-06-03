@@ -1,0 +1,21 @@
+uuid: 1ff419bd-dc40-4c94-ad61-82670444a51f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - contact.form.page_contact
+    - field.storage.contact_message.field_telephone
+  module:
+    - telephone
+id: contact_message.page_contact.field_telephone
+field_name: field_telephone
+entity_type: contact_message
+bundle: page_contact
+label: Téléphone
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

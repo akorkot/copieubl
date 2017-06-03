@@ -1,0 +1,22 @@
+uuid: 018e7133-235b-418c-b9fc-93786d8632ed
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.chiffres
+  module:
+    - text
+id: node.chiffres.body
+field_name: body
+entity_type: node
+bundle: chiffres
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

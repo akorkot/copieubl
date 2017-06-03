@@ -1,0 +1,22 @@
+uuid: 870c1a52-0f86-4922-9e17-8d8f04b5d010
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.reportages
+  module:
+    - text
+id: node.reportages.body
+field_name: body
+entity_type: node
+bundle: reportages
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

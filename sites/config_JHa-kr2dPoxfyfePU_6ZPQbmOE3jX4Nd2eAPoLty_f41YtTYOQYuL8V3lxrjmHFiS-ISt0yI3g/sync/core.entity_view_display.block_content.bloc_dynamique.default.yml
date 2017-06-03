@@ -1,0 +1,23 @@
+uuid: 92231b85-ab6d-40f7-a637-f99e09e06711
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.bloc_dynamique
+    - field.field.block_content.bloc_dynamique.body
+  module:
+    - text
+id: block_content.bloc_dynamique.default
+targetEntityType: block_content
+bundle: bloc_dynamique
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,27 @@
+uuid: d7758c5e-86d7-4444-ac00-b9be600629d8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_downloads_files
+    - node.type.portraits
+  module:
+    - file
+id: node.portraits.field_sb_downloads_files
+field_name: field_sb_downloads_files
+entity_type: node
+bundle: portraits
+label: Fichier
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'sidebar/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt doc pdf docx xls xlsx odt'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

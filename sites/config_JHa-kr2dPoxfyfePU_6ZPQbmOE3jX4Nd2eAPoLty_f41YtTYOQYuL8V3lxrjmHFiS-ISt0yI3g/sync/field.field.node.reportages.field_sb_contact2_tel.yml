@@ -1,0 +1,19 @@
+uuid: 94735374-3e09-45f1-aa43-6704447925a7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact2_tel
+    - node.type.reportages
+id: node.reportages.field_sb_contact2_tel
+field_name: field_sb_contact2_tel
+entity_type: node
+bundle: reportages
+label: Tél.
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: c32a4cd2-a06e-4173-8b1e-30e969198013
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_downloads_active
+    - node.type.opportunites
+id: node.opportunites.field_sb_downloads_active
+field_name: field_sb_downloads_active
+entity_type: node
+bundle: opportunites
+label: 'Activer ?'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

@@ -1,0 +1,19 @@
+uuid: 8beebb86-2ab2-411f-bd00-e50278a5975b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact5_email
+    - node.type.portraits
+id: node.portraits.field_sb_contact5_email
+field_name: field_sb_contact5_email
+entity_type: node
+bundle: portraits
+label: E-mail
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

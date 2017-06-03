@@ -1,0 +1,14 @@
+uuid: f723d68c-546a-46ed-9ed3-e963736d5f0b
+langcode: fr
+status: true
+dependencies: {  }
+name: actus_a_la_une
+label: 'Actus - a la une'
+effects:
+  d6d1ed36-6bba-4409-b116-a16d0e3914dd:
+    uuid: d6d1ed36-6bba-4409-b116-a16d0e3914dd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 673
+      height: 450

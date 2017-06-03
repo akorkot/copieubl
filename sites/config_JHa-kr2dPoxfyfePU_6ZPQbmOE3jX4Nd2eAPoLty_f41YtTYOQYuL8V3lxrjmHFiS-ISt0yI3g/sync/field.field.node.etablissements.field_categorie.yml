@@ -1,0 +1,27 @@
+uuid: e199532a-204f-47cb-ad04-4a988331e4fe
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categorie
+    - node.type.etablissements
+    - taxonomy.vocabulary.type_etablissement
+id: node.etablissements.field_categorie
+field_name: field_categorie
+entity_type: node
+bundle: etablissements
+label: Catégorie
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      type_etablissement: type_etablissement
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

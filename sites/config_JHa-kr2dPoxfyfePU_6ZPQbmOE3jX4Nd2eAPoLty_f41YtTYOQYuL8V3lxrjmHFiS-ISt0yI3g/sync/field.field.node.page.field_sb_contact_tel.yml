@@ -1,0 +1,19 @@
+uuid: 63d045db-e8e1-4bad-9525-e0244f744c87
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact_tel
+    - node.type.page
+id: node.page.field_sb_contact_tel
+field_name: field_sb_contact_tel
+entity_type: node
+bundle: page
+label: Tél.
+description: 'Numéro de téléphone du contact'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,36 @@
+uuid: 13d6f4f9-ec4f-4590-ac00-c14f5e7025e7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.etablissements.body
+    - field.field.node.etablissements.field_categorie
+    - node.type.etablissements
+  module:
+    - text
+    - user
+id: node.etablissements.default
+targetEntityType: node
+bundle: etablissements
+mode: default
+content:
+  addtoany:
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_categorie: true
+  langcode: true

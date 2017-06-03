@@ -1,0 +1,9 @@
+uuid: 0a7f55c9-44c5-4ef3-933a-dd911b7cf740
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Catégorie dossiers'
+vid: categorie_dossiers
+description: ''
+hierarchy: 0
+weight: 0

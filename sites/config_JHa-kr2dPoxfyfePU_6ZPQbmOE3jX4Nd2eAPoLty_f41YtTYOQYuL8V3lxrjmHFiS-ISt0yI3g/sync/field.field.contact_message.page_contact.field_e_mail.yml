@@ -1,0 +1,19 @@
+uuid: da4f5179-66b9-4da1-a18a-4654279ce413
+langcode: fr
+status: true
+dependencies:
+  config:
+    - contact.form.page_contact
+    - field.storage.contact_message.field_e_mail
+id: contact_message.page_contact.field_e_mail
+field_name: field_e_mail
+entity_type: contact_message
+bundle: page_contact
+label: E-mail
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

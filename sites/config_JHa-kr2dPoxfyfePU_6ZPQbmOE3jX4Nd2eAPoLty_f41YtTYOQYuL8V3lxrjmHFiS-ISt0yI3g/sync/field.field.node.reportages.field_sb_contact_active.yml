@@ -1,0 +1,23 @@
+uuid: 57105ef5-5689-4b7f-ba5a-903f1d5dc8d6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact_active
+    - node.type.reportages
+id: node.reportages.field_sb_contact_active
+field_name: field_sb_contact_active
+entity_type: node
+bundle: reportages
+label: 'Activer ?'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

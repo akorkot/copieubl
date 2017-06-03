@@ -1,0 +1,30 @@
+uuid: cb802cc6-9580-4f0e-8b4a-897bd6377b59
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.actus_les_plus_lus
+  module:
+    - system
+    - views
+  theme:
+    - ubl
+id: views_block__actus_les_plus_lus_block_1
+theme: ubl
+region: content
+weight: -17
+provider: null
+plugin: 'views_block:actus_les_plus_lus-block_1'
+settings:
+  id: 'views_block:actus_les_plus_lus-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /actualites-et-chroniques
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,9 @@
+uuid: 4e08da63-b018-4eba-b844-08c5018842ca
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Catégorie portraits'
+vid: categorie_portraits
+description: ''
+hierarchy: 0
+weight: 0

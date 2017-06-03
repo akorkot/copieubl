@@ -1,0 +1,19 @@
+uuid: 748acc8b-a501-4d3b-905f-95bb44b431b4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact4_name
+    - node.type.portraits
+id: node.portraits.field_sb_contact4_name
+field_name: field_sb_contact4_name
+entity_type: node
+bundle: portraits
+label: 'Nom du contact 4'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,26 @@
+uuid: 7802e2cc-d57c-4a90-a008-08dba67fd5e0
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+    - ubl_social_wall
+  theme:
+    - ubl
+id: socialwallwidgetblock
+theme: ubl
+region: content
+weight: -9
+provider: null
+plugin: widget_block
+settings:
+  id: widget_block
+  label: Suivez-nous
+  provider: ubl_social_wall
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /actualites-et-chroniques
+    negate: false
+    context_mapping: {  }

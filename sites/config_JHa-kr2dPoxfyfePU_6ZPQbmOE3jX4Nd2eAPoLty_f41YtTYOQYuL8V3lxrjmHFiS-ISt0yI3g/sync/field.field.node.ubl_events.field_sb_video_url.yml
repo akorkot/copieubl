@@ -1,0 +1,19 @@
+uuid: 0dcd1da3-c5bf-4ec7-9a08-8b0d39628c38
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_video_url
+    - node.type.ubl_events
+id: node.ubl_events.field_sb_video_url
+field_name: field_sb_video_url
+entity_type: node
+bundle: ubl_events
+label: Url
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

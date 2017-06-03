@@ -1,0 +1,23 @@
+uuid: a17ff4b8-4649-4b67-8203-3e05b7ffc97c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_video_active
+    - node.type.portraits
+id: node.portraits.field_sb_video_active
+field_name: field_sb_video_active
+entity_type: node
+bundle: portraits
+label: 'Activer ?'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

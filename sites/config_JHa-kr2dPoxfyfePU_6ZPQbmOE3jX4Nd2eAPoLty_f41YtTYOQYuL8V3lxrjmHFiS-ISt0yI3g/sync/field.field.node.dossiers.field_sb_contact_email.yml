@@ -1,0 +1,19 @@
+uuid: 9f76c6c0-70f9-47df-bd00-d01e6d713ea1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact_email
+    - node.type.dossiers
+id: node.dossiers.field_sb_contact_email
+field_name: field_sb_contact_email
+entity_type: node
+bundle: dossiers
+label: E-mail
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

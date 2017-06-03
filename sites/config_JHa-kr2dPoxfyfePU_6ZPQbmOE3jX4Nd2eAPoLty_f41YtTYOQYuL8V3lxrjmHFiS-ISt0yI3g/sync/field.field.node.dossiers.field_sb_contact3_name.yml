@@ -1,0 +1,19 @@
+uuid: da4bb7d2-e1ba-4d01-8a31-49800fdd403e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact3_name
+    - node.type.dossiers
+id: node.dossiers.field_sb_contact3_name
+field_name: field_sb_contact3_name
+entity_type: node
+bundle: dossiers
+label: 'Nom du contact 3'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

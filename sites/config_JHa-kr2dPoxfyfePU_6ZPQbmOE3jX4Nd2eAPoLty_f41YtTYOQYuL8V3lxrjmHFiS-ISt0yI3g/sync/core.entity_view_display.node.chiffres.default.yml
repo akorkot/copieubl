@@ -1,0 +1,39 @@
+uuid: 3e12d168-07e7-4b73-89d7-600a97c0d184
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.chiffres.body
+    - field.field.node.chiffres.field_icon
+    - node.type.chiffres
+  module:
+    - image
+    - text
+    - user
+id: node.chiffres.default
+targetEntityType: node
+bundle: chiffres
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_icon:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  langcode: true

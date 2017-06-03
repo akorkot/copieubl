@@ -1,0 +1,24 @@
+uuid: f55136a2-dab3-411e-82be-75a4ad739726
+langcode: fr
+status: false
+dependencies:
+  config:
+    - views.view.services_a_la_une
+  module:
+    - views
+  theme:
+    - ubl
+id: views_block__services_a_la_une_block_1
+theme: ubl
+region: header
+weight: -12
+provider: null
+plugin: 'views_block:services_a_la_une-block_1'
+settings:
+  id: 'views_block:services_a_la_une-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

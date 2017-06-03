@@ -1,0 +1,14 @@
+uuid: 2555edfa-1532-4ead-99f3-4bc6683841e9
+langcode: fr
+status: true
+dependencies: {  }
+name: moyen_wide
+label: 'Moyen wide'
+effects:
+  d9b89eaf-db18-44c2-a3be-f46bafe0e6a7:
+    uuid: d9b89eaf-db18-44c2-a3be-f46bafe0e6a7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 250

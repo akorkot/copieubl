@@ -1,0 +1,36 @@
+uuid: 747ec6f7-79c1-4c9b-be57-874939e31bdc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url
+    - node.type.article
+    - node.type.dossiers
+    - node.type.page
+    - node.type.portraits
+    - node.type.reportages
+    - node.type.slider
+    - node.type.ubl_events
+id: node.slider.field_url
+field_name: field_url
+entity_type: node
+bundle: slider
+label: Lien
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+      dossiers: dossiers
+      page: page
+      portraits: portraits
+      reportages: reportages
+      ubl_events: ubl_events
+    sort:
+      field: _none
+field_type: entity_reference

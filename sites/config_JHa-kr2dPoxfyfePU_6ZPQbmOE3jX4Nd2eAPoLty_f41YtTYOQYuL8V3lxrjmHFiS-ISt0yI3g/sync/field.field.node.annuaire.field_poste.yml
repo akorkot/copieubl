@@ -1,0 +1,19 @@
+uuid: d2ff2206-7343-49ad-9174-bd1a2d5b07a3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_poste
+    - node.type.annuaire
+id: node.annuaire.field_poste
+field_name: field_poste
+entity_type: node
+bundle: annuaire
+label: 'Intitulé poste'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

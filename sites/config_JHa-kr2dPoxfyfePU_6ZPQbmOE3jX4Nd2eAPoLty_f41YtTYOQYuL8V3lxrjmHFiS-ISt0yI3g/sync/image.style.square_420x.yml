@@ -1,0 +1,14 @@
+uuid: cc2a6a1d-9fc8-4050-93a1-a2cd18f7acfc
+langcode: fr
+status: true
+dependencies: {  }
+name: square_420x
+label: 'Square 420x285'
+effects:
+  97ee1564-a1a4-4eae-96b0-7944f1aa28d8:
+    uuid: 97ee1564-a1a4-4eae-96b0-7944f1aa28d8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 420
+      height: 285

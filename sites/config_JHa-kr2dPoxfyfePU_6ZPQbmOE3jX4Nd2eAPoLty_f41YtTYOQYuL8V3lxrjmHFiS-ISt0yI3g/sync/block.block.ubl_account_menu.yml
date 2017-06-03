@@ -1,0 +1,24 @@
+uuid: d2f56991-08de-4f6d-ad4d-9ef1f3d9a07e
+langcode: fr
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - ubl
+id: ubl_account_menu
+theme: ubl
+region: header
+weight: -17
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Menu du compte de l''utilisateur'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

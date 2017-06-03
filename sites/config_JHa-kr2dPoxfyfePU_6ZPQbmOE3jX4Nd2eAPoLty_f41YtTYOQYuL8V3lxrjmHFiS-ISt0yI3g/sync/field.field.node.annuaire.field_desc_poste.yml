@@ -1,0 +1,19 @@
+uuid: 7e2daa58-6094-4cc7-9fc1-788485809218
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_desc_poste
+    - node.type.annuaire
+id: node.annuaire.field_desc_poste
+field_name: field_desc_poste
+entity_type: node
+bundle: annuaire
+label: 'Descriptif du poste'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

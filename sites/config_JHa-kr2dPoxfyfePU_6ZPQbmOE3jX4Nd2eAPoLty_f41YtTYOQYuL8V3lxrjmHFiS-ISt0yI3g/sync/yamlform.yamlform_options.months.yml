@@ -1,0 +1,7 @@
+uuid: e07aeb6d-d295-4e68-bb00-d876380c049d
+langcode: fr
+status: true
+dependencies: {  }
+id: months
+label: Mois
+options: "January: January\nFebruary: February\nMarch: March\nApril: April\nMay: May\nJune: June\nJuly: July\nAugust: August\nSeptember: September\nOctober: October\nNovember: November\nDecember: December\n"

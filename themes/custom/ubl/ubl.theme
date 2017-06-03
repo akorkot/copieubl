@@ -151,7 +151,7 @@ function ubl_preprocess_page(&$variables)
     $variables['ubl_submenu'] = _ubl_var('ubl_submenu');
 
     $variables['has_sidebar'] = true;
-    if (is_object($variables['node'])) {
+    if (isset($variables['node']) && is_object($variables['node'])) {
         $node = $variables['node'];
 
         $variables['page']['title'] = _ubl_var('ubl_title', $node->getTitle());
@@ -498,7 +498,7 @@ function ubl_preprocess_page(&$variables)
             /**
              * Récupération de la page parente
              */
-            if ($node->hasField('field_page_parente') && $node->get('field_page_parente')->get(0)->target_id) {
+            if ($node->hasField('field_page_parente') && isset($node->get('field_page_parente')->get(0)->target_id)) {
                 $parentPage = $storage->load($node->get('field_page_parente')->get(0)->target_id);
 
                 $variables['ubl_parent'] = _ubl_var('ubl_parent', [

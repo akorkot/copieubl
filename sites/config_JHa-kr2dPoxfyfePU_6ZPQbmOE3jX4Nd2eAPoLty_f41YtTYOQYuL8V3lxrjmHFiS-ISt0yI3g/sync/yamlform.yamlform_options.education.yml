@@ -1,0 +1,7 @@
+uuid: 75f5317e-d3d3-4990-9d2c-440065cb1991
+langcode: fr
+status: true
+dependencies: {  }
+id: education
+label: Education
+options: "High School: High School\nAssociate Degree: Associate Degree\nAssociate Degree: Associate Degree\nGraduate or Professional Degree: Graduate or Professional Degree\nSome College: Some College\n"

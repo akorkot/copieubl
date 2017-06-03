@@ -1,0 +1,18 @@
+uuid: e92fa6af-b708-4144-970f-35f901f14702
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - ubl
+id: ubl_page_title
+theme: ubl
+region: contenttop
+weight: -17
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titre de page'
+  provider: core
+  label_display: '0'
+visibility: {  }

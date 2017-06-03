@@ -1,0 +1,19 @@
+uuid: 24f49d0a-9081-42b6-a921-338ceb48be72
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_video_url
+    - node.type.portraits
+id: node.portraits.field_sb_video_url
+field_name: field_sb_video_url
+entity_type: node
+bundle: portraits
+label: Url
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

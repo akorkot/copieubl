@@ -1,0 +1,19 @@
+uuid: 313b395c-68df-4333-905c-9254ce4965f2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sb_contact4_tel
+    - node.type.portraits
+id: node.portraits.field_sb_contact4_tel
+field_name: field_sb_contact4_tel
+entity_type: node
+bundle: portraits
+label: Tél.
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,15 @@
+uuid: f425fdcf-54cf-437e-a082-101a2054ea58
+langcode: fr
+status: false
+dependencies: {  }
+id: actualites
+label: Actualités
+use_admin_theme: null
+path: '/actualites/{node}'
+access_logic: and
+access_conditions: {  }
+static_context:
+  _node_from_route:
+    label: '{node} from route'
+    type: 'entity:node_type'
+    value: 9713e35b-e5e6-4da9-83e9-c317f4b88ff7

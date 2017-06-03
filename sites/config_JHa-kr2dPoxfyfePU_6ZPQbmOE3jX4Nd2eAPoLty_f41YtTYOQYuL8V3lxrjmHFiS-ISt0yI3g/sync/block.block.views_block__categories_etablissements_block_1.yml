@@ -1,0 +1,30 @@
+uuid: c7a340d4-d773-45ac-8e04-4ca5cb24d699
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.categories_etablissements
+  module:
+    - system
+    - views
+  theme:
+    - ubl
+id: views_block__categories_etablissements_block_1
+theme: ubl
+region: contenttop
+weight: -10
+provider: null
+plugin: 'views_block:categories_etablissements-block_1'
+settings:
+  id: 'views_block:categories_etablissements-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/etablissements\r\n/etablissements/*"
+    negate: false
+    context_mapping: {  }

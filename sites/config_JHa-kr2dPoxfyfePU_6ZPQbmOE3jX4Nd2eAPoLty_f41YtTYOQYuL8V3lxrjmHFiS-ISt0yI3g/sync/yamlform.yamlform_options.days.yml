@@ -1,0 +1,7 @@
+uuid: 73a8060e-5ce0-4c92-b200-eb3ddd30dec0
+langcode: fr
+status: true
+dependencies: {  }
+id: days
+label: Jours
+options: "Sunday: Sunday\nMonday: Monday\nTuesday: Tuesday\nWednesday: Wednesday\nThursday: Thursday\nFriday: Friday\nSaturday: Saturday\n"

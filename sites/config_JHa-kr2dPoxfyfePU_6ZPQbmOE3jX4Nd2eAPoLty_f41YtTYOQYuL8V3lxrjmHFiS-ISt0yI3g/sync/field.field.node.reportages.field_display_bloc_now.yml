@@ -1,0 +1,23 @@
+uuid: e77e5513-9ca5-4773-b923-35d445ef53d9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_bloc_now
+    - node.type.reportages
+id: node.reportages.field_display_bloc_now
+field_name: field_display_bloc_now
+entity_type: node
+bundle: reportages
+label: 'Afficher dans le bloc "En ce moment"'
+description: 'Afficher dans le bloc "En ce moment"'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Afficher dans "En ce moment"'
+  off_label: 'Ne pas afficher dans "En ce moment"'
+field_type: boolean

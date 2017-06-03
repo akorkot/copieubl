@@ -1,0 +1,30 @@
+uuid: 19b5dc59-335a-4eb1-aa88-cfeec9376de7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.actus_a_la_une
+  module:
+    - system
+    - views
+  theme:
+    - ubl
+id: views_block__actus_a_la_une_block_1
+theme: ubl
+region: contenttop
+weight: -13
+provider: null
+plugin: 'views_block:actus_a_la_une-block_1'
+settings:
+  id: 'views_block:actus_a_la_une-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /actualites-et-chroniques
+    negate: false
+    context_mapping: {  }

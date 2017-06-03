@@ -1,0 +1,21 @@
+uuid: e2b9b549-684f-4ffe-b809-9a63c44e9078
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field__sb_twitter_account
+field_name: field__sb_twitter_account
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
