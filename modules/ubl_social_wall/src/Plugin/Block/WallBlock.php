@@ -14,20 +14,19 @@ namespace Drupal\ubl_social_wall\Plugin\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\ubl_social_wall\Libs\TwitterAPIExchange;
 
-$path = '/sites/liner44/copieubl.s22777.com/html/vendor/google/apiclient/src';
-#$path = '/var/www/drupalvm/copieubl/vendor/google/apiclient/src';
+#$path = '/sites/liner44/copieubl.s22777.com/html/vendor/google/apiclient/src';
+$path = '/var/www/drupalvm/copieubl/vendor/google/apiclient/src';
 set_include_path(get_include_path() . PATH_SEPARATOR . $path);
 
-
+/*
 require_once '/sites/liner44/copieubl.s22777.com/html/vendor/google/apiclient/src/Google/Client.php';
 require_once '/sites/liner44/copieubl.s22777.com/html/vendor/google/apiclient/src/Google/Auth/AssertionCredentials.php';
 require_once '/sites/liner44/copieubl.s22777.com/html/vendor/google/apiclient/src/Google/Service/YouTube.php';
+*/
 
-/*
 require_once '/var/www/drupalvm/copieubl/vendor/google/apiclient/src/Google/Client.php';
 require_once '/var/www/drupalvm/copieubl/vendor/google/apiclient/src/Google/Auth/AssertionCredentials.php';
 require_once '/var/www/drupalvm/copieubl/vendor/google/apiclient/src/Google/Service/YouTube.php';
-*/
 
 class WallBlock extends BlockBase
 {

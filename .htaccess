@@ -1,7 +1,3 @@
-#Modif medialibs HTTPS 			
-redirect 301 /missions-et-activites/recherche/agenda-evenements http://u-bretagneloire.fr/agenda?thematique=1 			
-#redirect 301 /missions-et-activites/recherche/agenda-evenements https://u-bretagneloire.fr/agenda?thematique=1 			
-
 #
 # Apache/PHP/Drupal settings:
 #
@@ -72,11 +68,6 @@ AddEncoding gzip svgz
 # Various rewrite rules.
 <IfModule mod_rewrite.c>
   RewriteEngine on
-
-	#Medialibs - redirection HTTPS 	
-	RewriteCond %{HTTP_HOST}           ^u-bretagneloire.fr 			
-	RewriteCond %{HTTPS}                 !on 			
-	RewriteRule ^(.*)                 https://u-bretagneloire.fr/$1 [L] 
 
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
