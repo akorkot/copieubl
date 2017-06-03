@@ -75,19 +75,21 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 
 
 {% if view_mode == 'teaser' %}
-    <article class="recrutement-item">
-        <a data-toggle="collapse" data-target="#recrutement-node-{{ node.id }}">{{ label }}</a>
-        <div id="recrutement-node-{{ node.id }}" class="collapse in">
+    <article class="offre-recrutement-item">
+        <a class="offre-titre" data-toggle="collapse" data-target="#recrutement-node-{{ node.id }}">{{ label }}</a>
+        <div id="recrutement-node-{{ node.id }}" class="offre-content collapse in">
             <div class="rec-description">
                 {{ node.field_a_propos_etab.value|raw }}
             </div>
             <div class="rec-details">
-                <div class="rec-element">
-                    <span>Candidature</span>
-                    <div>
-                        {{ node.field_candidature.value|raw }}
+                {% if node.field_candidature.value is defined %}
+                    <div class="rec-element">
+                        <span>Candidature</span>
+                        <div>
+                            {{ node.field_candidature.value|raw }}
+                        </div>
                     </div>
-                </div>
+                {% endif %}
                 <div class="rec-element">
                     <span>Localisation</span>
                     <div>
@@ -114,10 +116,8 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
                 </div>
 
                 <div class="rec-element">
-                    <span>Fiche poste</span>
                     <div>
-                        {#{ node.field_fiche_poste.value }#}
-                        <a href="#">Télécharger la fiche poste</a>
+                        <a href="{{ file_url(node.field_fiche_poste.uri) }}">Télécharger la fiche poste ></a>
                     </div>
                 </div>
             </div>

@@ -1,1 +1,40 @@
 /* Recrutement */
+
+.page-offres-recrute .offre-recrutement-item {
+    padding-bottom: 30px;
+}
+.page-offres-recrute .offre-recrutement-item .offre-titre {
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    background: #f6f4f6;
+    text-decoration: none !important;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+.page-offres-recrute .offre-recrutement-item .offre-titre span {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #57575b;
+}
+
+.page-offres-recrute .offre-recrutement-item .offre-content {
+    padding: 14px 27px 0 24px;
+    border-left: 3px solid #f6f4f6;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.page-offres-recrute .offre-recrutement-item .offre-content .rec-element {
+    padding-top: 12px;
+}
+.page-offres-recrute .offre-recrutement-item .offre-content .rec-element span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.page-offres-recrute .offre-recrutement-item .offre-content .rec-element a {
+    text-decoration: none !important;
+    color: #09a4bb !important;
+}
