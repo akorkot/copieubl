@@ -1,7 +1,24 @@
 /* Recrutement */
 
+.page-offres-recrute h2 {
+    font-size: 20px !important;
+    font-family: "Noto Sans", sans-serif !important;
+}
+
+.page-offres-recrute .field--name-body {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+.page-offres-recrute .view-header {
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
 .page-offres-recrute .offre-recrutement-item {
-    padding-bottom: 30px;
+    padding-bottom: 12px;
 }
 .page-offres-recrute .offre-recrutement-item .offre-titre {
     display: block;
@@ -20,6 +37,9 @@
     line-height: 16px;
     padding-right: 12px;
     transition: all 0.2s linear;
+}
+.page-offres-recrute .offre-recrutement-item .offre-titre .glyphicon {
+    display: none;
 }
 .page-offres-recrute .offre-recrutement-item .offre-titre:not(.collapsed) .glyphicon.glyphicon-menu-up {
     display: inline-block;

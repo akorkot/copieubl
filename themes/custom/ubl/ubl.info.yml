@@ -25,3 +25,4 @@ regions:
   hp_services: 'HP - Services'
   hp_chiffres: 'HP - Chiffres'
   hp_opportunites: 'HP - Opportunités'
+  extra_content: 'Extra content'

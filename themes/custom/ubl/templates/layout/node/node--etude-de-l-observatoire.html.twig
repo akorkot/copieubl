@@ -82,68 +82,11 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
             <span class="glyphicon glyphicon-menu-up"></span>
         </a>
         <div id="recrutement-node-{{ node.id }}" class="offre-content collapse">
-            <div class="rec-description">
-                {{ node.field_a_propos_etab.value|raw }}
-            </div>
-            <div class="rec-details">
-
-                {% if node.field_candidature.value is defined %}
-                    <div class="rec-element">
-                        <span>Candidature</span>
-                        <div>
-                            {{ node.field_candidature.value|raw }}
-                        </div>
-                    </div>
-                {% endif %}
-
-                {% if node.field_localisation.value is defined %}
-                    <div class="rec-element">
-                        <span>Localisation</span>
-                        <div>
-                            {{ node.field_localisation.value }}
-                        </div>
-                    </div>
-                {% endif %}
-
-                {% if node.field_mission.value is defined %}
-                    <div class="rec-element">
-                        <span>Mission</span>
-                        <div>
-                            {{ node.field_mission.value|raw }}
-                        </div>
-                    </div>
-                {% endif %}
-
-
-                {% if node.field_poste_a_pouvoir.value is defined %}
-                    <div class="rec-element">
-                        <span>Poste à pouvoir</span>
-                        <div>
-                            {{ node.field_poste_a_pouvoir.value }}
-                        </div>
-                    </div>
-                {% endif %}
-
-                {% if node.field_type_de_contrat.value is defined %}
-                    <div class="rec-element">
-                        <span>Type de contrat</span>
-                        <div>
-                            {{ node.field_type_de_contrat.value }}
-                        </div>
-                    </div>
-                {% endif %}
-                {% if node.field_fiche_poste.entity.fileuri is defined %}
-                    <div class="rec-element">
-                        <div>
-                            <a target="_blank" href="{{ file_url(node.field_fiche_poste.entity.fileuri) }}">Télécharger
-                                la fiche poste
-                                ></a>
-                        </div>
-                    </div>
-                {% endif %}
-
-
-            </div>
+            {% if node.body.value is defined %}
+                <div class="rec-description">
+                    {{ node.body.value|raw }}
+                </div>
+            {% endif %}
         </div>
     </article>
 {% else %}
