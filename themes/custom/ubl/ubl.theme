@@ -260,6 +260,14 @@ function ubl_preprocess_page(&$variables)
                 }
             }
 
+
+            // Texte libre
+            if ($node->hasField('field_activer_txt_libre') && $node->get('field_activer_txt_libre')->value) {
+                $variables['ubl_sidebar']['txt_libre']['active'] = true;
+                $variables['ubl_sidebar']['txt_libre']['value'] = $node->get('field_texte_libre')->value;
+            }
+
+
             // VIDEO
             $variables['ubl_sidebar']['video']['active'] = false;
             if ($node->hasField('field_sb_video_active') && $node->get('field_sb_video_active')->value) {

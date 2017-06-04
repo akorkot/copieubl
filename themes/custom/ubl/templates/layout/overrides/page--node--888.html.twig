@@ -56,7 +56,15 @@
 
                     <div class="widget-container">
                         <div class="widget-row">
-
+                            {% if ubl_sidebar.txt_libre.active %}
+                                <div class="widget-wrap txt_libre">
+                                    <h3>A lire</h3>
+                                    <div class="widget-box">
+                                        <h3></h3>
+                                        {{ ubl_sidebar.txt_libre.value|raw }}
+                                    </div>
+                                </div>
+                            {% endif %}
                             {% if ubl_sidebar.services.active %}
                                 <div class="widget-wrap">
                                     <div class="widget-box">

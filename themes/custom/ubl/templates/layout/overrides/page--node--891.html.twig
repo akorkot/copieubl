@@ -1,16 +1,16 @@
 {#
 /**
- * @Page : Recrutement
+ * @Page : Etude de l'observatoire
  */
 #}
 
 {{ page.contenttop }}
 
-<main class="page-offres-recrute">
+<main class="page-offres-recrute etude-observatoire">
     <div class="row">
         <section id="content" class="{% if ubl_children %}has_child{% else %}has_not_child{% endif %}">
             {% if not ubl_children and node.type.value.0.target_id != 'services' and node.type.value.0.target_id != 'etablissements' %}
-                <h1>Recrutements</h1>
+                <h1>Etude de l'observatoire</h1>
 
 
 
@@ -37,7 +37,7 @@
                     </ul>
                 </div>
             {% endif %}
-            {#{ page.content }#}
+            {{ page.content }}
             {{ page.extra_content }}
         </section>
         {% if has_sidebar %}
@@ -64,6 +64,8 @@
                                     </div>
                                 </div>
                             {% endif %}
+
+
                             {% if ubl_sidebar.services.active %}
                                 <div class="widget-wrap">
                                     <div class="widget-box">
