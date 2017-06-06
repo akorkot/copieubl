@@ -1,5 +1,7 @@
 /* Recrutement */
 
+.page-offres-recrute article .a2a_kit{ display: none; }
+
 .page-offres-recrute h2 {
     font-size: 20px !important;
     font-family: "Noto Sans", sans-serif !important;
@@ -73,3 +75,7 @@
     text-decoration: none !important;
     color: #09a4bb !important;
 }
+
+.widget-wrap.txt_libre {}
+.widget-wrap.txt_libre .widget-box {background: #f6f4f6; padding: 20px;}
+.widget-wrap.txt_libre .widget-box  a{color: #09a4bb;}
